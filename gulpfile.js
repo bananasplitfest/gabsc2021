@@ -24,6 +24,7 @@ const path = {
   src_scss: 'src/scss',
   src_js: 'src/js',
   src_img: 'src/img',
+  src_static: 'src/static',
   dist_vendor: 'dist/vendor',
   dist_js: 'dist/js',
   dist_css: 'dist/css',
@@ -168,12 +169,12 @@ gulp.task('vendor', () => {
 });
 
 
-// Move images to dist folder
-gulp.task('img',function(){
+// Move static assets to dist folder with folder structure
+gulp.task('static',function(){
   // the base option sets the relative root for the set of files,
   // preserving the folder structure
-  return gulp.src('./**/*.*', { base: path.src_img, read: false })
-  .pipe(gulp.dest(path.dist_img));
+  return gulp.src('./**/*.*', { base: path.src_static})
+  .pipe(gulp.dest(path.dist));
 });
 
 
@@ -181,11 +182,12 @@ gulp.task('img',function(){
 
 gulp.task('clean', () => {
   return del([
-    path.dist_css,
-    path.dist_js,
-    path.dist + '/*.html',
-    path.dist_vendor,
-    path.dist_img
+    // path.dist_css,
+    // path.dist_js,
+    // path.dist + '/*.html',
+    // path.dist_vendor,
+    // path.dist_img
+    path.dist
   ]);
 });
 
@@ -208,7 +210,7 @@ gulp.task('watch', () => {
     });
     gulp.watch(path.src_scss + '/**/*.scss', gulp.series('sass:minified', 'sass:expanded'));
     gulp.watch(path.src_js + '/**/*.js', gulp.series('js:expanded', 'js:minified'));
-    gulp.watch(path.src_img + '**/*.*', gulp.series('img'));
+    // gulp.watch(path.src_img + '/**/*.*', gulp.series('static'));
 });
 
 
@@ -216,12 +218,12 @@ gulp.task('watch', () => {
 
 gulp.task(
   'default',
-  gulp.series('clean', 'vendor', gulp.parallel('img', 'pug', 'js:minified', 'js:expanded', 'sass:minified', 'sass:expanded'), 'watch')
+  gulp.series('clean', 'vendor', gulp.parallel('static', 'pug', 'js:minified', 'js:expanded', 'sass:minified', 'sass:expanded'), 'watch')
 );
 
 
 // Prepare for production
 gulp.task(
   'prod',
-  gulp.series('clean', 'vendor', gulp.parallel('img', 'pug', 'js:minified', 'js:expanded', 'sass:minified', 'sass:expanded'))
+  gulp.series('clean', 'vendor', gulp.parallel('static', 'pug', 'js:minified', 'js:expanded', 'sass:minified', 'sass:expanded'))
 );
