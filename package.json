@@ -4,7 +4,8 @@
   "description": "Around - Multipurpose Bootstrap Template",
   "main": "index.html",
   "scripts": {
-    "build": "gulp"
+    "build": "gulp",
+    "prod": "gulp prod"
   },
   "author": "https://createx.studio/",
   "license": "ISC",

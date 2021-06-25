@@ -207,3 +207,10 @@ gulp.task(
   'default',
   gulp.series('clean', 'vendor', gulp.parallel('pug', 'js:minified', 'js:expanded', 'sass:minified', 'sass:expanded'), 'watch')
 );
+
+
+// Prepare for production
+gulp.task(
+  'prod',
+  gulp.series('clean', 'vendor', gulp.parallel('pug', 'js:minified', 'js:expanded', 'sass:minified', 'sass:expanded'))
+);
