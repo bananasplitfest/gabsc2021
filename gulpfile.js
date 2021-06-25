@@ -23,9 +23,11 @@ const path = {
   src_pug: 'src/templates',
   src_scss: 'src/scss',
   src_js: 'src/js',
+  src_img: 'src/img',
   dist_vendor: 'dist/vendor',
   dist_js: 'dist/js',
-  dist_css: 'dist/css'
+  dist_css: 'dist/css',
+  dist_img: 'dist/img',
 }
 
 
@@ -139,7 +141,7 @@ gulp.task('pug', () =>
     };
 
     emitty.scan(global.emittyChangedFile).then(() => {
-      gulp.src(['*.pug', 'components/*pug', 'docs/*.pug'], sourceOptions)
+      gulp.src(['*.pug'], sourceOptions)
         .pipe(gulpif(global.watch, emitty.filter(global.emittyChangedFile)))
         .pipe(pug({ pretty: true }))
         .pipe(gulp.dest(path.dist))
@@ -166,16 +168,24 @@ gulp.task('vendor', () => {
 });
 
 
+// Move images to dist folder
+gulp.task('img',function(){
+  // the base option sets the relative root for the set of files,
+  // preserving the folder structure
+  return gulp.src('./**/*.*', { base: path.src_img })
+  .pipe(gulp.dest(path.dist_img));
+});
+
+
 // Clean certain files/folders from dist directory. Runs before compilation of new files. See 'default' task at the most bottom of this file
 
 gulp.task('clean', () => {
   return del([
     path.dist_css,
     path.dist_js,
-    path.dist + '/components',
-    path.dist + '/docs',
     path.dist + '/*.html',
-    path.dist_vendor
+    path.dist_vendor,
+    path.dist_img
   ]);
 });
 
@@ -198,6 +208,7 @@ gulp.task('watch', () => {
     });
     gulp.watch(path.src_scss + '/**/*.scss', gulp.series('sass:minified', 'sass:expanded'));
     gulp.watch(path.src_js + '/**/*.js', gulp.series('js:expanded', 'js:minified'));
+    gulp.watch(path.src_img + '**/*.*', gulp.series('img'));
 });
 
 
@@ -205,12 +216,12 @@ gulp.task('watch', () => {
 
 gulp.task(
   'default',
-  gulp.series('clean', 'vendor', gulp.parallel('pug', 'js:minified', 'js:expanded', 'sass:minified', 'sass:expanded'), 'watch')
+  gulp.series('clean', 'vendor', gulp.parallel('img', 'pug', 'js:minified', 'js:expanded', 'sass:minified', 'sass:expanded'), 'watch')
 );
 
 
 // Prepare for production
 gulp.task(
   'prod',
-  gulp.series('clean', 'vendor', gulp.parallel('pug', 'js:minified', 'js:expanded', 'sass:minified', 'sass:expanded'))
+  gulp.series('clean', 'vendor', gulp.parallel('img', 'pug', 'js:minified', 'js:expanded', 'sass:minified', 'sass:expanded'))
 );
