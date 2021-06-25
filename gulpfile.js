@@ -172,7 +172,7 @@ gulp.task('vendor', () => {
 gulp.task('img',function(){
   // the base option sets the relative root for the set of files,
   // preserving the folder structure
-  return gulp.src('./**/*.*', { base: path.src_img })
+  return gulp.src('./**/*.*', { base: path.src_img, read: false })
   .pipe(gulp.dest(path.dist_img));
 });
 
