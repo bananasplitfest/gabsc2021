@@ -1,8 +1,12 @@
 // 
 // user-variables.scss
-// Use this to override Bootstrap and Cartzilla variables
+// Use this to override Bootstrap variables
 //
 
-// Example of a variable override to change Cartzilla background color
-// Remove the "//" to comment it in and see it in action!
-// $body-bg: #12263F;
+// Brand colors
+$primary:               #0757A4 !default;
+$secondary:             #FFCC33 !default;
+$info:		            #B0E2FF !default;
+$success:               #16c995 !default;
+$warning:               #ffb15c !default;
+$danger:                #f74f78 !default;
