@@ -39,7 +39,7 @@ block content
         .col-xl-4.text-center.text-xl-start
           h2.mb-4.mb-xl-0 Be at the celebration
         .col-xl-8
-          .countdown.h2.display-2.justify-content-center.justify-content-xl-start(data-countdown='08/21/2021')
+          .countdown.h2.display-2.justify-content-center.justify-content-xl-start(data-countdown="08/21/2021")
             .countdown-days.mb-0.mt-3.me-0.px-4.border-end
               span.countdown-value.fw-normal.px-4 0
               span.countdown-label.fs-lg.text-body Days
@@ -128,26 +128,32 @@ block content
   section.bg-secondary
     .row.g-0
       .col-md-6.jarallax.py-7(data-jarallax data-speed='0.3')
-        span.position-absolute.top-0.start-0.w-100.h-100.bg-black(style='opacity: 40%;')
+        span.position-absolute.top-0.start-0.w-100.h-100.bg-black(style='opacity: 10%;')
         .jarallax-img(style='background-image: url(img/generic/banana-split-generic.jpg);')
       .col-md-6.px-3.pe-xl-0.ps-lg-5.ps-xl-6.py-2.py-lg-4
         .ms-sm-4.py-5.my-sm-0.py-md-6.py-lg-7(style='max-width: 520px;')
           h2.mb-5 We could all use some ice cream
           .d-flex.align-items-start.mb-grid-gutter
-            img(src='img/demo/event-landing/icons/01.svg' alt='Icon' width='43').d-block.mt-1
-            .ps-4.ms-2
-              h3.h5.mb-1 We're outside
-              p.fs-sm.mb-0 Plenty of space to spread out in Legion Keener Park
+            .col
+              i.fas.fa-sunglasses.fa-3x.d-block.mt-1
+            .col.flex-fill
+              .ps-4.ms-2
+                h3.h5.mb-1 We're outside
+                p.fs-sm.mb-0 Plenty of space to spread out in Legion Keener Park
           .d-flex.align-items-start.mb-grid-gutter
-            img(src='img/demo/event-landing/icons/02.svg' alt='Icon' width='43').d-block.mt-1
-            .ps-4.ms-2
-              h3.h5.mb-1 All the fun just in one day
-              p.fs-sm.mb-0 Everything you've come to enjoy just in a single&#8209;day format
+            .col
+              i.far.fa-calendar-day.fa-3x.d-block.mt-1
+            .col.flex-fill
+              .ps-4.ms-2
+                h3.h5.mb-1 All the fun, just in one day
+                p.fs-sm.mb-0 Everything you've come to enjoy just in a single&#8209;day format
           .d-flex.align-items-start
-            img(src='img/demo/event-landing/icons/03.svg' alt='Icon' width='43').d-block.mt-1
-            .ps-4.ms-2
-              h3.h5.mb-1 Monetization &amp; Commerce
-              p.fs-sm.mb-0 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            .col
+              i.far.fa-tags.fa-3x.d-block.mt-1
+            .col.flex-fill
+              .ps-4.ms-2
+                h3.h5.mb-1 Vendors and Shops
+                p.fs-sm.mb-0 Visit Latrobe's downtown merchants and the pop-up vendors at the celebration
 
 
   
@@ -214,25 +220,14 @@ block content
             //- // 4. Also in the form code provided by MailChimp find antispam input and copy it name attribute contents
             //- // 5. Paste what you have copied from name attribute to the name attribute of input with class "subscription-form-antispam"
             form(action="mailchimp-embedded-form-atcion-link", method="post", name="mc-embedded-subscribe-form", target="_blank", novalidate).subscription-form.validate
-            .input-group.flex-nowrap
-              i.ai-mail.position-absolute.top-50.translate-middle-y.text-muted.fs-base.ms-3
-              input(type="email", name="EMAIL", placeholder="Your email", required).form-control.rounded-start
-              button(type="submit", name="subscribe").btn.btn-primary Subscribe
-            //- // real people should not fill this in and expect good things - do not remove this or risk form bot signups
-            div(style="position: absolute; left: -5000px;" aria-hidden="true")
-              input(type="text", name="mailchimp-embedded-form-antispam-name-attribute", tabindex="-1").subscription-form-antispam
-            //- .form-text *Subscribe to our newsletter to receive early discount offers, updates and new products info.
-            .subscription-status
-            //- .d-sm-flex.justify-content-between.align-items-center.bg-light.rounded-3.px-3.py-4.p-sm-4.mb-grid-gutter.text-center.text-sm-start
-        //-       .me-sm-3.mb-4.mb-sm-0
-        //-         h3.h6.mb-2 Full conference pass
-        //-         p.mb-0 3 days full access + Lunch + Gifts
-        //-       a(href='#').btn.btn-primary Buy Now
-        //-     .d-sm-flex.justify-content-between.align-items-center.bg-light.rounded-3.px-3.py-4.p-sm-4.mb-grid-gutter.text-center.text-sm-start
-        //-       .me-sm-3.mb-4.mb-sm-0
-        //-         h3.h6.mb-2 1 day pass
-        //-         p.mb-0 1 day full access + Lunch + Gifts
-        //-       a(href='#').btn.btn-primary Buy Now
+              .input-group.flex-nowrap
+                i.ai-mail.position-absolute.top-50.translate-middle-y.text-muted.fs-base.ms-3
+                input(type="email", name="EMAIL", placeholder="Your email", required).form-control.rounded-start
+                button(type="submit", name="subscribe").btn.btn-primary Subscribe
+              //- // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+              div(style="position: absolute; left: -5000px;" aria-hidden="true")
+                input(type="text", name="mailchimp-embedded-form-antispam-name-attribute", tabindex="-1").subscription-form-antispam
+              .subscription-status
 
 
   
@@ -247,38 +242,38 @@ block content
       .row.justify-content-center
         .col-lg-8
           .row
-            .col-md-3.col-sm-4.col-6.text-center
-              a(href='#').swap-image.mb-grid-gutter
-                img(src='img/demo/event-landing/partners/01_color.png' alt='Logo' width='176').swap-to
-                img(src='img/demo/event-landing/partners/01_gray.png' alt='Logo' width='176').swap-from
-            .col-md-3.col-sm-4.col-6.text-center
-              a(href='#').swap-image.mb-grid-gutter
-                img(src='img/demo/event-landing/partners/02_color.png' alt='Logo' width='176').swap-to
-                img(src='img/demo/event-landing/partners/02_gray.png' alt='Logo' width='176').swap-from
-            .col-md-3.col-sm-4.col-6.text-center
-              a(href='#').swap-image.mb-grid-gutter
-                img(src='img/demo/event-landing/partners/03_color.png' alt='Logo' width='176').swap-to
-                img(src='img/demo/event-landing/partners/03_gray.png' alt='Logo' width='176').swap-from
-            .col-md-3.col-sm-4.col-6.text-center
-              a(href='#').swap-image.mb-grid-gutter
-                img(src='img/demo/event-landing/partners/04_color.png' alt='Logo' width='176').swap-to
-                img(src='img/demo/event-landing/partners/04_gray.png' alt='Logo' width='176').swap-from
-            .col-md-3.col-sm-4.col-6.text-center
-              a(href='#').swap-image.mb-grid-gutter
-                img(src='img/demo/event-landing/partners/05_color.png' alt='Logo' width='176').swap-to
-                img(src='img/demo/event-landing/partners/05_gray.png' alt='Logo' width='176').swap-from
-            .col-md-3.col-sm-4.col-6.text-center
-              a(href='#').swap-image.mb-grid-gutter
-                img(src='img/demo/event-landing/partners/06_color.png' alt='Logo' width='176').swap-to
-                img(src='img/demo/event-landing/partners/06_gray.png' alt='Logo' width='176').swap-from
-            .col-md-3.col-sm-4.col-6.text-center
-              a(href='#').swap-image.mb-grid-gutter
-                img(src='img/demo/event-landing/partners/07_color.png' alt='Logo' width='176').swap-to
-                img(src='img/demo/event-landing/partners/07_gray.png' alt='Logo' width='176').swap-from
-            .col-md-3.col-sm-4.col-6.text-center
-              a(href='#').swap-image.mb-grid-gutter
-                img(src='img/demo/event-landing/partners/08_color.png' alt='Logo' width='176').swap-to
-                img(src='img/demo/event-landing/partners/08_gray.png' alt='Logo' width='176').swap-from
+            //- .col-md-3.col-sm-4.col-6.text-center
+            //-   a(href='#').swap-image.mb-grid-gutter
+            //-     img(src='img/demo/event-landing/partners/01_color.png' alt='Logo' width='176').swap-to
+            //-     img(src='img/demo/event-landing/partners/01_gray.png' alt='Logo' width='176').swap-from
+            //- .col-md-3.col-sm-4.col-6.text-center
+            //-   a(href='#').swap-image.mb-grid-gutter
+            //-     img(src='img/demo/event-landing/partners/02_color.png' alt='Logo' width='176').swap-to
+            //-     img(src='img/demo/event-landing/partners/02_gray.png' alt='Logo' width='176').swap-from
+            //- .col-md-3.col-sm-4.col-6.text-center
+            //-   a(href='#').swap-image.mb-grid-gutter
+            //-     img(src='img/demo/event-landing/partners/03_color.png' alt='Logo' width='176').swap-to
+            //-     img(src='img/demo/event-landing/partners/03_gray.png' alt='Logo' width='176').swap-from
+            //- .col-md-3.col-sm-4.col-6.text-center
+            //-   a(href='#').swap-image.mb-grid-gutter
+            //-     img(src='img/demo/event-landing/partners/04_color.png' alt='Logo' width='176').swap-to
+            //-     img(src='img/demo/event-landing/partners/04_gray.png' alt='Logo' width='176').swap-from
+            //- .col-md-3.col-sm-4.col-6.text-center
+            //-   a(href='#').swap-image.mb-grid-gutter
+            //-     img(src='img/demo/event-landing/partners/05_color.png' alt='Logo' width='176').swap-to
+            //-     img(src='img/demo/event-landing/partners/05_gray.png' alt='Logo' width='176').swap-from
+            //- .col-md-3.col-sm-4.col-6.text-center
+            //-   a(href='#').swap-image.mb-grid-gutter
+            //-     img(src='img/demo/event-landing/partners/06_color.png' alt='Logo' width='176').swap-to
+            //-     img(src='img/demo/event-landing/partners/06_gray.png' alt='Logo' width='176').swap-from
+            //- .col-md-3.col-sm-4.col-6.text-center
+            //-   a(href='#').swap-image.mb-grid-gutter
+            //-     img(src='img/demo/event-landing/partners/07_color.png' alt='Logo' width='176').swap-to
+            //-     img(src='img/demo/event-landing/partners/07_gray.png' alt='Logo' width='176').swap-from
+            //- .col-md-3.col-sm-4.col-6.text-center
+            //-   a(href='#').swap-image.mb-grid-gutter
+            //-     img(src='img/demo/event-landing/partners/08_color.png' alt='Logo' width='176').swap-to
+            //-     img(src='img/demo/event-landing/partners/08_gray.png' alt='Logo' width='176').swap-from
 
 
 //- Footer
