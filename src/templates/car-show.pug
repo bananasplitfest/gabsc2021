@@ -1,0 +1,78 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var vendorStyles = [ 'tiny-slider/dist/tiny-slider.css', 'lightgallery.js/dist/css/lightgallery.min.css']
+  - var vendorScripts = ['tiny-slider/dist/min/tiny-slider.js', 'lightgallery.js/dist/js/lightgallery.min.js', 'lg-fullscreen.js/dist/lg-fullscreen.min.js', 'lg-zoom.js/dist/lg-zoom.min.js']
+  - var parentMenu = 'Activities'
+  - var pageTitle = 'Car Show'
+
+//- Navbar
+block navbar
+  include partials/navbar-solid
+
+//- Page Content
+block content
+  section.sidebar-enabled.sidebar-end
+    .container
+      .row
+
+        // Project description
+        .col-lg-4.sidebar.order-lg-2
+          .px-sm-4.pt-6.py-lg-6.position-relative.zindex-5
+            h1.h2 Car Show
+            a(href='#', target="_blank").btn.btn-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block Register Online
+            a(href='#', target="_blank").btn.btn-outline-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block Paper Form
+            a(href='#gallery' data-scroll).btn.btn-translucent-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block.d-lg-none Gallery
+            .d-sm-flex.align-items-center.pt-3.pb-2.mb-5.border-bottom.fs-sm
+
+            //-   .d-flex.align-items-center.mb-3
+            //-     .text-nowrap.text-muted.me-3
+            //-       i.ai-calendar.me-1
+            //-       span Aug 28, 2020
+            //-     .text-nowrap.text-muted
+            //-       i.ai-tag.me-1
+            //-       span 3D Modelling
+            h3.h5 Details
+            ul.list-unstyled.fs-md.mb-4.pb-2
+              li.mb-2
+                | Date:
+                span.fw-medium.text-nav.ms-2 August 21, 2021
+              li.mb-2
+                | Time:
+                span.fw-medium.text-nav.ms-2 Noon - 4PM
+              li.mb-2
+                | Location:
+                span.fw-medium.text-nav.ms-2 Legion Keener Parking Lot
+              li
+                | Cost per Entry:
+                span.fw-medium.text-nav.ms-2 $10
+            h3.h5 Show Information
+            p.fs-sm.mb-4.pb-2 The 5k Banana Run course has participants touring through historic downtown Latrobe following the same route as the annual Turkey Trot. Racers can enter into the runner or walker category with prizes being awarded for the top male/female finishers overall and in each category by age bracket.
+            h3.h5 Categories
+            p.fs-sm.mb-4.pb-2 Domestic, Foreign, Special Interest, Antique
+            h3.h5 Sponsors
+            ul.list-unstyled.fs-md.mb-4.pb-2
+              li.mb-2
+                | State Farm Agent Sarah Crispin-Thomas
+              li.mb-2
+                | GLSD - Latrobe Parks &amp; Recreation
+              li.mb-2
+                | GLLV Chamber of Commerce
+              li
+                | Zone 6
+        
+
+        // Project gallery (List)
+        #gallery.col-lg-8.content.pb-lg-4.order-lg-1
+          .gallery.pt-5.pb-4.py-lg-5
+            a(href='img/car-show/car-show-blue.jpg').gallery-item.rounded-3.mb-grid-gutter
+              img(src='img/car-show/car-show-blue-thumb.jpg' alt='Blue car entry')
+            a(href='img/car-show/car-show-red-car.jpg').gallery-item.rounded-3.mb-grid-gutter
+              img(src='img/car-show/car-show-red-car-thumb.jpg' alt='Cars entered in the car show')
+
+
+
+//- Footer
+block footer
+  include partials/footer-default

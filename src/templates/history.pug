@@ -1,0 +1,98 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+    - var vendorStyles = ['tiny-slider/dist/tiny-slider.css', 'lightgallery.js/dist/css/lightgallery.min.css']
+    - var vendorScripts = ['tiny-slider/dist/min/tiny-slider.js', 'lightgallery.js/dist/js/lightgallery.min.js', 'lg-video.js/dist/lg-video.min.js']
+    - var parentMenu = 'History'
+    - var pageTitle = 'History'
+
+//- Navbar
+block navbar
+    include partials/navbar-solid
+
+//- Page Content
+block content
+
+    // Content
+    .container
+        .row.justify-content-center
+            .col-lg-9
+                .mt-lg-7.mt-sm-3
+                    h1 History of the Banana Split
+                    p.fs-4 The story of the All-American dessert that started in Latrobe
+        
+        .row.justify-content-center
+            .col-lg-9.py-4
+                .row.position-relative.g-0.align-items-center.border-top.border-bottom.mb-4
+                    .col.py-3.pe-md-3
+                        p The entire 2021 celebration is centered around the Legion Keener Park band shell &mdash; our main stage for the day. Past performers at the event have included dance squads, local musicians, magicians, as well as regional and national artists.
+                        p Like the event #[a(href="https://fb.com/bananasplitfest.com", target="_blank") Facebook page] or come back to this page once we announce who will be joining the event this year.
+
+
+        .row.justify-content-center
+            .col-lg-9.py-4
+                // Hotspots
+                #hotspots-container-1.hotspots
+                    // Image
+                    img(src="img/generic/banana-split-generic.jpg", alt="Banana Split").rounded-3
+                    // Hotspot
+                    span(style="top: 76%; right: 54%;", data-bs-container="#hotspots-container-1", data-bs-toggle="popover", data-bs-placement="top", data-bs-trigger="hover", title="Banana", data-bs-content="There's lots that make up this sundae, but the star is without a doubt the banana!").hotspot
+                    // Hotspot
+                    span(style="top: 56%; right: 44%;", data-bs-container="#hotspots-container-1", data-bs-toggle="popover", data-bs-placement="top", data-bs-trigger="hover", title="Strawberry Ice Cream", data-bs-content="A favorite summertime berry, frozen and topped with more strawberry preserves.").hotspot
+                    // Hotspot
+                    span(style="top: 45%; left: 74%;", data-bs-container="#hotspots-container-1", data-bs-toggle="popover", data-bs-placement="bottom", data-bs-trigger="hover", title="Vanilla Ice Cream", data-bs-content="The classic scoop of vanilla topped with crushed pineapple.").hotspot
+                    // Hotspot
+                    span(style="top: 74%; left: 16%;", data-bs-container="#hotspots-container-1", data-bs-toggle="popover", data-bs-placement="top", data-bs-trigger="hover", title="Chocolate Ice Cream", data-bs-content="You'll get your chocolate fix with this scoop topped with hot fudge.").hotspot
+                    // Hotspot
+                    span(style="top: 30%; left: 56%;", data-bs-container="#hotspots-container-1", data-bs-toggle="popover", data-bs-placement="top", data-bs-trigger="hover", title="Whipped Cream and Nuts", data-bs-content="Add some fresh whipped cream and sprinkle with your chopped nuts.").hotspot
+                    // Hotspot
+                    span(style="top: 46%; left: 16%;", data-bs-container="#hotspots-container-1", data-bs-toggle="popover", data-bs-placement="top", data-bs-trigger="hover", title="Cherries", data-bs-content="Finish up the creation with cherries.").hotspot
+
+
+
+        // Banana Split Princesses
+        section.container.pt-5.pb-4.pb-md-5.pb-lg-6.pt-md-6.pt-lg-7
+            h2.text-center.pt-2.pt-md-0.mb-5 Banana Split Princesses
+            .row.pb-3.pb-md-0.d-flex.justify-content-around
+                // Princess Profile
+                .col-lg-3.col-md-4.col-sm-6.mb-grid-gutter
+                    .card.card-curved-body.border-0.shadow.mx-auto(style='max-width: 20rem;')
+                        img(src='img/history/princess-2018-piper-anke.jpg' alt='Piper Anke')
+                        .card-body.text-center
+                            h3.h6.card-title.mb-2 Piper Anke
+                            p.fs-xs.text-body.mb-0 2018 Banana Split Princess
+                // Princess Profile
+                .col-lg-3.col-md-4.col-sm-6.mb-grid-gutter
+                    .card.card-curved-body.border-0.shadow.mx-auto(style='max-width: 20rem;')
+                        img(src='img/history/princess-2019-janie-van-horn.jpg' alt='Janie Van Horn')
+                        .card-body.text-center
+                            h3.h6.card-title.mb-2 Janie Van Horn
+                            p.fs-xs.text-body.mb-0 2019 Banana Split Princess
+                // Princess Profile
+                .col-lg-3.col-md-4.col-sm-6.mb-grid-gutter
+                    .card.card-curved-body.border-0.shadow.mx-auto(style='max-width: 20rem;')
+                        img(src='img/team/01.jpg' alt='Sophia Trunzo')
+                        .card-body.text-center
+                            h3.h6.card-title.mb-2 Sophia Trunzo
+                            p.fs-xs.text-body.mb-0 2020 Banana Split Princess
+
+        // Honorary Chairs
+        section.container.pt-5.pb-4.pb-md-5.pb-lg-6.pt-md-6.pt-lg-7
+            h2.text-center.pt-2.pt-md-0.mb-5 Honorary Chairs
+            .row.pb-3.pb-md-0.d-flex.justify-content-around
+                // Horizontal card layout
+                .col-md-6
+                    .card.card-horizontal.p-0
+                        .card-img-top(style="background-image: url(img/history/ice-cream-joe.jpg);")
+                        .card-body
+                            h5.card-title
+                                | Ice Cream Joe Gruble
+                            p.card-text.fs-sm
+                                | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+
+
+
+//- Footer
+block footer
+    include partials/footer-default

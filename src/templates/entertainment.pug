@@ -1,0 +1,181 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+    - var vendorStyles = ['tiny-slider/dist/tiny-slider.css', 'lightgallery.js/dist/css/lightgallery.min.css']
+    - var vendorScripts = ['tiny-slider/dist/min/tiny-slider.js', 'lightgallery.js/dist/js/lightgallery.min.js', 'lg-video.js/dist/lg-video.min.js']
+    - var parentMenu = 'Entertainment'
+    - var pageTitle = 'Entertainment'
+
+//- Navbar
+block navbar
+    include partials/navbar-solid
+
+//- Page Content
+block content
+
+    // Content
+    .container
+        .row.justify-content-center
+            .col-lg-9
+                .mt-lg-7.mt-sm-3(style='max-width: 38rem;')
+                    h1 Entertainment
+                    p.fs-4 This year's line-up is jammin'
+        
+        .row.justify-content-center
+            .col-lg-9.py-4
+                .row.position-relative.g-0.align-items-center.border-top.border-bottom.mb-4
+                    .col.py-3.pe-md-3
+                        p The entire 2021 celebration is centered around the Legion Keener Park band shell &mdash; our main stage for the day. Past performers at the event have included dance squads, local musicians, magicians, as well as regional and national artists.
+                        p Like the event #[a(href="https://fb.com/bananasplitfest.com", target="_blank") Facebook page] or come back to this page once we announce who will be joining the event this year.
+
+
+    // CTA
+    section.bg-secondary.bg-size-cover.py-5.py-md-6(style='background-image: url(img/demo/business-consulting/cta-bg.png);')
+        .container.py-3.py-md-0
+            .row.align-items-center
+                .col-lg-5.col-md-6.text-center.text-md-start
+                    h2.mb-4.pb-3.pb-md-0.mb-md-0 Want to perform at the event?
+                .col-lg-7.col-md-6
+                    .row
+                        //- .col-sm-7.col-md-12.col-lg-7.mb-3.mb-lg-0
+                        //-     input(type='email' placeholder='Your email' required).form-control
+                        //-     .invalid-feedback Please provide a valid email address!
+                        //- .col-sm-5.col-md-12.col-lg-5
+                        //-     button(type='submit').btn.btn-primary.d-block.w-100 Book a Consultation
+                    .d-flex.align-items-center.justify-content-center.justify-content-sm-start.pt-4.pt-sm-2.pt-md-4
+                        i.ai-mail.fs-xl.me-2
+                        span.me-2 Send the details on your act to #[a(href='mailto:entertainment@bananasplitfest.com').nav-link-style entertainment@bananasplitfest.com]
+                    .d-flex.align-items-center.justify-content-center.justify-content-sm-start.pt-2
+                        i.ai-phone.fs-xl.me-2
+                        span.me-2 Or call us #[a(href='tel:+17245372671,702').nav-link-style 724 537 2671 x702]
+
+
+    // Past Headliners
+    section.container.my-5.py-5.py-md-3
+        .row.justify-content-center
+            .col-lg-9
+                p.h6 Past Headliners
+                p Take a look back at the artists who have performed at the Banana Split Celebration!
+        .row.justify-content-center
+            .col-xl-11
+                .tns-carousel-wrapper
+                    .tns-carousel-inner(data-carousel-options='{"mode": "gallery", "nav": false}')
+
+                        // Item
+                        div
+                            .pb-3.pb-md-0.ps-md-7.ms-md-3
+                                .bg-size-cover.bg-position-center.rounded-3.py-7(style='background-image: url(img/entertainment/the-clarks.jpg);')
+                                    .d-md-flex.align-items-center.ms-md-n7.text-center.text-md-start
+                                        .card.card-body.d-none.d-md-flex.py-grid-gutter.px-grid-gutter.border-0.shadow-lg.me-6.scale-up(style='max-width: 28rem;')
+                                            p.display-6 The Clarks
+                                            p.mb-0 The Clarks played the Banana Split Celebration in 2015. The American rock band, originated at Indiana University of Pennsylvania and in 30+ years has produced eleven studio albums, two live albums, 2 compilation albums, an EP, and four solo releases.
+                                .d-md-none.mt-n6.px-3.scale-up
+                                    .card.card-body.py-grid-gutter.px-grid-gutter.border-0.shadow.mx-auto(style='max-width: 28rem;')
+                                        p.display-6 The Clarks
+                                        p.mb-0 The Clarks played the Banana Split Celebration in 2015. The American rock band, originated at Indiana University of Pennsylvania and in 30+ years has produced eleven studio albums, two live albums, 2 compilation albums, an EP, and four solo releases.
+
+                        // Item
+                        div
+                            .pb-3.pb-md-0.ps-md-7.ms-md-3
+                                .bg-size-cover.bg-position-center.rounded-3.py-7(style='background-image: url(img/entertainment/kellie-pickler.jpg);')
+                                    .d-md-flex.align-items-center.ms-md-n7.text-center.text-md-start
+                                        .card.card-body.d-none.d-md-flex.py-grid-gutter.px-grid-gutter.border-0.shadow-lg.me-6.scale-up(style='max-width: 28rem;')
+                                            p.display-6 Kellie Pickler
+                                            p Country music singer, songwriter, actress, and TV personality performed at the 2016 Banana Split Celebration. Her 2006 debut album had the hit songs "Red High Heels," "I Wonder," and "Things That Never Cross a Man's Mind."
+                                .d-md-none.mt-n6.px-3.scale-up
+                                    .card.card-body.py-grid-gutter.px-grid-gutter.border-0.shadow.mx-auto(style='max-width: 28rem;')
+                                        p.display-6 Kellie Pickler
+                                        p Country music singer, songwriter, actress, and TV personality performed at the 2016 Banana Split Celebration. Her 2006 debut album had the hit songs "Red High Heels," "I Wonder," and "Things That Never Cross a Man's Mind."
+
+                        // Item
+                        div
+                            .pb-3.pb-md-0.ps-md-7.ms-md-3
+                                .bg-size-cover.bg-position-center.rounded-3.py-7(style='background-image: url(img/entertainment/the-commonheart.jpg);')
+                                    .d-md-flex.align-items-center.ms-md-n7.text-center.text-md-start
+                                        .card.card-body.d-none.d-md-flex.py-grid-gutter.px-grid-gutter.border-0.shadow-lg.me-6.scale-up(style='max-width: 28rem;')
+                                            p.display-6 The Commonheart
+                                            p Playing in 2017 with their gritty vocals over rock riffs and horns, The Commonheart delivered an emotion-packed, soulful sound that lit up the downtown streets of Latrobe.
+                                .d-md-none.mt-n6.px-3.scale-up
+                                    .card.card-body.py-grid-gutter.px-grid-gutter.border-0.shadow.mx-auto(style='max-width: 28rem;')
+                                        p.display-6 The Commonheart
+                                        p Playing in 2017 with their gritty vocals over rock riffs and horns, The Commonheart delivered an emotion-packed, soulful sound that lit up the downtown streets of Latrobe.
+
+                        // Item
+                        div
+                            .pb-3.pb-md-0.ps-md-7.ms-md-3
+                                .bg-size-cover.bg-position-center.rounded-3.py-7(style='background-image: url(img/entertainment/vertigo-red.jpg);')
+                                    .d-md-flex.align-items-center.ms-md-n7.text-center.text-md-start
+                                        .card.card-body.d-none.d-md-flex.py-grid-gutter.px-grid-gutter.border-0.shadow-lg.me-6.scale-up(style='max-width: 28rem;')
+                                            p.display-6 Vertigo Red
+                                            p In 2018, VERTIGO RED a party rock cover band from Annapolis performed covers of a variety of music from today's radio pop-rock to 80s/90s retro favorites to modern country.
+                                .d-md-none.mt-n6.px-3.scale-up
+                                    .card.card-body.py-grid-gutter.px-grid-gutter.border-0.shadow.mx-auto(style='max-width: 28rem;')
+                                        p.display-6 Vertigo Red
+                                        p In 2018, VERTIGO RED a party rock cover band from Annapolis performed covers of a variety of music from today's radio pop-rock to 80s/90s retro favorites to modern country.
+
+                        // Item
+                        div
+                            .pb-3.pb-md-0.ps-md-7.ms-md-3
+                                .bg-size-cover.bg-position-center.rounded-3.py-7(style='background-image: url(img/entertainment/joe-grushecky.jpg);')
+                                    .d-md-flex.align-items-center.ms-md-n7.text-center.text-md-start
+                                        .card.card-body.d-none.d-md-flex.py-grid-gutter.px-grid-gutter.border-0.shadow-lg.me-6.scale-up(style='max-width: 28rem;')
+                                            p.display-6 Joe Grushecky
+                                            p Playing to a packed crowd, Joe Grushecky &amp; The Houserockers did, in fact, rock the house of Latrobe in 2019. A Rolling Stone review once said of the band, "they are up there with Springsteen, Petty and Seger".
+                                .d-md-none.mt-n6.px-3.scale-up
+                                    .card.card-body.py-grid-gutter.px-grid-gutter.border-0.shadow.mx-auto(style='max-width: 28rem;')
+                                        p.display-6 Joe Grushecky
+                                        p Playing to a packed crowd, Joe Grushecky &amp; The Houserockers did, in fact, rock the house of Latrobe in 2019. A Rolling Stone review once said of the band, "they are up there with Springsteen, Petty and Seger".
+
+
+
+
+
+
+    // Industries
+    //- section.bg-secondary.py-5.py-md-6.mt-n4
+        .container.py-2
+            .row.justify-content-center
+                .col-lg-6.col-md-8.col-sm-10.text-center
+                    h2 Industries
+                    p.text-muted.mb-5.pb-2 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae
+            .row
+                .col-lg-4.col-sm-6.mb-grid-gutter
+                    a(href='#' style='max-width: 400px;').card.card-hover.border-0.shadow.mx-auto
+                        img(src='img/demo/business-consulting/industries/01.jpg' alt='Life Science').card-img-top
+                        .card-body
+                            h3.h5.mb-0 Life Science
+                .col-lg-4.col-sm-6.mb-grid-gutter
+                    a(href='#' style='max-width: 400px;').card.card-hover.border-0.shadow.mx-auto
+                        img(src='img/demo/business-consulting/industries/02.jpg' alt='Technology').card-img-top
+                        .card-body
+                            h3.h5.mb-0 Technology
+                .col-lg-4.col-sm-6.mb-grid-gutter
+                    a(href='#' style='max-width: 400px;').card.card-hover.border-0.shadow.mx-auto
+                        img(src='img/demo/business-consulting/industries/03.jpg' alt='Healthcare').card-img-top
+                        .card-body
+                            h3.h5.mb-0 Healthcare
+                .col-lg-4.col-sm-6.mb-grid-gutter
+                    a(href='#' style='max-width: 400px;').card.card-hover.border-0.shadow.mx-auto
+                        img(src='img/demo/business-consulting/industries/04.jpg' alt='Natural Resources').card-img-top
+                        .card-body
+                            h3.h5.mb-0 Natural Resources
+                .col-lg-4.col-sm-6.mb-grid-gutter
+                    a(href='#' style='max-width: 400px;').card.card-hover.border-0.shadow.mx-auto
+                        img(src='img/demo/business-consulting/industries/05.jpg' alt='Freight & Logistics').card-img-top
+                        .card-body
+                            h3.h5.mb-0 Freight &amp; Logistics
+                .col-lg-4.col-sm-6.mb-grid-gutter
+                    a(href='#' style='max-width: 400px;').card.card-hover.border-0.shadow.mx-auto
+                        img(src='img/demo/business-consulting/industries/06.jpg' alt='Retail').card-img-top
+                        .card-body
+                            h3.h5.mb-0 Retail
+            .pt-3.text-center
+                a(href='#').btn.btn-primary See all industries
+
+
+
+
+//- Footer
+block footer
+    include partials/footer-default

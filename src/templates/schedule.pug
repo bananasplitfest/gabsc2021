@@ -1,0 +1,72 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+    - var vendorStyles = ['lightgallery.js/dist/css/lightgallery.min.css']
+    - var vendorScripts = ['jarallax/dist/jarallax.min.js', 'jarallax/dist/jarallax-element.min.js', 'lightgallery.js/dist/js/lightgallery.min.js', 'lg-fullscreen.js/dist/lg-fullscreen.min.js', 'lg-zoom.js/dist/lg-zoom.min.js', 'lg-video.js/dist/lg-video.min.js']
+    - var parentMenu = 'Demos'
+    - var pageTitle = 'Event Landing'
+
+//- Navbar
+block navbar
+    include partials/navbar-solid
+
+//- Page Content
+block content
+
+    // Schedule
+    section.bg-secondary.pt-5.pb-3.pt-md-6.pb-md-4.pt-lg-7.pb-lg-5
+        .container.pt-3.pt-md-0
+            h2.text-center.mb-5 2021 Schedule
+
+            .section
+
+                // Day 1
+                #day-1
+                    .border-top.py-2
+                        .row
+                            .col-12
+                                .h3.text-body.mb-0.py-3 Saturday, August 21
+                    .border-top.py-2
+                        .row.py-md-2
+                            .col-lg-2.col-sm-3
+                                .h6.text-body.mb-0.py-1 7:30 AM - 9:30 AM
+                            .col-sm-9.offset-lg-1
+                                .h6.text-body.mb-0.py-1 5k Banana Run Packet Pickup
+                    .border-top.py-2
+                        .row.py-md-2
+                            .col-lg-2.col-sm-3
+                                .h6.text-body.mb-0.py-1 9:30 AM - 10:30 AM
+                            .col-sm-9.offset-lg-1
+                                a(href='5k-banana-run.html').h6.text-body.mb-0.py-1 5k Banana Run
+                                .d-flex.align-items-start.py-1.mb-2
+                                    ul.list-inline.m-0
+                                        li.list-inline-item: a(href='5k-banana-run.html').btn.btn-outline-primary.btn-sm
+                                            | Register Online
+                                        li.list-inline-item
+                                            p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt] Excepteur sint occaecat cupidatat non proident #[a(href='5k-banana-run.html') Register Online]
+                    .border-top.py-2
+                        .row.py-md-2
+                            .col-lg-2.col-sm-3
+                                .h6.text-body.mb-0.py-1 12:00 PM - 8:00 PM
+                            .col-sm-9.offset-lg-1
+                                a(href='vendors.html').h6.text-body.mb-0.py-1 Vendors Open
+                                p.fs-sm.mb-2 Excepteur sint occaecat cupidatat non proident
+                    .border-top.py-2
+                        .row.py-md-2
+                            .col-lg-2.col-sm-3
+                                .h6.text-body.mb-0.py-1 12:00 PM - 8:00 PM
+                            .col-lg-10.col-sm-9
+                                .d-flex.align-items-start.py-1.mb-2
+                                    img(src='img/demo/event-landing/speakers/05.jpg' alt='Tim Brooks' width='75').rounded-circle
+                                    .ms-4(style='max-width: 420px;')
+                                        .h6.text-body.mb-2 Tim Brooks
+                                        p.fs-sm.mb-2 Excepteur sint occaecat cupidatat non proident
+                                        h3.h4.nav-heading.mb-0
+                                            a(href='#') Improve your profile visibility. Tips &amp; tricks from the field expert.
+
+
+
+//- Footer
+block footer
+    include partials/footer-default

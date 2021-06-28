@@ -12,7 +12,8 @@ const gulp = require('gulp'),
       reload = browserSync.reload,
       babel = require('gulp-babel'),
       uglify = require('gulp-uglify'),
-      packageJSON = require('./package.json');
+      packageJSON = require('./package.json'),
+      watch = require('gulp-watch');
 
 
 // Define reusable paths
@@ -173,7 +174,7 @@ gulp.task('vendor', () => {
 gulp.task('static',function(){
   // the base option sets the relative root for the set of files,
   // preserving the folder structure
-  return gulp.src('./**/*.*', { base: path.src_static})
+  return gulp.src(path.src_static + '/**/*.*', { base: path.src_static})
   .pipe(gulp.dest(path.dist));
 });
 
