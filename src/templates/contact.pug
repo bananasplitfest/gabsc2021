@@ -59,25 +59,25 @@ block content
                   label(for='cont-fn').form-label
                     | Full name
                     sup.text-danger.ms-1 *
-                  input(type='text' id='cont-fn' placeholder='John Doe' required).form-control
+                  input(type='text' id='cont-fn' name="Name" placeholder='John Doe' required).form-control
                   .invalid-feedback Please enter your full name!
                 .col-md-6.mb-3.pb-1
                   label(for='cont-email').form-label
                     | Email address
                     sup.text-danger.ms-1 *
-                  input(type='email' id='cont-email' placeholder='j.doe@example.com' required).form-control
+                  input(type='email' id='cont-email' name="Email" placeholder='j.doe@example.com' required).form-control
                   .invalid-feedback Please enter a valid email address!
               .mb-3.pb-1
                 label(for='cont-subject').form-label
                   | Subject
                   sup.text-danger.ms-1 *
-                input(type='text' id='cont-subject' placeholder='Title of your message' required).form-control
+                input(type='text' id='cont-subject' name="Subject" placeholder='Title of your message' required).form-control
                 .invalid-feedback Please enter a subject!
               .mb-3.pb-1
                 label(for='cont-message').form-label
                   | Message
                   sup.text-danger.ms-1 *
-                textarea(id='cont-message' rows='5' placeholder='Write your message here' required).form-control
+                textarea(id='cont-message' rows='5' name="Message" placeholder='Write your message here' required).form-control
                 .invalid-feedback Please write a message!
               .text-center.pt-2
                 button(type='submit').btn.btn-primary Send Message
