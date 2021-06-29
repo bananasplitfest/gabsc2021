@@ -9,61 +9,164 @@ append config
 
 //- Navbar
 block navbar
-    include partials/navbar-solid
+    include partials/navbar-solid-shadow
 
 //- Page Content
 block content
 
-    // Schedule
-    section.bg-secondary.pt-5.pb-3.pt-md-6.pb-md-4.pt-lg-7.pb-lg-5
-        .container.pt-3.pt-md-0
-            h2.text-center.mb-5 2021 Schedule
+    .container
+        .row.justify-content-center
+            .col-lg-9
+                .mt-lg-7.mt-sm-3(style='max-width: 38rem;')
+                    h1 2021 Schedule
+                    p.fs-4 With more fun and activities to come
 
-            .section
+    
+    #tbd.container
+        .row.justify-content-center
+            .col-lg-9
+                .row
+                    .h3.text-body.mb-0.py-3 Date TBD
+                .row.border-top.py-md-2
+                    .col-lg-2.col-sm-3
+                        .h6.text-body.mb-0.py-1
+                    .col-sm-9.offset-lg-1
+                        a(href='princess-pageant.html').h4.text-body.mb-0.py-1 Princess Pageant
+                        .d-flex.align-items-start.py-1.mb-2
+                            ul.list-inline.m-0
+                                li.list-inline-item: a(href='#').btn.btn-outline-primary.btn-sm.disabled
+                                    | Entry Form <small>- Coming soon</small>
+    
+    #aug20.container
+        .row.justify-content-center
+            .col-lg-9
+                .row
+                    .h3.text-body.mb-0.py-3 Friday, August 20
+                .row.border-top.py-2
+                    .col-lg-2.col-sm-3
+                        .h6.text-body.mb-0.py-1 
+                    .col-sm-9.offset-lg-1
+                        a(href='https://www.latrobeartcenter.org/', target='_blank').h4.text-body.mb-0.py-1 Yellow Tie Gala
+                        .d-flex.align-items-start.py-1.mb-2
+                            ul.list-inline.m-0
+                                li.list-inline-item
+                                    p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Latrobe Art Center
 
-                // Day 1
-                #day-1
-                    .border-top.py-2
-                        .row
-                            .col-12
-                                .h3.text-body.mb-0.py-3 Saturday, August 21
-                    .border-top.py-2
-                        .row.py-md-2
-                            .col-lg-2.col-sm-3
-                                .h6.text-body.mb-0.py-1 7:30 AM - 9:30 AM
-                            .col-sm-9.offset-lg-1
-                                .h6.text-body.mb-0.py-1 5k Banana Run Packet Pickup
-                    .border-top.py-2
-                        .row.py-md-2
-                            .col-lg-2.col-sm-3
-                                .h6.text-body.mb-0.py-1 9:30 AM - 10:30 AM
-                            .col-sm-9.offset-lg-1
-                                a(href='5k-banana-run.html').h6.text-body.mb-0.py-1 5k Banana Run
-                                .d-flex.align-items-start.py-1.mb-2
-                                    ul.list-inline.m-0
-                                        li.list-inline-item: a(href='5k-banana-run.html').btn.btn-outline-primary.btn-sm
-                                            | Register Online
-                                        li.list-inline-item
-                                            p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt] Excepteur sint occaecat cupidatat non proident #[a(href='5k-banana-run.html') Register Online]
-                    .border-top.py-2
-                        .row.py-md-2
-                            .col-lg-2.col-sm-3
-                                .h6.text-body.mb-0.py-1 12:00 PM - 8:00 PM
-                            .col-sm-9.offset-lg-1
-                                a(href='vendors.html').h6.text-body.mb-0.py-1 Vendors Open
-                                p.fs-sm.mb-2 Excepteur sint occaecat cupidatat non proident
-                    .border-top.py-2
-                        .row.py-md-2
-                            .col-lg-2.col-sm-3
-                                .h6.text-body.mb-0.py-1 12:00 PM - 8:00 PM
-                            .col-lg-10.col-sm-9
-                                .d-flex.align-items-start.py-1.mb-2
-                                    img(src='img/demo/event-landing/speakers/05.jpg' alt='Tim Brooks' width='75').rounded-circle
-                                    .ms-4(style='max-width: 420px;')
-                                        .h6.text-body.mb-2 Tim Brooks
-                                        p.fs-sm.mb-2 Excepteur sint occaecat cupidatat non proident
-                                        h3.h4.nav-heading.mb-0
-                                            a(href='#') Improve your profile visibility. Tips &amp; tricks from the field expert.
+    #aug21.container
+        .row.justify-content-center
+            .col-lg-9
+                .row
+                    .h3.text-body.mb-0.py-3 Saturday, August 21
+                .row.border-top.py-2
+                    .col-lg-2.col-sm-3
+                        .h6.text-body.mb-0.py-1 7:30 AM - 9:30 AM
+                    .col-sm-9.offset-lg-1
+                        .h4.text-body.mb-0.py-1 5k Banana Run Packet Pickup
+                        ul.list-inline.m-0
+                            li.list-inline-item
+                                p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Latrobe Memorial Stadium
+                .row.border-top.py-2
+                    .col-lg-2.col-sm-3
+                        .h6.text-body.mb-0.py-1 9:30 AM - 10:30 AM
+                    .col-sm-9.offset-lg-1
+                        a(href='5k-banana-run.html').h4.text-body.mb-0.py-1 5k Banana Run
+                        .d-flex.align-items-start.py-1.mb-2
+                            ul.list-inline.m-0
+                                li.list-inline-item: a(href='https://www.active.com/latrobe-pa/running/distance-running-races/5k-banana-run-2021', target='_blank').btn.btn-outline-primary.btn-sm
+                                    | Register Online
+                                li.list-inline-item
+                                    p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Latrobe Memorial Stadium
+                .row.border-top.py-2
+                    .col-lg-2.col-sm-3
+                        .h6.text-body.mb-0.py-1 12:00 PM - 4:00 PM
+                    .col-sm-9.offset-lg-1
+                        a(href='car-show.html').h4.text-body.mb-0.py-1 Car Show
+                        .d-flex.align-items-start.py-1.mb-2
+                            ul.list-inline.m-0
+                                li.list-inline-item: a(href='car-show.html', target='_blank').btn.btn-outline-primary.btn-sm.disabled
+                                    | Entry Form <small> - Coming soon</small>
+                                li.list-inline-item
+                                    p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Legion Keener Park
+                .row.border-top.py-2
+                    .col-lg-2.col-sm-3
+                        .h6.text-body.mb-0.py-1 12:00 PM - 8:00 PM
+                    .col-sm-9.offset-lg-1
+                        a(href='vendors.html').h4.text-body.mb-0.py-1 Vendors Open
+                        .d-flex.align-items-start.py-1.mb-2
+                            ul.list-inline.m-0
+                                li.list-inline-item: a(href='vendors.html', target='_blank').btn.btn-outline-primary.btn-sm.disabled
+                                    | Vendor Registration <small> - Coming soon</small>
+                                li.list-inline-item
+                                    p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Legion Keener Park
+                .row.border-top.py-2
+                    .col-lg-2.col-sm-3
+                        .h6.text-body.mb-0.py-1 12:00 PM - 8:00 PM
+                    .col-sm-9.offset-lg-1
+                        a(href='entertainment.html').h4.text-body.mb-0.py-1 Entertainment
+                        p.fs-sm.mb-2 Check back for the line-up of acts
+                        .d-flex.align-items-start.py-1.mb-2
+                            ul.list-inline.m-0
+                                li.list-inline-item
+                                    p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Legion Keener Park Band Stand
+                .row.border-top.py-2
+                    .col-lg-2.col-sm-3
+                        .h6.text-body.mb-0.py-1 2:00 PM - 2:30 PM
+                    .col-sm-9.offset-lg-1
+                        a(href='pie-eating-contest.html').h4.text-body.mb-0.py-1 Pie Eating Contest
+                        p.fs-sm.mb-2 Check back for the line-up of acts
+                        .d-flex.align-items-start.py-1.mb-2
+                            ul.list-inline.m-0
+                                li.list-inline-item: a(href='pie-eating-contest.html', target='_blank').btn.btn-outline-primary.btn-sm.disabled
+                                    | Contestant Regisration <small> - Coming soon</small>
+                                li.list-inline-item
+                                    p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Legion Keener Park Band Stand
+                .row.border-top.py-2
+                    .col-lg-2.col-sm-3
+                        .h6.text-body.mb-0.py-1 4:45 PM - 5:00 PM
+                    .col-sm-9.offset-lg-1
+                        .h4.text-body.mb-0.py-1 Banana Split Princess Court
+                        p.fs-sm.mb-2 Welcome to the stage the banana split royalty of 2020 and 2021.
+                        .d-flex.align-items-start.py-1.mb-2
+                            ul.list-inline.m-0
+                                li.list-inline-item
+                                    p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Legion Keener Park Band Stand
+                .row.border-top.py-2
+                    .col-lg-2.col-sm-3
+                        .h6.text-body.mb-0.py-1 6:30 PM - 8:30 PM
+                    .col-sm-9.offset-lg-1
+                        .h4.text-body.mb-0.py-1 Headlining Act
+                        p.fs-sm.mb-2 Watch the celebration #[a(href='https://fb.com/bananasplitfest', target='_blank') Facebook page] for the announcement of who will be performing!
+                        .d-flex.align-items-start.py-1.mb-2
+                            ul.list-inline.m-0
+                                li.list-inline-item
+                                    p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Legion Keener Park Band Stand
+
+
+                    //- .border-top.py-2
+                    //-     .row.py-md-2
+                    //-         .col-lg-2.col-sm-3
+                    //-             .h6.text-body.mb-0.py-1 12:00 PM - 8:00 PM
+                    //-         .col-lg-10.col-sm-9
+                    //-             .d-flex.align-items-start.py-1.mb-2
+                    //-                 img(src='img/demo/event-landing/speakers/05.jpg' alt='Tim Brooks' width='75').rounded-circle
+                    //-                 .ms-4(style='max-width: 420px;')
+                    //-                     .h6.text-body.mb-2 Tim Brooks
+                    //-                     p.fs-sm.mb-2 Excepteur sint occaecat cupidatat non proident
+                    //-                     h3.h4.nav-heading.mb-0
+                    //-                         a(href='#') Improve your profile visibility. Tips &amp; tricks from the field expert.
+
+    section.bg-dark.position-relative.py-7.mt-7
+        //- Content goes here
+        .container.position-relative.zindex-5(style='margin-top:-130px;')
+            .row.justify-content-center
+                .col-lg-10.col-md-11
+                    .bg-light.border.border-primary.border-5.rounded-3.pt-5.px-4.pb-4.p-sm-5
+                        .px-md-4
+                            h3.text-center.pb-1 August 19-21, 2022 
+                            p.text-center.pb-0.mb-0 Between bites of ice cream, mark off the dates for next year
+        .shape.shape-top.shape-slant.bg-body
+            svg(xmlns="http://www.w3.org/2000/svg", viewBox="0 0 3000 260")
+                polygon(fill="currentColor", points="0,0 0,2.4 3000,260 3000,0")
 
 
 

@@ -9,7 +9,7 @@ append config
 
 //- Navbar
 block navbar
-    include partials/navbar-solid
+    include partials/navbar-solid-shadow
 
 //- Page Content
 block content
@@ -93,8 +93,7 @@ block content
                             | Are credit/debit cards accepted?
                         p.card-text.fs-sm
                             | This is up to the individual vendor where you are making a purchase. The majority do accept cards.
-                        a(href="https://www.google.com/maps/search/ATM/@40.3116387,-79.3940146,15z/data=!4m2!2m1!6e2", target="_blank").btn.btn-outline-primary Find an ATM
-                        
+                        a(href="https://www.google.com/maps/search/ATM/@40.3116387,-79.3940146,15z/data=!4m2!2m1!6e2", target="_blank").btn.btn-outline-primary Find an ATM   
             .col-lg-4.col-sm-6.mb-grid-gutter
                 .card
                     .card-body
@@ -104,6 +103,15 @@ block content
                         p.card-text.fs-sm
                             | Watch the weather forecast and plan on wearing appropriate clothes. While there are trees in the park, you will want to pack sunscreen.
                         a(href="https://www.accuweather.com/en/us/latrobe/15650/weather-forecast/345464",target="_blank").btn.btn-outline-primary Latrobe Weather
+            .col-lg-4.col-sm-6.mb-grid-gutter
+                .card
+                    .card-body
+                        a#faq-2021-packing-list
+                        h5.card-title
+                            | Are there any restrictions or special rules at Legion Keener Park?
+                        p.card-text.fs-sm
+                            | Yes. Latrobe-GLSD Parks &amp; Recreation has rules that will be enforced throughout the event. These are in addition to our event guidelines and all applicable laws.
+                        a(href="http://www.latroberecreation.org/legionkeenerpark.html",target="_blank").btn.btn-outline-primary Park Rules
 
 
 
@@ -116,14 +124,14 @@ block content
                     h2.text-center.pb-1 Get the Inside Scoop
                     p.text-center Enter your email address to get updates on future events
                 .col-lg-6
-                    form(action="mailchimp-embedded-form-atcion-link", method="post", name="mc-embedded-subscribe-form", target="_blank", novalidate).subscription-form.validate
+                    form(action="https://bananasplitfest.us17.list-manage.com/subscribe/post?u=130529bf4626796b734d2d6aa&amp;id=dcc82d196b", method="post", name="mc-embedded-subscribe-form", target="_blank", novalidate).subscription-form.validate
                         .input-group.flex-nowrap
                             i.ai-mail.position-absolute.top-50.translate-middle-y.text-muted.fs-base.ms-3
                             input(type="email", name="EMAIL", placeholder="Your email", required).form-control.rounded-start
                             button(type="submit", name="subscribe").btn.btn-primary Subscribe
                         // real people should not fill this in and expect good things - do not remove this or risk form bot signups
                         div(style="position: absolute; left: -5000px;" aria-hidden="true")
-                            input(type="text", name="mailchimp-embedded-form-antispam-name-attribute", tabindex="-1").subscription-form-antispam
+                            input(type="text", name="b_130529bf4626796b734d2d6aa_dcc82d196b", tabindex="-1").subscription-form-antispam
                         .subscription-status
 
 

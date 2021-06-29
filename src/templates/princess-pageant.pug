@@ -9,7 +9,7 @@ append config
 
 //- Navbar
 block navbar
-  include partials/navbar-solid
+  include partials/navbar-solid-shadow
 
 //- Page Content
 block content
@@ -21,7 +21,7 @@ block content
         .col-lg-4.sidebar.order-lg-2
           .px-sm-4.pt-6.py-lg-6.position-relative.zindex-5
             h1.h2 Princess Pageant
-            a(href='#', target="_blank").btn.btn-outline-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block Paper Form
+            a(href='#', target="_blank").disabled.btn.btn-outline-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block Paper Form <small>- Coming Soon!</small>
             a(href='#gallery' data-scroll).btn.btn-translucent-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block.d-lg-none Gallery
             .d-sm-flex.align-items-center.pt-3.pb-2.mb-5.border-bottom.fs-sm
 
@@ -46,19 +46,15 @@ block content
             h3.h5 Pageant Information
             p.fs-sm.mb-4.pb-2 Open to girls ages 9 - 11 who live inside the boundaries of Derry Area, Greater Latrobe, and Ligonier Valley school districts.
             h3.h5 Pageant Contact
-            p.fs-sm.mb-4.pb-2 Questions about the pageant can be directe to the pageant chair using the email address princess@bananasplitfest.com
+            p.fs-sm.mb-4.pb-2 Questions about the pageant can be directe to the pageant chair using the email address #[a(href="mailto:princess@bananasplitfest.com") princess@bananasplitfest.com]
             h3.h5 Required Activities
             p.fs-sm.mb-4.pb-2 Girls participating in the pageant will need to attend two practices prior to the actual pageant. Girls selected to serve on the Banana Split Princess Court will have additional responsibilities throughout the year.
             h3.h5 Sponsors
             ul.list-unstyled.fs-md.mb-4.pb-2
               li.mb-2
-                | State Farm Agent Sarah Crispin-Thomas
-              li.mb-2
-                | GLSD - Latrobe Parks &amp; Recreation
-              li.mb-2
                 | GLLV Chamber of Commerce
-              li
-                | Zone 6
+              li.mb-2
+                | Valley Dairy Restaurants
         
 
         // Project gallery (List)

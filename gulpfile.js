@@ -143,7 +143,7 @@ gulp.task('pug', () =>
     };
 
     emitty.scan(global.emittyChangedFile).then(() => {
-      gulp.src(['*.pug'], sourceOptions)
+      gulp.src(['**/*.pug', '!helpers/**', '!partials/**'], sourceOptions)
         .pipe(gulpif(global.watch, emitty.filter(global.emittyChangedFile)))
         .pipe(pug({ pretty: true }))
         .pipe(gulp.dest(path.dist))
