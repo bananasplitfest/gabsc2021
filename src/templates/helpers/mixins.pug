@@ -88,3 +88,21 @@ mixin star-rating(number)
         i.sr-star.ai-star
         i.sr-star.ai-star
         i.sr-star.ai-star
+
+// Google Analytics
+mixin ga(id)
+    //- Pass your ga id, as attribute, eg. +ga('yourid12345')
+    script.
+        window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+        ga('create', '!{id}', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+    script(src='https://www.google-analytics.com/analytics.js')
+
+// Facebook Pixel
+mixin fb(id)
+    //- Pass in your Facebook pixel id as attribute, eg. +fb('yourid12345')
+    script.
+        !function(e,n,t,o,c,s,a){e.fbq||(c=e.fbq=function(){c.callMethod?c.callMethod.apply(c,arguments):c.queue.push(arguments)},e._fbq||(e._fbq=c),c.push=c,c.loaded=!0,c.version="2.0",c.queue=[],(s=n.createElement(t)).async=!0,s.src="https://connect.facebook.net/en_US/fbevents.js",(a=n.getElementsByTagName(t)[0]).parentNode.insertBefore(s,a))}(window,document,"script");
+        fbq("init", "!{id}");
+        fbq("track", "PageView");
+    noscript
+        img(height="1", width="1", style="display:none;", src!="https://www.facebook.com/tr?ev=PageView&noscript=1&id="+id)
