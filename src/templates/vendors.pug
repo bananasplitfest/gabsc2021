@@ -4,8 +4,8 @@ extends partials/layout
 append config
   - var vendorStyles = [ 'tiny-slider/dist/tiny-slider.css', 'lightgallery.js/dist/css/lightgallery.min.css']
   - var vendorScripts = ['tiny-slider/dist/min/tiny-slider.js', 'lightgallery.js/dist/js/lightgallery.min.js', 'lg-fullscreen.js/dist/lg-fullscreen.min.js', 'lg-zoom.js/dist/lg-zoom.min.js']
-  - var parentMenu = 'Activities'
-  - var pageTitle = '5k Banana Run'
+  - var parentMenu = 'Vendors'
+  - var pageTitle = 'Vendors'
 
 //- Navbar
 block navbar
@@ -20,8 +20,12 @@ block content
         // Project description
         .col-lg-4.sidebar.order-lg-2
           .px-sm-4.pt-6.py-lg-6.position-relative.zindex-5
-            h1.h2 5k Banana Run
-            a(href='https://www.active.com/latrobe-pa/running/distance-running-races/5k-banana-run-2021', target="_blank").btn.btn-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block Register Online
+            h1.h2 Vendors
+            a(href='#', target="_blank").disabled.btn.btn-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block Register Online <small>- Coming soon</small>
+            a(href='/pdf/2021-vendor-application.pdf', target="_blank").btn.btn-outline-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block Paper Form
+            a(href='/pdf/2021-06-30-vendor-guidelines.pdf', target="_blank").btn.btn-outline-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block Vendor Guidelines
+            a(href='#', target="_blank").disabled.btn.btn-outline-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block Alcohol Addendum <small>- Coming soon</small>
+            a(href='#', target="_blank").disabled.btn.btn-outline-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block Food Vendor Addendum <small>- Coming soon</small>
             a(href='#gallery' data-scroll).btn.btn-translucent-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block.d-lg-none Gallery
             .d-sm-flex.align-items-center.pt-3.pb-2.mb-5.border-bottom.fs-sm
 
@@ -39,34 +43,30 @@ block content
                 span.fw-medium.text-nav.ms-2 August 21, 2021
               li.mb-2
                 | Time:
-                span.fw-medium.text-nav.ms-2 Race starts at 9AM
+                span.fw-medium.text-nav.ms-2 Noon - 8PM
               li.mb-2
                 | Location:
-                span.fw-medium.text-nav.ms-2 Latrobe Memorial Stadium
-              li
-                | Cost:
-                span.fw-medium.text-nav.ms-2 $20 ($25 after August 6)
-            h3.h5 Race Information
-            p.fs-sm.mb-4.pb-2 The 5k Banana Run course has participants touring through historic downtown Latrobe. Because of some upgrades and repairs to the roads and bridges in town, the route will be modified for 2021. Racers can enter into the runner or walker category with prizes being awarded for the top male/female finishers overall and in each category by age bracket.
-            h3.h5 Age Brackets
-            p.fs-sm.mb-4.pb-2 Under 10, 10-19, 20-29, 30-39, 40-49, 50-59, 60+
-            h3.h5 Sponsors
+                span.fw-medium.text-nav.ms-2 Legion Keener Park
+            h3.h4 Be a Vendor
+            p.fs-sm.mb-4.pb-2 We're accepting vendors for this year's event through the month of July. Download and send in an application or complete the online form. Spaces are available on a first-come, first-serve basis. Questions can be sent to #[a(href="mailto:vendors@bananasplitfest.com") vendors@bananasplitfest.com]
+            h3.h5 Categories
             ul.list-unstyled.fs-md.mb-4.pb-2
               li.mb-2
-                | GLSD - Latrobe Parks &amp; Recreation
+                | General Vendor
               li.mb-2
-                | GLLV Chamber of Commerce
+                | Food or Alcohol Vendor
               li.mb-2
-                | Valley Dairy Restaurants
+                | Marketplace Vendor
+            p.fs-sm.mb-4.pb-2 Domestic, Foreign, Special Interest, Antique
+
+
         
 
         // Project gallery (List)
         #gallery.col-lg-8.content.pb-lg-4.order-lg-1
           .gallery.pt-5.pb-4.py-lg-5
-            a(href='img/5k-banana-run/awards-ceremony.jpg').gallery-item.rounded-3.mb-grid-gutter
-              img(src='img/5k-banana-run/awards-ceremony-thumb.jpg' alt='Male finisher receiving award')
-            a(href='img/5k-banana-run/racers-banana-costumes.jpg').gallery-item.rounded-3.mb-grid-gutter
-              img(src='img/5k-banana-run/racers-banana-costumes-thumb.jpg' alt='Female racers in banana costumes')
+            a(href='img/vendors/vendors-blue.jpg').gallery-item.rounded-3.mb-grid-gutter
+              img(src='img/vendors/vendor-artist.jpg' alt='Artist in his vendor booth')
 
 
 
