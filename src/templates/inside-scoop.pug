@@ -1,0 +1,56 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var parentMenu = 'Pages'
+  - var pageTitle = 'Get the Inside Scoop'
+  - var isPageFullHeight = true
+
+
+//- Page Content
+block content
+
+  .row.g-0.d-lg-flex.min-vh-100(style='flex: 1 0 auto;')
+
+    // Left half: Background image + Counter + Footer
+    .col-lg-6.d-flex.flex-column.pt-4.pb-3.px-4.position-relative.bg-size-cover.bg-size-cover(style='flex: 1 0 auto; background-image: url(img/inside-scoop/kids-enjoy-split.jpg);')
+      span.position-absolute.top-0.start-0.w-100.h-100.bg-gradient.opacity-90
+      .position-relative.zindex-5.text-center.mb-4.mb-lg-0
+        a(href='index.html').d-inline-block
+          img(src='img/logo/logo.svg' alt='Banana Split Celebration logo' width='200')
+      .position-relative.zindex-5.mx-auto.my-auto.text-center(style='max-width: 500px;')
+        h1.mb-3.text-light Who's ready for ice cream and good music?
+        p.mb-grid-gutter.text-light Provide us your email address and find out who will be performing at this year's celebration before anyone else!
+        a(href='/schedule.html').btn.btn-outline-light.btn-sm.ms-auto.mx-3.mb-3.d-inline-block Activities Schedule
+      .position-relative.zindex-5.text-center.py-4.py-lg-0
+        .pt-4.pb-3
+          a(href='https://fb.com/bananasplitfest').btn-social.bs-light.bs-facebook.mx-2.mb-2
+            i.ai-facebook
+          a(href='https://instagram.com/bananasplitfest').btn-social.bs-light.bs-instagram.mx-2.mb-2
+            i.ai-instagram
+      .shape.shape-right.bg-body.d-none.d-lg-block
+        svg(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 228.4 2500')
+          path(fill='currentColor' d='M228.4,0v2500H0c134.9-413.7,202.4-830.4,202.4-1250S134.9,413.7,0,0H228.4z')
+      .shape.shape-bottom.shape-curve.bg-body.d-lg-none
+        svg(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3000 185.4')
+          path(fill='currentColor' d='M3000,0v185.4H0V0c496.4,115.6,996.4,173.4,1500,173.4S2503.6,115.6,3000,0z')
+    
+    // Right half: Notification form
+    .col-lg-6.py-5.pb-lg-6.px-4.align-self-center
+      .mx-auto.text-center.py-2.py-lg-0.mt-lg-n6(style='max-width: 500px;')
+        h2.h1.mb-3 Get the Inside Scoop
+        p.mb-grid-gutter Let me know all the good things going on at this year's event. Here is my email address:
+        //- form(action="https://bananasplitfest.us17.list-manage.com/subscribe/post?u=130529bf4626796b734d2d6aa&amp;id=dcc82d196b", method="post", name="mc-embedded-subscribe-form", target="_blank", novalidate).d-flex.align-items-start.validate
+        //-   .me-2.me-sm-3.w-100
+        //-     input(type='email' placeholder='Email address' required).form-control
+        //-     .invalid-tooltip Please provide a valid email address!
+        //-   button(type='submit').btn.btn-primary Notify Me
+        form(action="https://bananasplitfest.us17.list-manage.com/subscribe/post?u=130529bf4626796b734d2d6aa&amp;id=dcc82d196b", method="post", name="mc-embedded-subscribe-form", target="_blank", novalidate).subscription-form.validate
+          .input-group.flex-nowrap
+            i.ai-mail.position-absolute.top-50.translate-middle-y.text-muted.fs-base.ms-3
+            input(type="email", name="EMAIL", placeholder="Your email", required).form-control.rounded-start
+            button(type="submit", name="subscribe").btn.btn-primary Subscribe
+          //- // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+          div(style="position: absolute; left: -5000px;" aria-hidden="true")
+            input(type="text", name="b_130529bf4626796b734d2d6aa_dcc82d196b", tabindex="-1").subscription-form-antispam
+          .subscription-status
