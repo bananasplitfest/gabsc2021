@@ -4,8 +4,8 @@ extends partials/layout
 append config
     - var vendorStyles = ['lightgallery.js/dist/css/lightgallery.min.css']
     - var vendorScripts = ['jarallax/dist/jarallax.min.js', 'jarallax/dist/jarallax-element.min.js', 'lightgallery.js/dist/js/lightgallery.min.js', 'lg-fullscreen.js/dist/lg-fullscreen.min.js', 'lg-zoom.js/dist/lg-zoom.min.js', 'lg-video.js/dist/lg-video.min.js']
-    - var parentMenu = 'Demos'
-    - var pageTitle = 'Event Landing'
+    - var parentMenu = 'Schedule'
+    - var pageTitle = 'Schedule'
 
 //- Navbar
 block navbar
@@ -14,171 +14,165 @@ block navbar
 //- Page Content
 block content
 
-    .container
-        .row.justify-content-center
-            .col-lg-9
-                .mt-lg-7.mt-sm-3(style='max-width: 38rem;')
-                    h1 2021 Schedule
-                    p.fs-4 With more fun and activities to come
+    .container.mt-lg-7.mt-sm-3
+        h1 2021 Schedule
+        p.fs-4 With more fun and activities to come
 
-    
-    #tbd.container
-        .row.justify-content-center
-            .col-lg-9
-                .row
-                    .h3.text-body.mb-0.py-3 Sunday, August 15
-                .row.border-top.py-md-2
-                    .col-lg-2.col-sm-3
-                        .text-body.mb-0.py-1 4:00&nbsp;PM - 5:00&nbsp;PM
-                    .col-sm-9.offset-lg-1
-                        a(href='princess-pageant.html').h4.text-body.mb-0.py-1 Princess Pageant
-                        .d-flex.align-items-start.py-1.mb-2
-                            ul.list-inline.m-0
-                                li.list-inline-item
-                                    p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Latrobe Elementary School
-    
-    #aug20.container
-        .row.justify-content-center
-            .col-lg-9
-                .row
-                    .h3.text-body.mb-0.py-3 Friday, August 20
-                .row.border-top.py-2
-                    .col-lg-2.col-sm-3
-                        .text-body.mb-0.py-1 11:00&nbsp;AM - 3:00&nbsp;PM
-                    .col-sm-9.offset-lg-1
-                        a(href='https://www.latrobeartcenter.org/events-all/2021-downtown-banana', target='_blank').h4.text-body.mb-0.py-1 Downtown Latrobe Banana Split Celebration 
-                        .d-flex.align-items-start.py-1.mb-2
-                            ul.list-inline.m-0
-                                li.list-inline-item
-                                    p.fs-sm.mb-2 "Banana Split Open"
-                                li.list-inline-item
-                                    p.fs-sm.mb-2 Comedy and Magic Show
-                                li.list-inline-item
-                                    p.fs-sm.mb-2 Tracy's Song &amp; Dance Show
-                                li.list-inline-item
-                                    p.fs-sm.mb-2 Arts &amp; Crafts
-                                li.list-inline-item
-                                    p.fs-sm.mb-2 Street Performers
-                                li.list-inline-item
-                                    p.fs-sm.mb-2 Music
-                                li.list-inline-item
-                                    p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Various locations and shops throughout Downtown Latrobe
-                .row.border-top.py-2
-                    .col-lg-2.col-sm-3
-                        .text-body.mb-0.py-1 6:00&nbsp;PM - 9:00&nbsp;PM
-                    .col-sm-9.offset-lg-1
-                        a(href='https://www.latrobeartcenter.org/events-all/2021-yellow-tie-gala', target='_blank').h4.text-body.mb-0.py-1 Yellow Tie Gala
-                        .d-flex.align-items-start.py-1.mb-2
-                            ul.list-inline.m-0
-                                li.list-inline-item: a(href='https://www.latrobeartcenter.org/events-all/2021-yellow-tie-gala', target='_blank').btn.btn-outline-primary.btn-sm
-                                    | Tickets
-                                li.list-inline-item
-                                    p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Latrobe Art Center
+        #aug15.container.my-3
+          .h3.text-body.mb-0.pb-3 Sunday, August 15
+          .border-top.py-4
+            .row.py-md-2
+              .col-lg-2.col-sm-3
+                .text-body 4:00&nbsp;PM - 5:00&nbsp;PM
+              .col-lg-10.col-sm-9
+                .d-flex.align-items-start
+                  img(src='img/schedule/princess-icon.jpg' alt='Princess Pageant' width='75').rounded-circle
+                  .ms-4(style='max-width: 580px;')
+                    a(href='princess-pageant.html').h4.text-body Princess Pageant
+                    ul.list-inline.my-2
+                        li.list-inline-item
+                            p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Latrobe Elementary School
 
-    #aug21.container
-        .row.justify-content-center
-            .col-lg-9
-                .row
-                    .h3.text-body.mb-0.py-3 Saturday, August 21
-                .row.border-top.py-2
-                    .col-lg-2.col-sm-3
-                        .text-body.mb-0.py-1 7:30&nbsp;AM - 9:30&nbsp;AM
-                    .col-sm-9.offset-lg-1
-                        .h4.text-body.mb-0.py-1 5k Banana Run Packet Pickup
-                        ul.list-inline.m-0
+        #aug20.container.my-3
+          .h3.text-body.mb-0.pb-3 Friday, August 20
+          .border-top.py-4
+            .row.py-md-2
+              .col-lg-2.col-sm-3
+                .text-body 11:00&nbsp;AM - 3:00&nbsp;PM
+              .col-lg-10.col-sm-9
+                .d-flex.align-items-start
+                    //- img(src='img/schedule/princess-icon.jpg' alt='Princess Pageant' width='75').rounded-circle
+                    .ms-4(style='max-width: 580px;')
+                        a(href='https://www.latrobeartcenter.org/events-all/2021-downtown-banana', target='_blank').h5.text-body Downtown Latrobe Banana Split Celebration
+                        ul.list-inline.my-2
                             li.list-inline-item
-                                p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Latrobe Memorial Stadium
-                .row.border-top.py-2
-                    .col-lg-2.col-sm-3
-                        .text-body.mb-0.py-1 9:30&nbsp;AM - 10:30&nbsp;AM
-                    .col-sm-9.offset-lg-1
-                        a(href='5k-banana-run.html').h4.text-body.mb-0.py-1 5k Banana Run
-                        .d-flex.align-items-start.py-1.mb-2
-                            ul.list-inline.m-0
-                                li.list-inline-item: a(href='https://www.active.com/latrobe-pa/running/distance-running-races/5k-banana-run-2021', target='_blank').btn.btn-outline-primary.btn-sm
-                                    | Register Online
-                                li.list-inline-item
-                                    p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Latrobe Memorial Stadium
-                .row.border-top.py-2
-                    .col-lg-2.col-sm-3
-                        .text-body.mb-0.py-1 12:00&nbsp;PM - 4:00&nbsp;PM
-                    .col-sm-9.offset-lg-1
+                                p.fs-sm.mb-2 "Banana Split Open"
+                            li.list-inline-item
+                                p.fs-sm.mb-2 Comedy and Magic Show
+                            li.list-inline-item
+                                p.fs-sm.mb-2 Tracy's Song &amp; Dance Show
+                            li.list-inline-item
+                                p.fs-sm.mb-2 Arts &amp; Crafts
+                            li.list-inline-item
+                                p.fs-sm.mb-2 Street Performers
+                            li.list-inline-item
+                                p.fs-sm.mb-2 Music
+                            li.list-inline-item
+                                p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Various locations and shops throughout Downtown Latrobe
+          .border-top.py-4
+            .row.py-md-2
+              .col-lg-2.col-sm-3
+                .text-body 6:00&nbsp;PM - 9:00&nbsp;PM
+              .col-lg-10.col-sm-9
+                .d-flex.align-items-start
+                    img(src='img/schedule/yellow-tie.jpg' alt='Yellow Tie Gala' width='75').rounded-circle
+                    .ms-4(style='max-width: 580px;')
+                        a(href='https://www.latrobeartcenter.org/events-all/2021-yellow-tie-gala', target='_blank').h4.text-body Yellow Tie Gala
+                        ul.list-inline.my-2
+                            li.list-inline-item: a(href='https://www.latrobeartcenter.org/events-all/2021-yellow-tie-gala', target='_blank').btn.btn-outline-primary.btn-sm
+                                    | Tickets
+                            li.list-inline-item
+                                p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Latrobe Art Center
+
+        #aug15.container.my-3
+          .h3.text-body.mb-0.pb-3 Saturday, August 21
+          .border-top.py-4
+            .row.py-md-2
+              .col-lg-2.col-sm-3
+                .text-body 7:30&nbsp;AM - 9:30&nbsp;AM
+              .col-lg-10.col-sm-9
+                .d-flex.align-items-start
+                  //- img(src='img/schedule/princess-icon.jpg' alt='Princess Pageant' width='75').rounded-circle
+                  .ms-4(style='max-width: 580px;')
+                    .h6.text-body 5k Banana Run Packet Pickup
+                    ul.list-inline.my-2
+                        li.list-inline-item
+                            p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Latrobe Memorial Stadium
+          .border-top.py-4
+            .row.py-md-2
+              .col-lg-2.col-sm-3
+                .text-body 7:30&nbsp;AM - 9:30&nbsp;AM
+              .col-lg-10.col-sm-9
+                .d-flex.align-items-start
+                  img(src='img/schedule/5k-run.png' alt='5k Banana run' width='75').rounded-circle
+                  .ms-4(style='max-width: 580px;')
+                    a(href='5k-banana-run.html').h4.text-body 5k Banana Run
+                    ul.list-inline.my-2
+                        li.list-inline-item: a(href='https://www.active.com/latrobe-pa/running/distance-running-races/5k-banana-run-2021', target='_blank').btn.btn-outline-primary.btn-sm
+                            | Register Online
+                        li.list-inline-item
+                            p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Latrobe Memorial Stadium
+          .border-top.py-4
+            .row.py-md-2
+              .col-lg-2.col-sm-3
+                .text-body 12:00&nbsp;PM - 4:00&nbsp;PM
+              .col-lg-10.col-sm-9
+                .d-flex.align-items-start
+                    img(src='img/schedule/car-show.jpg' alt='Blue car' width='75').rounded-circle
+                    .ms-4(style='max-width: 580px;')
                         .small.text-body.my-0.py-0 State Farm Agent Sarah Crispin-Thomas
-                        a(href='car-show.html').h4.text-body.mb-0.py-1 Car Show
-                        .d-flex.align-items-start.py-1.mb-2
-                            ul.list-inline.m-0
-                                li.list-inline-item: a(href='https://dashboard.bananasplitfest.com/car-show-registration/', target="_blank").btn.btn-outline-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block Register Online
-                                li.list-inline-item: a(href='/pdf/2021-car-show-reg.pdf', target="_blank").btn.btn-outline-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block Paper Form
-                                li.list-inline-item
-                                    p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Legion Keener Park
-                .row.border-top.py-2
-                    .col-lg-2.col-sm-3
-                        .text-body.mb-0.py-1 12:00&nbsp;PM - 8:00&nbsp;PM
-                    .col-sm-9.offset-lg-1
-                        .h4.text-body.mb-0.py-1 Vendors Open
-                        .d-flex.align-items-start.py-1.mb-2
-                            ul.list-inline.m-0
-                                li.list-inline-item: a(href='https://dashboard.bananasplitfest.com/vendor/', target='_blank').btn.btn-outline-primary.btn-sm
-                                    | Vendor Registration <small> - Available online</small>
-                                li.list-inline-item
-                                    p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Legion Keener Park
-                .row.border-top.py-2
-                    .col-lg-2.col-sm-3
-                        .text-body.mb-0.py-1 12:00&nbsp;PM - 8:00&nbsp;PM
-                    .col-sm-9.offset-lg-1
-                        a(href='entertainment.html').h4.text-body.mb-0.py-1 Entertainment
-                        p.fs-sm.mb-2 Check back for the line-up of acts
-                        .d-flex.align-items-start.py-1.mb-2
-                            ul.list-inline.m-0
-                                li.list-inline-item
-                                    p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Legion Keener Park Band Stand
-                .row.border-top.py-2
-                    .col-lg-2.col-sm-3
-                        .text-body.mb-0.py-1 2:00&nbsp;PM - 2:30&nbsp;PM
-                    .col-sm-9.offset-lg-1
-                        .small.text-body.my-0.py-0 Eat’n Park
-                        a(href='pie-eating-contest.html').h4.text-body.mb-0.py-0 Pie Eating Contest
-                        .small.text-body.my-0.pb-1 presented by Wildcat Championship Belts
-                        .d-flex.align-items-start.py-1.mb-2
-                            ul.list-inline.m-0
-                                li.list-inline-item: a(href='pie-eating-contest.html', target='_blank').btn.btn-outline-primary.btn-sm.disabled
-                                    | Contestant Regisration <small> - Coming soon</small>
+                        a(href='car-show.html').h4.text-body Car Show
+                        ul.list-inline.my-2
+                            li.list-inline-item: a(href='https://dashboard.bananasplitfest.com/car-show-registration/', target="_blank").btn.btn-outline-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block 
+                                | Register Online
+                            li.list-inline-item: a(href='/pdf/2021-car-show-reg.pdf', target="_blank").btn.btn-outline-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block 
+                                | Paper Form
+                            li.list-inline-item
+                                p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Legion Keener Park
+          .border-top.py-4
+            .row.py-md-2
+              .col-lg-2.col-sm-3
+                .text-body 12:00&nbsp;PM - 8:00&nbsp;PM
+              .col-lg-10.col-sm-9
+                .d-flex.align-items-start
+                    //- img(src='img/schedule/princess-icon.jpg' alt='Princess Pageant' width='75').rounded-circle
+                    .ms-4(style='max-width: 580px;')
+                        .h5.text-body Vendors Open
+                        ul.list-inline.my-2
+                            li.list-inline-item
+                                p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Legion Keener Park
+          .border-top.py-4
+            .row.py-md-2
+                .col-lg-2.col-sm-3
+                    .text-body 2:00&nbsp;PM - 2:30&nbsp;PM
+                .col-lg-10.col-sm-9
+                    .d-flex.align-items-start
+                        //- img(src='img/schedule/princess-icon.jpg' alt='Princess Pageant' width='75').rounded-circle
+                        .ms-4(style='max-width: 580px;')
+                            .small.text-body.my-0.py-0 Eat’n Park
+                            .h5.text-body.pb-0.mb-0 Pie Eating Contest
+                            .small.text-body.my-0.pb-1 presented by Wildcat Championship Belts
+                            ul.list-inline.my-2
                                 li.list-inline-item
                                     p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Legion Keener Park Band Stand
-                .row.border-top.py-2
-                    .col-lg-2.col-sm-3
-                        .text-body.mb-0.py-1 4:45&nbsp;PM - 5:00&nbsp;PM
-                    .col-sm-9.offset-lg-1
-                        .h4.text-body.mb-0.py-1 Banana Split Princess Court
-                        p.fs-sm.mb-2 Welcome to the stage the banana split royalty of 2020 and 2021.
-                        .d-flex.align-items-start.py-1.mb-2
-                            ul.list-inline.m-0
+          .border-top.py-4
+            .row.py-md-2
+                .col-lg-2.col-sm-3
+                    .text-body 2:00&nbsp;PM - 2:30&nbsp;PM
+                .col-lg-10.col-sm-9
+                    .d-flex.align-items-start
+                        img(src='img/schedule/princess-icon.jpg' alt='Princess Pageant' width='75').rounded-circle
+                        .ms-4(style='max-width: 580px;')
+                            .h5.text-body.pb-0.mb-0 Banana Split Princess Court
+                            p.fs-sm.mb-2 Welcome to the stage the banana split royalty of 2020 and 2021.
+                            ul.list-inline.my-2
                                 li.list-inline-item
                                     p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Legion Keener Park Band Stand
-                .row.border-top.py-2
-                    .col-lg-2.col-sm-3
-                        .text-body.mb-0.py-1 6:30&nbsp;PM - 8:30&nbsp;PM
-                    .col-sm-9.offset-lg-1
-                        .h4.text-body.mb-0.py-1 Headlining Act
-                        p.fs-sm.mb-2 Watch the celebration #[a(href='https://fb.com/bananasplitfest', target='_blank') Facebook page] for the announcement of who will be performing!
-                        .d-flex.align-items-start.py-1.mb-2
-                            ul.list-inline.m-0
+          .border-top.py-4
+            .row.py-md-2
+                .col-lg-2.col-sm-3
+                    .text-body 6:30&nbsp;PM - 8:00&nbsp;PM
+                .col-lg-10.col-sm-9
+                    .d-flex.align-items-start
+                        //- img(src='img/schedule/princess-icon.jpg' alt='Princess Pageant' width='75').rounded-circle
+                        .ms-4(style='max-width: 580px;')
+                            .text-uppercase.small.text-body.my-0.py-0 Headlining performance
+                            .h2.text-body.pb-0.mb-0 In the Sticks
+                            p.fs-sm.mb-2 Country and classic rock band <strong>In the Sticks</strong> performs your favorite songs from artists like Miranda Lambert, Zac Brown, Reba and Hank, to AC/DC, Zeppelin, Skynyrd, and Heart from the band stand in Legion Keener Park.
+                            ul.list-inline.my-2
                                 li.list-inline-item
                                     p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Legion Keener Park Band Stand
 
-
-                    //- .border-top.py-2
-                    //-     .row.py-md-2
-                    //-         .col-lg-2.col-sm-3
-                    //-             .text-body.mb-0.py-1 12:00&nbsp;PM - 8:00&nbsp;PM
-                    //-         .col-lg-10.col-sm-9
-                    //-             .d-flex.align-items-start.py-1.mb-2
-                    //-                 img(src='img/demo/event-landing/speakers/05.jpg' alt='Tim Brooks' width='75').rounded-circle
-                    //-                 .ms-4(style='max-width: 420px;')
-                    //-                     .text-body.mb-2 Tim Brooks
-                    //-                     p.fs-sm.mb-2 Excepteur sint occaecat cupidatat non proident
-                    //-                     h3.h4.nav-heading.mb-0
-                    //-                         a(href='#') Improve your profile visibility. Tips &amp; tricks from the field expert.
 
     section.bg-dark.position-relative.py-7.mt-7
         //- Content goes here
