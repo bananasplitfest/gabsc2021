@@ -10,8 +10,7 @@ ul.navbar-nav
         a(href='car-show.html').dropdown-item Car Show
         a(href='pie-eating-contest.html').dropdown-item Pie Eating Contest
         a(href='princess-pageant.html').dropdown-item Princess Pageant
-        a(href='https://www.latrobeartcenter.org/events-all/2021-yellow-tie-gala', target="_blank").dropdown-item Yellow Tie Gala
-        a(href='https://www.latrobeartcenter.org/events-all/2021-downtown-banana', target="blank").dropdown-item Downtown Banana <small>on Friday, 8/20</small>
+        a(href='https://www.latrobeartcenter.org/events-all/2022-yellow-tie-gala', target="_blank").dropdown-item Yellow Tie Gala
   li()&attributes(parentMenu === 'Entertainment' ? {'class': 'nav-item active'} : {'class': 'nav-item'})
     a(href='entertainment.html').nav-link Entertainment
   
@@ -28,14 +27,14 @@ ul.navbar-nav
   //-   a(href='vendors.html').nav-link Vendors
 
 
-  //- li()&attributes(parentMenu === 'Vendors' ? {'class': 'nav-item dropdown dropdown-mega active'} : {'class': 'nav-item dropdown dropdown-mega'})
-  //-   a(href='#' data-bs-toggle='dropdown').nav-link.dropdown-toggle Vendors
-  //-   .dropdown-menu
-  //-     a(href='#' style='background-image: url(img/menu/vendor-artist-thumb.jpg);').dropdown-column.dropdown-column-img.bg-secondary
-  //-     .dropdown-column
-  //-       h5.dropdown-header Vendor Information
-  //-       a(href='vendors.html').dropdown-item Application
-  //-       a(href='vendors.html').dropdown-item Guidelines
+  li()&attributes(parentMenu === 'Vendors' ? {'class': 'nav-item dropdown dropdown-mega active'} : {'class': 'nav-item dropdown dropdown-mega'})
+    a(href='#' data-bs-toggle='dropdown').nav-link.dropdown-toggle Vendors
+    .dropdown-menu
+      a(href='#' style='background-image: url(img/menu/vendor-artist-thumb.jpg);').dropdown-column.dropdown-column-img.bg-secondary
+      .dropdown-column
+        h5.dropdown-header Vendor Information
+        a(href='vendors.html').dropdown-item Application
+        a(href='vendors.html').dropdown-item Guidelines
         
   li()&attributes(parentMenu === 'Attend' ? {'class': 'nav-item dropdown dropdown-mega active'} : {'class': 'nav-item dropdown dropdown-mega'})
     a(href='#' data-bs-toggle='dropdown').nav-link.dropdown-toggle Attend
@@ -45,7 +44,6 @@ ul.navbar-nav
         h5.dropdown-header Attend
         a(href='attend.html').dropdown-item Getting to the Event
         a(href='attend.html').dropdown-item Parking
-        a(href='attend.html').dropdown-item Pet policy
         a(href='attend.html').dropdown-item What to bring
   li()&attributes(parentMenu === 'History' ? {'class': 'nav-item dropdown dropdown-mega active'} : {'class': 'nav-item dropdown dropdown-mega'})
     a(href='#' data-bs-toggle='dropdown').nav-link.dropdown-toggle History

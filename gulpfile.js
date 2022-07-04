@@ -3,7 +3,7 @@ const gulp = require('gulp'),
       gulpif = require('gulp-if'),
       del = require('del'),
       rename = require('gulp-rename'),
-      sass = require('gulp-sass'),
+      sass = require('gulp-sass')(require('sass')),
       pug = require('gulp-pug'),
       autoprefixer = require('gulp-autoprefixer'),
       sourcemaps = require('gulp-sourcemaps'),
@@ -14,7 +14,6 @@ const gulp = require('gulp'),
       uglify = require('gulp-uglify'),
       packageJSON = require('./package.json'),
       watch = require('gulp-watch');
-
 
 // Define reusable paths
 
