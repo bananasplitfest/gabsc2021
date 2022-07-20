@@ -2,8 +2,8 @@ extends partials/layout
 
 //- Override default config variables
 append config
-  - var vendorStyles = [ 'tiny-slider/dist/tiny-slider.css', 'lightgallery.js/dist/css/lightgallery.min.css']
-  - var vendorScripts = ['tiny-slider/dist/min/tiny-slider.js', 'lightgallery.js/dist/js/lightgallery.min.js', 'lg-fullscreen.js/dist/lg-fullscreen.min.js', 'lg-zoom.js/dist/lg-zoom.min.js']
+  - var vendorStyles = [ 'tiny-slider/dist/tiny-slider.css', 'lightgallery.js/dist/css/lightgallery.min.css', 'add-to-calendar-button/assets/css/atcb.min.css']
+  - var vendorScripts = ['tiny-slider/dist/min/tiny-slider.js', 'lightgallery.js/dist/js/lightgallery.min.js', 'lg-fullscreen.js/dist/lg-fullscreen.min.js', 'lg-zoom.js/dist/lg-zoom.min.js', 'add-to-calendar-button/assets/js/atcb.min.js']
   - var parentMenu = 'Activities'
   - var pageTitle = 'Blood Drive'
 
@@ -22,6 +22,29 @@ block content
           .px-sm-4.pt-6.py-lg-6.position-relative.zindex-5
             h1.h2 Blood Drive
             a(href='https://www.redcrossblood.org/give.html/drive-results?zipSponsor=bananasplit', target="_blank").btn.btn-outline-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block Register to Donate
+            btn.btn.btn-translucent-dark.btn-sm.ms-auto.mx-3.mb-3.d-inline-block#atcb Add to Calendar
+            script.
+              const config = {
+                name: "Banana Split Blood Drive",
+                description: "Donate life saving blood with the American Red Cross:<br>→ [url]https://www.redcrossblood.org/give.html/drive-results?zipSponsor=bananasplit[/url]",
+                startDate: "2022-08-19",
+                startTime: "11:00:00",
+                endDate: "2022-08-19",
+                endTime: "16:00:00",
+                timeZone: "America/New_York",
+                location: "130 Depot St, Latrobe, PA 15650",
+                trigger: "click",
+                options: [
+                  "Google",
+                  "iCal",
+                  "Outlook.com",
+                  "Yahoo"
+                ],
+                iCalFileName: "Blood-Drive",
+              };
+              const button = document.querySelector('#atcb');
+              button.addEventListener('click', () => atcb_action(config, button));
+
             a(href='#gallery' data-scroll).btn.btn-translucent-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block.d-lg-none Gallery
             .d-sm-flex.align-items-center.pt-3.pb-2.mb-5.border-bottom.fs-sm
 
@@ -67,8 +90,6 @@ block content
           .gallery.pt-5.pb-4.py-lg-5
             a(href='img/blood-drive/all-blood-types-needed.png').gallery-item.rounded-3.mb-grid-gutter
               img(src='img/blood-drive/all-blood-types-needed.png' alt='All blood types needed')
-
-
 
 //- Footer
 block footer

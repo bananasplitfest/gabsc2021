@@ -2,8 +2,8 @@ extends partials/layout
 
 //- Override default config variables
 append config
-  - var vendorStyles = [ 'tiny-slider/dist/tiny-slider.css', 'lightgallery.js/dist/css/lightgallery.min.css']
-  - var vendorScripts = ['tiny-slider/dist/min/tiny-slider.js', 'lightgallery.js/dist/js/lightgallery.min.js', 'lg-fullscreen.js/dist/lg-fullscreen.min.js', 'lg-zoom.js/dist/lg-zoom.min.js']
+  - var vendorStyles = [ 'tiny-slider/dist/tiny-slider.css', 'lightgallery.js/dist/css/lightgallery.min.css', 'add-to-calendar-button/assets/css/atcb.min.css']
+  - var vendorScripts = ['tiny-slider/dist/min/tiny-slider.js', 'lightgallery.js/dist/js/lightgallery.min.js', 'lg-fullscreen.js/dist/lg-fullscreen.min.js', 'lg-zoom.js/dist/lg-zoom.min.js', 'add-to-calendar-button/assets/js/atcb.min.js']
   - var parentMenu = 'Activities'
   - var pageTitle = '5k Banana Run'
 
@@ -23,7 +23,28 @@ block content
             .small.text-body.my-0.py-0 Robindale Energy
             h1.h2 5k Banana Run
             a(href="https://www.active.com/latrobe-pa/running/distance-running-races/5k-banana-run-2022").btn.btn-success.btn-sm.ms-auto.mx-3.mb-3.d-inline-block Online Registration
-            //- a(href='/pdf/2021-5k-route.pdf').btn.btn-outline-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block 2021 Route
+            btn.btn.btn-translucent-dark.btn-sm.ms-auto.mx-3.mb-3.d-inline-block#atcb Add to Calendar
+            script.
+              const config = {
+                name: "5k Banana Run",
+                description: "Packet pickup starts at 7:30 AM in the stadium concession stand. Race begins at 9 AM on Memorial Drive with the finish line inside the stadium.<br>→ [url]https://bananasplit.run[/url]",
+                startDate: "2022-08-20",
+                startTime: "09:00:00",
+                endDate: "2022-08-20",
+                endTime: "11:00:00",
+                timeZone: "America/New_York",
+                location: "Latrobe Memorial Stadium, Latrobe, PA 15650",
+                trigger: "click",
+                options: [
+                  "Google",
+                  "iCal",
+                  "Outlook.com",
+                  "Yahoo"
+                ],
+                iCalFileName: "5k-Banana-Run",
+              };
+              const button = document.querySelector('#atcb');
+              button.addEventListener('click', () => atcb_action(config, button));
             a(href='#gallery' data-scroll).btn.btn-translucent-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block.d-lg-none Gallery
             .d-sm-flex.align-items-center.pt-3.pb-2.mb-5.border-bottom.fs-sm
 
