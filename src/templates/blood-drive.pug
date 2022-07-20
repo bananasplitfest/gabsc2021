@@ -5,7 +5,7 @@ append config
   - var vendorStyles = [ 'tiny-slider/dist/tiny-slider.css', 'lightgallery.js/dist/css/lightgallery.min.css']
   - var vendorScripts = ['tiny-slider/dist/min/tiny-slider.js', 'lightgallery.js/dist/js/lightgallery.min.js', 'lg-fullscreen.js/dist/lg-fullscreen.min.js', 'lg-zoom.js/dist/lg-zoom.min.js']
   - var parentMenu = 'Activities'
-  - var pageTitle = 'Pie Eating Contest'
+  - var pageTitle = 'Blood Drive'
 
 //- Navbar
 block navbar
@@ -20,14 +20,12 @@ block content
         // Project description
         .col-lg-4.sidebar.order-lg-2
           .px-sm-4.pt-6.py-lg-6.position-relative.zindex-5
-            .small.text-body.my-0.py-0 Eat'n Park
-            h1.h2 Pie Eating Contest
-            .small.text-body.mb-3 presented by Wildcat Championship Belts
-            a(href='#', target="_blank").disabled.btn.btn-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block Register Online <small>- Coming soon</small>
+            h1.h2 Blood Drive
+            a(href='https://www.redcrossblood.org/give.html/drive-results?zipSponsor=bananasplit', target="_blank").btn.btn-outline-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block Register to Donate
             a(href='#gallery' data-scroll).btn.btn-translucent-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block.d-lg-none Gallery
             .d-sm-flex.align-items-center.pt-3.pb-2.mb-5.border-bottom.fs-sm
 
-            //-   .d-flex.align-items-center.mb-3
+                        //-   .d-flex.align-items-center.mb-3
             //-     .text-nowrap.text-muted.me-3
             //-       i.ai-calendar.me-1
             //-       span Aug 28, 2020
@@ -38,21 +36,24 @@ block content
             ul.list-unstyled.fs-md.mb-4.pb-2
               li.mb-2
                 | Date:
-                span.fw-medium.text-nav.ms-2 August 20, 2022
+                span.fw-medium.text-nav.ms-2 Friday, August 19
               li.mb-2
                 | Time:
-                span.fw-medium.text-nav.ms-2 TBA
+                span.fw-medium.text-nav.ms-2 11 AM - 4 PM
               li
                 | Location:
-                span.fw-medium.text-nav.ms-2 TBA
-            h3.h5 Contest Information
-            p.fs-sm.mb-4.pb-2 Do you have the stomach to eat an entire banana cream pie? Gobble it down the fastest and be named the pie eating winner!
+                span.fw-medium.text-nav.ms-2 Westmoreland County Community College - Latrobe campus (130 Depot St)
+            
+            h3.h5 Donate blood, save a life
+
+            p.fs-sm.mb-2 Each pint of blood we collect can help save up to three lives and will touch the lives of so many more.What a great way to pay it forward and make an impact on people in our community and across the country. We are very excited to have this drive and we hope you are too! 
+
             h3.h5 Sponsors
             ul.list-unstyled.fs-md.mb-4.pb-2
-              //- li.mb-2
-              //-   | Eat'n Park Restaurants
-              //- li.mb-2
-              //-   | Wildcat Championship Belts
+              li.mb-2
+                | American Red Cross
+              li.mb-2
+                | Westmoreland County Community College
               li.mb-2
                 | Robindale Energy
               li.mb-2
@@ -64,12 +65,8 @@ block content
         // Project gallery (List)
         #gallery.col-lg-8.content.pb-lg-4.order-lg-1
           .gallery.pt-5.pb-4.py-lg-5
-            a(href='img/pie-eating-contest/pie-eating-contestant.jpg').gallery-item.rounded-3.mb-grid-gutter
-              img(src='img/pie-eating-contest/pie-eating-contestant-thumb.jpg' alt='Female contestant')
-            a(href='img/pie-eating-contest/pie-eating-champion.jpg').gallery-item.rounded-3.mb-grid-gutter
-              img(src='img/pie-eating-contest/pie-eating-champion-thumb.jpg' alt='Male champion of the 2018 contest')
-            a(href='img/pie-eating-contest/pie-eating-belt.jpg').gallery-item.rounded-3.mb-grid-gutter
-              img(src='img/pie-eating-contest/pie-eating-belt-thumb.jpg' alt='Champion Belt')
+            a(href='img/blood-drive/all-blood-types-needed.png').gallery-item.rounded-3.mb-grid-gutter
+              img(src='img/blood-drive/all-blood-types-needed.png' alt='All blood types needed')
 
 
 
