@@ -2,8 +2,8 @@ extends partials/layout
 
 //- Override default config variables
 append config
-  - var vendorStyles = ['lightgallery.js/dist/css/lightgallery.min.css']
-  - var vendorScripts = ['jarallax/dist/jarallax.min.js', 'jarallax/dist/jarallax-element.min.js', 'lightgallery.js/dist/js/lightgallery.min.js', 'lg-fullscreen.js/dist/lg-fullscreen.min.js', 'lg-zoom.js/dist/lg-zoom.min.js', 'lg-video.js/dist/lg-video.min.js']
+  - var vendorStyles = ['lightgallery.js/dist/css/lightgallery.min.css','tiny-slider/dist/tiny-slider.css']
+  - var vendorScripts = ['tiny-slider/dist/min/tiny-slider.js','jarallax/dist/jarallax.min.js', 'jarallax/dist/jarallax-element.min.js', 'lightgallery.js/dist/js/lightgallery.min.js', 'lg-fullscreen.js/dist/lg-fullscreen.min.js', 'lg-zoom.js/dist/lg-zoom.min.js', 'lg-video.js/dist/lg-video.min.js']
   - var parentMenu = 'Index'
   - var pageTitle = 'Home'
 
@@ -15,21 +15,66 @@ block navbar
 block content
 
   // Hero
-  section.bg-size-cover.overflow-hidden.py-5.py-md-6.py-lg-7(style='max-height: 750px; background-image: url(img/generic/banana-costumes.jpg); background-position: center;')
-    .container.position-relative.zindex-5.pt-2.pb-4.pb-md-2
-      .row.justify-content-center
-        .col-xl-6.col-lg-7.col-md-8.text-center
-          h1.display-4.text-light.mb-4 Banana Split Celebration
-          .d-inline-flex.align-items-center.mx-1.px-3.mb-4
-            i.ai-calendar.h2.mb-0.me-2.text-light
-            span.text-light August 19 - 21, 2022
-          .d-inline-flex.align-items-center.mx-1.px-3.mb-4
-            i.ai-map-pin.h2.mb-0.me-2.text-light
-            span.text-light Latrobe, PA
-          //- .pt-2
-          //-   a(href='schedule.html' data-scroll).btn.btn-secondary Check out the schedule
-    //- div(data-jarallax-element='50' data-disable-parallax-down='md')
-    //-   img(src='img/generic/2girls_sundae.png' alt='Girls enjoying banana splits').d-block.mx-auto
+  section.position-relative.bg-faded-primary.pb-5.pb-md-6.pb-lg-7.overflow-hidden.mb-7
+    .shape.shape-bottom.shape-curve.bg-body
+      svg(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3000 185.4')
+        path(fill='currentColor' d='M3000,0v185.4H0V0c496.4,115.6,996.4,173.4,1500,173.4S2503.6,115.6,3000,0z')
+    .container.pt-4.pt-md-5.pt-lg-0
+      .row.align-items-center
+        .col-lg-4.text-center.text-lg-start
+          h1.mb-3 Banana Split Celebration
+          p.fs-lg.text-muted.mb-4 A fun-filled weekend as we celebrate the town where the banana split was invented!
+          ul.list-unstyled
+            li
+              .d-inline-flex.align-items-center
+                i.ai-calendar.h2.mb-0.me-2
+                span August 19 - 21, 2022
+            li
+              .d-inline-flex.align-items-center
+                i.ai-map-pin.h2.mb-0.me-2
+                span Latrobe, PA
+        .col-xl-7.col-lg-8.offset-xl-1.pt-lg-3
+          .tns-carousel-wrapper.bg-size-cover.mx-auto.pt-6.pb-2
+            .position-relative
+              .frame-browser-label
+                .tns-carousel-label
+                  i.far.fa-running
+                  span 5k Banana Run
+              .frame-browser-body
+                .tns-carousel-inner(data-carousel-options='{"mode": "gallery", "controls": false, "nav": false, "autoplay": true, "autoplayTimeout": 3000}')
+                  div(data-carousel-label='<i class="far fa-running"></i><span>5k Banana Run</span>')
+                    a(href="5k-banana-run.html")
+                      img(src='img/generic/banana-run-finish-2021.jpg' alt='5k Banana Run finish line').rounded
+                  div(data-carousel-label='<i class="fal fa-heart-circle"></i><span>Blood Drive</span>')
+                    a(href="blood-drive.html")
+                      img(src='img/generic/blood-drive-donate-sign.jpg' alt='Blood drive donation direction sign').rounded
+                  div(data-carousel-label='<i class="fas fa-ice-cream"></i><span>Banana Splits</span>')
+                    img(src='img/generic/banana-costumes.jpg' alt='Girls in banana costumes').rounded
+                  div(data-carousel-label='<i class="fal fa-car"></i><span>Car Show</span>')
+                    a(href="car-show.html")
+                      img(src='img/generic/car-show-2021.jpg' alt='Car Show cars from 2021').rounded
+            .tns-carousel-pager.pt-4.text-nowrap.text-center.mt-4
+              button(data-nav data-goto='1').active
+              button(data-nav data-goto='2')
+              button(data-nav data-goto='3')
+              button(data-nav data-goto='4')
+
+  //- // Hero
+  //- section.bg-size-cover.overflow-hidden.py-5.py-md-6.py-lg-7(style='max-height: 750px; background-image: url(img/generic/banana-costumes.jpg); background-position: center;')
+  //-   .container.position-relative.zindex-5.pt-2.pb-4.pb-md-2
+  //-     .row.justify-content-center
+  //-       .col-xl-6.col-lg-7.col-md-8.text-center
+  //-         h1.display-4.text-light.mb-4 Banana Split Celebration
+  //-         .d-inline-flex.align-items-center.mx-1.px-3.mb-4
+  //-           i.ai-calendar.h2.mb-0.me-2.text-light
+  //-           span.text-light August 19 - 21, 2022
+  //-         .d-inline-flex.align-items-center.mx-1.px-3.mb-4
+  //-           i.ai-map-pin.h2.mb-0.me-2.text-light
+  //-           span.text-light Latrobe, PA
+  //-         //- .pt-2
+  //-         //-   a(href='schedule.html' data-scroll).btn.btn-secondary Check out the schedule
+  //-   //- div(data-jarallax-element='50' data-disable-parallax-down='md')
+  //-   //-   img(src='img/generic/2girls_sundae.png' alt='Girls enjoying banana splits').d-block.mx-auto
   
 
   // Countdown
