@@ -2,8 +2,8 @@ extends partials/layout
 
 //- Override default config variables
 append config
-  - var vendorStyles = ['lightgallery.js/dist/css/lightgallery.min.css','tiny-slider/dist/tiny-slider.css']
-  - var vendorScripts = ['tiny-slider/dist/min/tiny-slider.js','jarallax/dist/jarallax.min.js', 'jarallax/dist/jarallax-element.min.js', 'lightgallery.js/dist/js/lightgallery.min.js', 'lg-fullscreen.js/dist/lg-fullscreen.min.js', 'lg-zoom.js/dist/lg-zoom.min.js', 'lg-video.js/dist/lg-video.min.js']
+  - var vendorStyles = ['lightgallery.js/dist/css/lightgallery.min.css','tiny-slider/dist/tiny-slider.css', 'add-to-calendar-button/assets/css/atcb.min.css']
+  - var vendorScripts = ['tiny-slider/dist/min/tiny-slider.js','jarallax/dist/jarallax.min.js', 'jarallax/dist/jarallax-element.min.js', 'lightgallery.js/dist/js/lightgallery.min.js', 'lg-fullscreen.js/dist/lg-fullscreen.min.js', 'lg-zoom.js/dist/lg-zoom.min.js', 'lg-video.js/dist/lg-video.min.js', 'add-to-calendar-button/assets/js/atcb.min.js']
   - var parentMenu = 'Index'
   - var pageTitle = 'Home'
 
@@ -82,8 +82,30 @@ block content
     .container.py-2.py-md-0
       .row.align-items-center
         .col-xl-4.text-center.text-xl-start
-          h2.mb-4.mb-xl-2.text-light See you soon
-          p.mb-4.mb-xl-2.text-light August 19-21, 2022 | Latrobe, PA
+          h2.mb-4.mb-xl-2.text-light See you soon!
+          p.mb-4.mb-xl-2.text-light Hop in the car and head to Latrobe
+          btn.btn.btn-light.btn-sm.ms-auto.mx-3.mb-3.d-inline-block#atcb
+           i.fal.fa-calendar-plus.h5.mb-0.me-2
+           span Add to calendar
+            script.
+              const config = {
+                name: "Banana Split Celebration",
+                description: "A weekend of fun for the whole family as we celebrate the town where the banana split was invented.<br>Presented by Robindale, Valley Dairy Restaurants, and the Greater Latrobe - Laurel Valley Chamber of Commerce.<br>→ [url]https://bananasplitfest.com[/url]",
+                startDate: "2022-08-19",
+                endDate: "2022-08-21",
+                timeZone: "America/New_York",
+                location: "Latrobe, PA 15650",
+                trigger: "click",
+                options: [
+                  "Google",
+                  "iCal",
+                  "Outlook.com",
+                  "Yahoo"
+                ],
+                iCalFileName: "Banana-Split-Celebration",
+              };
+              const button = document.querySelector('#atcb');
+              button.addEventListener('click', () => atcb_action(config, button));
         .col-xl-8
           //- .h2.display-2.justify-content-center.justify-content-xl-start.text-light
           //-   .mb-0.mt-3.me-0.px-4.text-light Hop in the car and head to Latrobe
@@ -184,21 +206,21 @@ block content
           .row
             .d-flex.align-items-start.mb-grid-gutter
               .col-2.justify-content-center
-                i.fas.fa-sunglasses.fa-3x.d-block.mt-1
+                i.fas.fa-sunglasses.fa-fw.fa-3x.d-block.mt-1
               .col.flex-fill
                 .ps-4.ms-2
                   h3.h5.mb-1 Latrobe - where the split was invented
                   p.fs-sm.mb-0 Multiple stages. Activity areas for kids. An over 21 area for adults. And banana splits for all
             .d-flex.align-items-start.mb-grid-gutter
               .col-2.justify-content-center
-                i.far.fa-tags.fa-3x.d-block.mt-1
+                i.far.fa-tags.fa-fw.fa-3x.d-block.mt-1
               .col.flex-fill
                 .ps-4.ms-2
                   h3.h5.mb-1 Vendors and Shops
                   p.fs-sm.mb-0 Visit Latrobe's downtown merchants and the pop-up vendors at the celebration
             .d-flex.align-items-start.mb-grid-gutter
               .col-2.justify-content-center
-                i.far.fa-calendar-day.fa-3x.d-block.mt-1
+                i.far.fa-calendar-day.fa-3x.fa-fw.d-block.mt-1
               .col.flex-fill
                 .ps-4.ms-2
                   h3.h5.mb-1 One Sweet Weekend

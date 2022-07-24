@@ -1,0 +1,54 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var parentMenu = 'Attend'
+  - var pageTitle = 'When and where is the event?'
+  - var isSidebar = true
+
+//- Navbar
+block navbar
+  include partials/navbar-solid-shadow
+
+//- Page Content
+block content
+  .sidebar-enabled
+    .container
+      .row
+
+        // Sidebar
+        .sidebar.col-lg-3.pt-lg-5
+          #help-sidebar.offcanvas.offcanvas-collapse
+            .offcanvas-header.navbar-shadow.mb-3
+              h5.mt-1.mb-0 Sidebar
+              button(type='button' data-bs-dismiss='offcanvas' aria-label='Close').btn-close.lead
+            .offcanvas-body.pt-3.pt-lg-0.ps-lg-0.pe-lg-2.pe-xl-4(data-simplebar)
+              //- partials/sidebar-help.pug
+              include partials/sidebar-help
+
+
+        .col-lg-9.content.py-4
+
+          // Page title
+          .d-md-flex.justify-content-between.pb-2.mb-4
+            h1.me-3(style='max-width: 38rem;') When and where is the event?
+            span.fs-sm.text-muted.text-md-nowrap.pt-2 Last updated May 1, 2022
+          
+          // Content
+          p For 2022, the celebration will be located back in downtown Latrobe &mdash; where the original banana split was invented.
+          h2.h5.mb-4 August 19-21, 2022
+          h2.h5.mb-0 Main and Ligonier Steets
+          p Latrobe, PA 15650
+          
+
+
+
+
+//- Footer
+block footer
+  include partials/footer-default
+
+  // Sidebar toggle button
+  button(type='button' data-bs-toggle='offcanvas' data-bs-target='#help-sidebar').btn.btn-primary.btn-sm.sidebar-toggle
+    i.ai-sidebar.fs-base.me-2
+    | Sidebar

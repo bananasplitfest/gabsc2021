@@ -1,0 +1,82 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var parentMenu = 'Attend'
+  - var pageTitle = 'Parking'
+  - var isSidebar = true
+
+//- Navbar
+block navbar
+  include partials/navbar-solid-shadow
+
+//- Page Content
+block content
+  .sidebar-enabled
+    .container
+      .row
+
+        // Sidebar
+        .sidebar.col-lg-3.pt-lg-5
+          #help-sidebar.offcanvas.offcanvas-collapse
+            .offcanvas-header.navbar-shadow.mb-3
+              h5.mt-1.mb-0 Sidebar
+              button(type='button' data-bs-dismiss='offcanvas' aria-label='Close').btn-close.lead
+            .offcanvas-body.pt-3.pt-lg-0.ps-lg-0.pe-lg-2.pe-xl-4(data-simplebar)
+              //- partials/sidebar-help.pug
+              include partials/sidebar-help
+
+
+        .col-lg-9.content.py-4
+
+          // Page title
+          .d-md-flex.justify-content-between.pb-2.mb-4
+            h1.me-3(style='max-width: 38rem;') Parking
+            span.fs-sm.text-muted.text-md-nowrap.pt-2 Last updated May 1, 2022
+          
+
+          // Content
+          h2.h3.mb-3 Where can I park?
+          p.mb-2
+            span.fw-bold FREE 
+            | parking is available at all City of Latrobe operated surface lots and parking garage. Additional parking is at Latrobe Memorial Stadium.
+          p.mb-4 Parking in private lots may result in citations or towing at the owner's expense.
+
+          h3.h6.mb-1 Surface lots
+          ul.mb-3
+            li.mb-2
+              span Behind Adams Memorial Library at 300 Chestnut Street
+            li.mb-2
+              span Behind Gibson Thomas Engineering building, between Weldon and Spring Streets
+            li.mb-2
+              span Between RiteAid and Dollar General on Depot Street
+          
+          h3.h6.mb-1 Parking garage
+          ul.mb-3
+            li.mb-2
+              span 1099 Court Yard Plaza
+          
+          h3.h6.mb-1 Other locations
+          ul.mb-3
+            li.mb-2
+              span Latrobe Memorial Stadium at 131 Irving Ave
+
+          .row.mt-5
+            span.fa-stack.fa-2x
+              i.fas.fa-square.fa-stack-2x
+              i.fal.fa-wheelchair.fa-stack-1x.fa-inverse
+            .col
+              h2.h3.mb-1#handicap Handicap spaces
+              p Each parking lot has designated handicap parking spots. Remember to display your placard or have appropriate plates.
+
+
+
+
+//- Footer
+block footer
+  include partials/footer-default
+
+  // Sidebar toggle button
+  button(type='button' data-bs-toggle='offcanvas' data-bs-target='#help-sidebar').btn.btn-primary.btn-sm.sidebar-toggle
+    i.ai-sidebar.fs-base.me-2
+    | Sidebar
