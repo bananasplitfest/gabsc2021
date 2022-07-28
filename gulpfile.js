@@ -1,7 +1,9 @@
 const gulp = require('gulp'),
       rollup = require('gulp-rollup'),  
       gulpif = require('gulp-if'),
+      data = require('gulp-data'),
       del = require('del'),
+      fs = require('fs'),
       rename = require('gulp-rename'),
       sass = require('gulp-sass')(require('sass')),
       pug = require('gulp-pug'),
@@ -13,7 +15,8 @@ const gulp = require('gulp'),
       babel = require('gulp-babel'),
       uglify = require('gulp-uglify'),
       packageJSON = require('./package.json'),
-      watch = require('gulp-watch');
+      watch = require('gulp-watch'),
+      sortJSON = require('gulp-json-sort');
 
 // Define reusable paths
 
@@ -142,8 +145,19 @@ gulp.task('pug', () =>
     };
 
     emitty.scan(global.emittyChangedFile).then(() => {
+      // gulp.src('**/schedule.pug').pipe(data(function(file) {
+      //     const j = JSON.parse(fs.readFileSync(path.src_pug+'/data/2022-schedule.json'))
+      //     console.log(j)
+      //     return j
+      // }))
+
       gulp.src(['**/*.pug', '!helpers/**', '!partials/**'], sourceOptions)
         .pipe(gulpif(global.watch, emitty.filter(global.emittyChangedFile)))
+        .pipe(data(function(file) {
+            const j = JSON.parse(fs.readFileSync(path.src_pug+'/data/2022-schedule.json'))
+            //console.log(j)
+            return j
+        }))
         .pipe(pug({ pretty: true }))
         .pipe(gulp.dest(path.dist))
         .on('error', reject)

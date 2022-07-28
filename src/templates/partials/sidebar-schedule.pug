@@ -1,0 +1,43 @@
+// Related articles
+.widget.mb-5
+  h3.h2.widget-title Filters
+
+  .filter-date.mb-4
+    h4.h6.mb-1.text-decoration-underline Date
+    ul.ps-2
+      li.d-flex
+        input.me-2(type="checkbox", value="aug19", x-model="day")
+        span Friday, Aug 19
+      li.d-flex
+        input.me-2(type="checkbox", value="aug20", x-model="day")
+        span Saturday, Aug 20
+      li.d-flex
+        input.me-2(type="checkbox", value="aug21", x-model="day")
+        span Sunday, Aug 21
+
+  //- .filter-audience.mb-4
+    h4.h6.mb-1.text-decoration-underline Audience
+    ul.ps-2
+      li.d-flex
+        input.me-2(type="checkbox", value="kids", x-model="audience")
+        span Kids
+      li.d-flex
+        input.me-2(type="checkbox", value="adults", x-model="audience")
+        span Adults
+
+  //- .filter-category.mb-4
+    h4.h6.mb-1.text-decoration-underline Category
+    ul.ps-2
+      li.d-flex
+        input.me-2(type="checkbox")
+        span Activities
+      li.d-flex
+        input.me-2(type="checkbox")
+        span Entertainment
+      li.d-flex
+        input.me-2(type="checkbox")
+        span Special Events
+      li.d-flex
+        input.me-2(type="checkbox")
+        span Vendors
+

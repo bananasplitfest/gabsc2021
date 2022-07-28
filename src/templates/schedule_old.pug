@@ -1,0 +1,428 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+    - var vendorStyles = ['lightgallery.js/dist/css/lightgallery.min.css']
+    - var vendorScripts = ['jarallax/dist/jarallax.min.js', 'jarallax/dist/jarallax-element.min.js', 'lightgallery.js/dist/js/lightgallery.min.js', 'lg-fullscreen.js/dist/lg-fullscreen.min.js', 'lg-zoom.js/dist/lg-zoom.min.js', 'lg-video.js/dist/lg-video.min.js']
+    - var parentMenu = 'Schedule'
+    - var pageTitle = 'Schedule'
+
+
+
+//- Navbar
+block navbar
+    include partials/navbar-solid-shadow
+
+//- Page Content
+block content
+
+    .container.mt-lg-7.mt-sm-3
+        h1 2022 Schedule
+        p.fs-4 Fun for kids and adults
+
+            section.position-relative.py-4
+                //- Content goes here
+                .container.position-relative.zindex-5
+                    .row.justify-content-center
+                        .col-lg-10.col-md-11
+                            .bg-light.border.border-primary.border-5.rounded-3.pt-5.px-4.pb-4.p-sm-5
+                                .px-md-4
+                                    h3.text-center.pb-1 August 19-21, 2022 
+                                    p.text-center.pb-0.mb-0 The schedule for 2022 is a work in progress. Confirmed activities are below, but check back often!
+
+
+            // Topics grid
+            //- section.container.mt-2.pt-3.mt-md-0.pt-md-4.pb-5
+                //- h2.mb-5.text-center Select a topic
+                .row.d-flex.justify-content-center
+                    .col-lg-4.col-sm-6.mb-grid-gutter
+                        a(href='5k-banana-run.html').card.h-100.border-0.shadow.card-hover
+                            .card-body.ps-grid-gutter.pe-grid-gutter.text-center
+                                i.fas.fa-running.fa-3x.text-primary.mt-2.mb-4
+                                h3.h5 5k Banana Run
+                                p.fs-sm.text-body Saturday, August 20 at Latrobe Memorial Stadium at 9AM
+                                .btn.btn-translucent-primary.btn-sm.mb-2 Register
+                    .col-lg-4.col-sm-6.mb-grid-gutter
+                        a(href='car-show.html').card.h-100.border-0.shadow.card-hover
+                            .card-body.ps-grid-gutter.pe-grid-gutter.text-center
+                                i.fas.fa-cars.fa-3x.text-primary.mt-2.mb-4
+                                h3.h5 Car Show
+                                p.fs-sm.text-body Saturday, August 20 at WCCC Latrobe Campus at 12PM
+                                .btn.btn-translucent-primary.btn-sm.mb-2 Register
+
+
+
+            //- .container.my-5
+            //-     .row.justify-content-center
+            //-         .col-lg-10.col-md-11
+            //-             .bg-light.border.border-primary.border-5.rounded-3.pt-5.px-4.pb-4.p-sm-5
+            //-                 .d-flex.align-items-start
+            //-                     img(src='img/schedule/in-the-sticks.jpg' alt='In the Sticks' width='200')
+            //-                     .px-md-4
+            //-                         .text-uppercase.small.text-body.my-0.py-0 Headlining performance
+            //-                         h3.pb-1.mb-0 In the Sticks Band
+            //-                         h5.text-body August 21, 2021 6:30&nbsp;PM
+            //-                         p.pb-0.mb-0 Classic Rock &amp; Country
+
+
+            //- #aug15.container.my-3
+                .h3.text-body.mb-0.pb-3 Sunday, August 15
+                .border-top.py-4
+                    .row.py-md-2
+                        .col-lg-2.col-sm-3
+                            .text-body 4:00&nbsp;PM - 5:00&nbsp;PM
+                        .col-lg-10.col-sm-9
+                            .d-flex.align-items-start
+                                img(src='img/schedule/princess-icon.jpg' alt='Princess Pageant' width='75').rounded-circle
+                                .ms-4(style='max-width: 580px;')
+                                    a(href='princess-pageant.html').h4.text-body Princess Pageant
+                                    ul.list-inline.my-2
+                                        li.list-inline-item
+                                            p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Latrobe Elementary School
+
+            #aug19.container.my-3
+                .h3.text-body.mb-0.pb-3 Friday, August 19
+
+                .border-top.py-4.activity.aug19.adults.specialEvents
+                    .row.py-md-2
+                        .col-lg-2.col-sm-3
+                            .text-body 11:00&nbsp;AM - 4:00&nbsp;PM
+                        .col-lg-10.col-sm-9
+                            .d-flex.align-items-start
+                                img(src='img/schedule/blood-drive.gif' alt='Red Cross logo inside blood drop' width='75').rounded-circle
+                                .ms-4(style='max-width: 580px;')
+                                    .h5.text-body American Red Cross Blood Drive
+                                    ul.list-inline.my-2
+                                        li.list-inline-item: a(href='https://www.redcrossblood.org/give.html/drive-results?zipSponsor=bananasplit' target="_blank").btn.btn-outline-primary.btn-sm.d-inline-block.align-self-center
+                                            | Donate
+                                        li.list-inline-item
+                                            p.fs-sm.align-self-center #[i.fas.fa-map-marker-alt.pe-2] WCCC Latrobe Campus (130 Depot St)
+
+                .border-top.py-4.activity.aug19.kids.adults.activities
+                    .row.py-md-2
+                        .col-lg-2.col-sm-3
+                            .text-body 12:00&nbsp;PM - 8:00&nbsp;PM
+                        .col-lg-10.col-sm-9
+                            .d-flex.align-items-start
+                                img(src='img/schedule/climbing-wall.jpg' alt='Climber on wall' width='75').rounded-circle
+                                .ms-4(style='max-width: 580px;')
+                                    .h5.text-body Climbing Wall
+                                    ul.list-inline.my-2
+                                        li.list-inline-item
+                                            p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Main &amp; Ligonier Streets
+
+                .border-top.py-4.activity.aug19.adults.specialEvents
+                    .row.py-md-2
+                        .col-lg-2.col-sm-3
+                            .text-body 6:00&nbsp;PM - 9:00&nbsp;PM
+                        .col-lg-10.col-sm-9
+                            .d-flex.align-items-start
+                                img(src='img/schedule/yellow-tie.jpg' alt='Yellow Tie Gala' width='75').rounded-circle
+                                .ms-4(style='max-width: 580px;')
+                                    .small.text-body.my-0.py-0 Latrobe Art Center
+                                    a(href='https://www.latrobeartcenter.org/events-all/2022-yellow-tie-gala' target='_blank').h4.text-body Yellow Tie Gala
+                                    ul.list-inline.my-2
+                                        li.list-inline-item: a(href='https://www.latrobeartcenter.org/events-all/2022-yellow-tie-gala' target="_blank").btn.btn-outline-primary.btn-sm.d-inline-block.align-self-center
+                                            | Tickets
+                                        li.list-inline-item
+                                            p.fs-sm.align-self-center #[i.fas.fa-map-marker-alt.pe-2] Latrobe Art Center (819 Ligonier St)
+
+
+            #aug20.container.my-3
+                .h3.text-body.mb-0.pb-3 Saturday, August 20
+                
+                .border-top.py-4.activity.aug20.kids.adults.runs
+                    .row.py-md-2
+                        .col-lg-2.col-sm-3
+                            .text-body 7:30&nbsp;AM - 9:30&nbsp;AM
+                        .col-lg-10.col-sm-9
+                            .d-flex.align-items-start
+                                //- img(src='img/schedule/princess-icon.jpg' alt='Princess Pageant' width='75').rounded-circle
+                                .ms-4(style='max-width: 580px;')
+                                    .h6.text-body 5k Banana Run Packet Pickup
+                                    ul.list-inline.my-2
+                                        li.list-inline-item
+                                            p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Latrobe Memorial Stadium
+
+                .border-top.py-4.activity.aug20.kids.adults.runs
+                    .row.py-md-2
+                        .col-lg-2.col-sm-3
+                            .text-body 9:00&nbsp;AM - 11:30&nbsp;AM
+                        .col-lg-10.col-sm-9
+                            .d-flex.align-items-start
+                                img(src='img/schedule/5k-run.png' alt='5k Banana run' width='75').rounded-circle
+                                .ms-4(style='max-width: 580px;')
+                                    .small.text-body.my-0.py-0 Robindale
+                                    a(href='5k-banana-run.html').h4.text-body 5k Banana Run
+                                    ul.list-inline.my-2
+                                        li.list-inline-item: a(href='https://www.active.com/latrobe-pa/running/distance-running-races/5k-banana-run-2022' target="_blank").btn.btn-outline-primary.btn-sm.d-inline-block.align-self-center
+                                            | Register Online
+                                        li.list-inline-item
+                                            p.fs-sm.align-self-center #[i.fas.fa-map-marker-alt.pe-2] Latrobe Memorial Stadium
+
+                .border-top.py-4.activity.aug20.kids.adults.funs.awards
+                    .row.py-md-2
+                        .col-lg-2.col-sm-3
+                            .text-body 11:00&nbsp;AM
+                        .col-lg-10.col-sm-9
+                            .d-flex.align-items-start
+                                .ms-4(style='max-width: 580px;')
+                                    //- .small.text-body.my-0.py-0 Loyalhanna Continuing Care Community
+                                    .h5.text-body 5k Banana Run Awards Ceremony
+                                    ul.list-inline.my-2
+                                        li.list-inline-item
+                                            p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Latrobe Memorial Stadium
+
+                .border-top.py-4.activity.aug20.kids.adults.specialEvents
+                    .row.py-md-2
+                        .col-lg-2.col-sm-3
+                            .text-body 12:00&nbsp;PM - 4:00&nbsp;PM
+                        .col-lg-10.col-sm-9
+                            .d-flex.align-items-start
+                                img(src='img/schedule/car-show.jpg' alt='Blue car' width='75').rounded-circle
+                                .ms-4(style='max-width: 580px;')
+                                    .small.text-body.my-0.py-0 State Farm Agent Sarah Crispin-Thomas
+                                    a(href='car-show.html').h4.text-body.my-0.py-0 Car Show
+                                    .small.text-body.mb-2.pb-2 benefiting Relay for Life
+                                    ul.list-inline.my-2
+                                        li.list-inline-item: a(href='https://dashboard.bananasplitfest.com/car-show-registration/' target="_blank").btn.btn-outline-primary.btn-sm.d-inline-block.align-self-center
+                                            | Register Online
+                                        li.list-inline-item
+                                            p.fs-sm.align-self-center #[i.fas.fa-map-marker-alt.pe-2] WCCC Latrobe Campus (130 Depot St)
+
+                .border-top.py-4.activity.aug20.kids.adults.vendors
+                    .row.py-md-2
+                        .col-lg-2.col-sm-3
+                            .text-body 12:00&nbsp;PM - 8:00&nbsp;PM
+                        .col-lg-10.col-sm-9
+                            .d-flex.align-items-start
+                                .ms-4(style='max-width: 580px;')
+                                    .h5.text-body Vendors Open
+                                    ul.list-inline.my-2
+                                        li.list-inline-item
+                                            p.fs-sm.align-self-center #[i.fas.fa-map-marker-alt.pe-2] Main &amp; Ligonier Streets
+
+
+
+                //- .border-top.py-4
+                //-     .row.py-md-2
+                //-         .col-lg-2.col-sm-3
+                //-             .text-body 12:00&nbsp;PM - 12:45&nbsp;PM
+                //-         .col-lg-10.col-sm-9
+                //-             .d-flex.align-items-start
+                //-                 img(src='img/schedule/david-stout.jpg' alt='David Stout' width='75').rounded-circle
+                //-                 .ms-4(style='max-width: 580px;')
+                //-                     a(href='entertainment.html').h5.text-body.pb-0.mb-0 David Stout
+                //-                     .small.text-body.my-0.pb-1 presented by SpringHill Outdoor Power Equipment
+                //-                     ul.list-inline.my-2
+                //-                         li.list-inline-item
+                //-                             p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Band Stand
+
+
+                //- .border-top.py-4
+                //-     .row.py-md-2
+                //-         .col-lg-2.col-sm-3
+                //-             .text-body 1:00&nbsp;PM - 1:30&nbsp;PM
+                //-         .col-lg-10.col-sm-9
+                //-             .d-flex.align-items-start
+                //-                 img(src='img/schedule/candy-bar-bingo.png' alt='Candy Bar Bingo' width='75').rounded-circle
+                //-                 .ms-4(style='max-width: 580px;')
+                //-                     .small.text-body.my-0.py-0 Pynos Insurance Agency
+                //-                     .h5.text-body.pb-0.mb-0 Candy Bar Bingo
+                //-                     ul.list-inline.my-2
+                //-                         li.list-inline-item
+                //-                             p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Playland II
+
+
+                //- .border-top.py-4
+                //-     .row.py-md-2
+                //-         .col-lg-2.col-sm-3
+                //-             .text-body 1:00&nbsp;PM - 1:45&nbsp;PM
+                //-         .col-lg-10.col-sm-9
+                //-             .d-flex.align-items-start
+                //-                 img(src='img/schedule/timeless.jpg' alt='Timeless' width='75').rounded-circle
+                //-                 .ms-4(style='max-width: 580px;')
+                //-                     a(href='entertainment.html').h5.text-body.pb-0.mb-0 Timeless
+                //-                     .small.text-body.my-0.pb-1 presented by MPS Tax Service
+                //-                     ul.list-inline.my-2
+                //-                         li.list-inline-item
+                //-                             p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Band Stand
+
+                //- .border-top.py-4
+                //-     .row.py-md-2
+                //-         .col-lg-2.col-sm-3
+                //-             .text-body 2:00&nbsp;PM - 2:30&nbsp;PM
+                //-         .col-lg-10.col-sm-9
+                //-             .d-flex.align-items-start
+                //-                 img(src='img/schedule/pie-eating.jpg' alt='Pie Eating Contest' width='75').rounded-circle
+                //-                 .ms-4(style='max-width: 580px;')
+                //-                     .small.text-body.my-0.py-0 Eat’n Park
+                //-                     .h5.text-body.pb-0.mb-0 Pie Eating Contest
+                //-                     .small.text-body.my-0.pb-1 presented by Wildcat Championship Belts
+                //-                     ul.list-inline.my-2
+                //-                         li.list-inline-item
+                //-                             p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Band Stand
+
+                //- .border-top.py-4
+                //-     .row.py-md-2
+                //-         .col-lg-2.col-sm-3
+                //-             .text-body 2:30&nbsp;PM - 2:50&nbsp;PM
+                //-         .col-lg-10.col-sm-9
+                //-             .d-flex.align-items-start
+                //-                 //- img(src='img/schedule/conner-gilbert.jpg' alt='Conner Gilbert' width='75').rounded-circle
+                //-                 .ms-4(style='max-width: 580px;')
+                //-                     a(href='entertainment.html').h5.text-body.pb-0.mb-0 HighKix Martial Arts
+                //-                     ul.list-inline.my-2
+                //-                         li.list-inline-item
+                //-                             p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Band Stand
+
+                //- .border-top.py-4
+                //-     .row.py-md-2
+                //-         .col-lg-2.col-sm-3
+                //-             .text-body 3:00&nbsp;PM - 3:30&nbsp;PM
+                //-         .col-lg-10.col-sm-9
+                //-             .d-flex.align-items-start
+                //-                 img(src='img/schedule/candy-bar-bingo.png' alt='Candy Bar Bingo' width='75').rounded-circle
+                //-                 .ms-4(style='max-width: 580px;')
+                //-                     .small.text-body.my-0.py-0 Pynos Insurance Agency
+                //-                     .h5.text-body.pb-0.mb-0 Candy Bar Bingo
+                //-                     ul.list-inline.my-2
+                //-                         li.list-inline-item
+                //-                             p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Playland II
+
+                //- .border-top.py-4
+                //-     .row.py-md-2
+                //-         .col-lg-2.col-sm-3
+                //-             .text-body 3:00&nbsp;PM - 3:45&nbsp;PM
+                //-         .col-lg-10.col-sm-9
+                //-             .d-flex.align-items-start
+                //-                 img(src='img/schedule/antolena.jpg' alt='Antolena' width='75').rounded-circle
+                //-                 .ms-4(style='max-width: 580px;')
+                //-                     a(href='entertainment.html').h5.text-body.pb-0.mb-0 Antolena
+                //-                     .small.text-body.my-0.pb-1 presented by Valley Dairy Restaurants
+                //-                     ul.list-inline.my-2
+                //-                         li.list-inline-item
+                //-                             p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Band Stand
+
+                .border-top.py-4.activity.aug20.kids.adults.specialEvents.awards
+                    .row.py-md-2
+                        .col-lg-2.col-sm-3
+                            .text-body 3:30&nbsp;PM - 4:00&nbsp;PM
+                        .col-lg-10.col-sm-9
+                            .d-flex.align-items-start
+                                .ms-4(style='max-width: 580px;')
+                                    //- .small.text-body.my-0.py-0 Technimark
+                                    .h5.text-body.pb-0.mb-0 Car Show Awards Ceremony
+                                    ul.list-inline.my-2
+                                        li.list-inline-item
+                                            p.fs-sm.align-self-center #[i.fas.fa-map-marker-alt.pe-2] WCCC Latrobe Campus (130 Depot St)
+
+
+                //- .border-top.py-4
+                //-     .row.py-md-2
+                //-         .col-lg-2.col-sm-3
+                //-             .text-body 4:30&nbsp;PM - 4:45&nbsp;PM
+                //-         .col-lg-10.col-sm-9
+                //-             .d-flex.align-items-start
+                //-                 img(src='img/schedule/conner-gilbert.jpg' alt='Conner Gilbert' width='75').rounded-circle
+                //-                 .ms-4(style='max-width: 580px;')
+                //-                     a(href='entertainment.html').h5.text-body.pb-0.mb-0 Conner Gilbert
+                //-                     .small.text-body.my-0.pb-1 presented by 1st Summit Bank
+                //-                     ul.list-inline.my-2
+                //-                         li.list-inline-item
+                //-                             p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Band Stand
+
+                //- .border-top.py-4
+                //-     .row.py-md-2
+                //-         .col-lg-2.col-sm-3
+                //-             .text-body 4:45&nbsp;PM - 5:00&nbsp;PM
+                //-         .col-lg-10.col-sm-9
+                //-             .d-flex.align-items-start
+                //-                 img(src='img/schedule/2021-princess-court.jpg' alt='Princess Court' width='75').rounded-circle
+                //-                 .ms-4(style='max-width: 580px;')
+                //-                     .h5.text-body.pb-0.mb-0 Banana Split Princess Court Introduction
+                //-                     p.fs-sm.mb-2 Welcome to the stage the banana split royalty of 2020 and 2021.
+                //-                     ul.list-inline.my-2
+                //-                         li.list-inline-item
+                //-                             p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Band Stand
+
+                //- .border-top.py-4
+                //-     .row.py-md-2
+                //-         .col-lg-2.col-sm-3
+                //-             .text-body 5:00&nbsp;PM - 5:30&nbsp;PM
+                //-         .col-lg-10.col-sm-9
+                //-             .d-flex.align-items-start
+                //-                 img(src='img/schedule/candy-bar-bingo.png' alt='Candy Bar Bingo' width='75').rounded-circle
+                //-                 .ms-4(style='max-width: 580px;')
+                //-                     .small.text-body.my-0.py-0 Pynos Insurance Agency
+                //-                     .h5.text-body.pb-0.mb-0 Candy Bar Bingo
+                //-                     ul.list-inline.my-2
+                //-                         li.list-inline-item
+                //-                             p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Playland II
+
+                //- .border-top.py-4
+                //-     .row.py-md-2
+                //-         .col-lg-2.col-sm-3
+                //-             .text-body 5:00&nbsp;PM - 5:45&nbsp;PM
+                //-         .col-lg-10.col-sm-9
+                //-             .d-flex.align-items-start
+                //-                 img(src='img/schedule/john-pertrarka.jpg' alt='John Petrarca' width='75').rounded-circle
+                //-                 .ms-4(style='max-width: 580px;')
+                //-                     a(href='entertainment.html').h5.text-body.pb-0.mb-0 John Petrarca
+                //-                     .small.text-body.my-0.pb-1 presented by Steve Limani Realty One Group Gold Standard
+                //-                     ul.list-inline.my-2
+                //-                         li.list-inline-item
+                //-                             p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Band Stand
+
+                //- .border-top.py-4
+                //-     .row.py-md-2
+                //-         .col-lg-2.col-sm-3
+                //-             .text-body 6:00&nbsp;PM - 7:00&nbsp;PM
+                //-         .col-lg-10.col-sm-9
+                //-             .d-flex.align-items-start
+                //-                 img(src='img/schedule/goat-yoga.jpg' alt='Goat Yoga' width='75').rounded-circle
+                //-                 .ms-4(style='max-width: 580px;')
+                //-                     .small.text-body.my-0.py-0 Phoenix Rehab
+                //-                     .h5.text-body.pb-0.mb-0 Goat Yoga
+                //-                     ul.list-inline.my-2
+                //-                         li.list-inline-item
+                //-                             p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Legion Keener Park
+
+                //- .border-top.py-4
+                //-     .row.py-md-2
+                //-         .col-lg-2.col-sm-3
+                //-             .text-body 6:30&nbsp;PM - 8:00&nbsp;PM
+                //-         .col-lg-10.col-sm-9
+                //-             .d-flex.align-items-start
+                //-                 img(src='img/schedule/in-the-sticks.jpg' alt='In the Sticks' width='200')
+                //-                 .ms-4(style='max-width: 580px;')
+                //-                     .text-uppercase.small.text-body.my-0.py-0 Headlining performance
+                //-                     a(href='entertainment.html').h2.text-body.pb-0.mb-0 In the Sticks
+                //-                     p.fs-sm.mb-2 Country and classic rock band <strong>In the Sticks</strong> performs your favorite songs from artists like Miranda Lambert, Zac Brown, Reba and Hank, to AC/DC, Zeppelin, Skynyrd, and Heart from the band stand in Legion Keener Park.
+                //-                     ul.list-inline.my-2
+                //-                         li.list-inline-item
+                //-                             p.fs-sm.mb-2 #[i.fas.fa-map-marker-alt.pe-2] Band Stand
+
+        #aug21.container.my-3
+                .h3.text-body.mb-0.pb-3 Sunday, August 21
+
+                .border-top.py-4.activity.aug21.vendors.kids.adults
+                    .row.py-md-2
+                        .col-lg-2.col-sm-3
+                            .text-body 12:00&nbsp;PM - 4:00&nbsp;PM
+                        .col-lg-10.col-sm-9
+                            .d-flex.align-items-start
+                                .ms-4(style='max-width: 580px;')
+                                    .h5.text-body Vendors Open
+                                    ul.list-inline.my-2
+                                        li.list-inline-item
+                                            p.fs-sm.align-self-center #[i.fas.fa-map-marker-alt.pe-2] Main &amp; Ligonier Streets
+
+
+
+
+
+
+//- Footer
+block footer
+    include partials/footer-default

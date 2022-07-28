@@ -1,0 +1,171 @@
+{
+    "activities": [
+        {
+          "title": "Blood Drive",
+          "pre": "American Red Cross",
+          "start": "2022-08-19T11:00",
+          "end": "2022-08-19T16:00",
+          "location": "WCCC Latrobe (130 Depot St)",
+          "link": "blood-drive.html",
+          "image": {
+            "file": "blood-drive.gif",
+            "alt": "Red Cross logo inside blood drop"
+          },
+          "buttons": [
+            {
+              "title": "Donate",
+              "link": "https://www.redcrossblood.org/give.html/drive-results?zipSponsor=bananasplit"
+            }
+          ]
+        },
+        {
+          "title": "Climbing Wall",
+          "pre": "PNC Bank",
+          "start": "2022-08-19T15:00",
+          "end": "2022-08-19T20:00",
+          "location": "Intersection of Weldon and Ligonier Streets",
+          "image": {
+            "file": "climbing-wall.jpg",
+            "alt": "Climber on wall"
+          }
+        },
+        {
+          "title": "Over 21 Area",
+          "start": "2022-08-19T15:00",
+          "end": "2022-08-19T20:00"
+        },
+        {
+          "title": "Vendors Open",
+          "start": "2022-08-19T15:00",
+          "end": "2022-08-19T20:00",
+          "location": "Main and Ligonier Streets"
+        },
+        {
+          "title": "Yellow Tie Gala",
+          "pre": "Latrobe Art Center",
+          "start": "2022-08-19T18:00",
+          "end": "2022-08-19T21:00",
+          "location": "Latrobe Art Center (819 Ligonier St)",
+          "link": "https://www.latrobeartcenter.org/events-all/2021-yellow-tie-gala",
+          "image": {
+            "file": "yellow-tie.jpg",
+            "alt": "Yellow Tie Gala"
+          },
+          "buttons": [
+            {
+              "title": "Purchase ticket",
+              "link": "https://www.latrobeartcenter.org/events-all/2021-yellow-tie-gala"
+            }
+          ]
+        },
+        {
+          "title": "5k Banana Run",
+          "pre": "Robindale",
+          "start": "2022-08-20T09:00",
+          "end": "2022-08-20T11:30",
+          "location": "Latrobe Memorial Stadium",
+          "link": "bananan-run.html",
+          "image": {
+            "file": "5k-run.png",
+            "alt": "2021 Banana Run shirt design"
+          },
+          "buttons": [
+            {
+              "title": "Register online",
+              "link": "https://www.active.com/latrobe-pa/running/distance-running-races/5k-banana-run-2022"
+            }
+          ]
+        },
+        {
+          "title": "5k Banana Run Awards Ceremony",
+          "pre": "Loyalhanna Continuing Care",
+          "start": "2022-08-20T10:30",
+          "end": "2022-08-20T11:30",
+          "location": "Latrobe Memorial Stadium",
+          "link": "bananan-run.html"
+        },
+        {
+          "title": "5k Banana Run Check-in",
+          "start": "2022-08-20T12:00",
+          "end": "2022-08-20T09:00",
+          "location": "Latrobe Memorial Stadium",
+          "link": "bananan-run.html"
+        },
+        {
+          "title": "Car Show",
+          "pre": "State Farm Agent Sarah Crispin-Thomas",
+          "post": "benefitting Relay for Life Latrobe",
+          "start": "2022-08-20T12:00",
+          "end": "2022-08-20T16:00",
+          "location": "WCCC Latrobe (130 Depot St)",
+          "link": "car-show.html",
+          "image": {
+            "file": "car-show.jpg",
+            "alt": "Blue show car"
+          },
+          "buttons": [
+            {
+              "title": "Register online",
+              "link": "https://dashboard.bananasplitfest.com/car-show-registration/"
+            }
+          ]
+        },
+        {
+          "title": "Over 21 Area",
+          "start": "2022-08-20T12:00",
+          "end": "2022-08-20T20:00"
+        },
+        {
+          "title": "Vendors Open",
+          "start": "2022-08-20T12:00",
+          "end": "2022-08-20T20:00",
+          "location": "Main and Ligonier Streets"
+        },
+        {
+          "title": "Kevin Dale Band",
+          "start": "2022-08-20T13:30",
+          "end": "2022-08-20T14:30"
+        },
+        {
+          "title": "Car Show Awards Ceremony",
+          "pre": "Superior Motors",
+          "start": "2022-08-20T15:30",
+          "end": "2022-08-20T16:00",
+          "location": "WCCC Latrobe (130 Depot St)",
+          "link": "car-show.html"
+        },
+        {
+          "title": "Crystal Blue Band",
+          "start": "2022-08-20T19:30",
+          "end": "2022-08-20T21:00",
+          "location": "Main Stage",
+          "description": "Final live public performance"
+        },
+        {
+          "title": "Joe Porembka Polka band",
+          "start": "2022-08-21T12:00",
+          "end": "2022-08-21T14:00"
+        },
+        {
+          "title": "Over 21 Area",
+          "start": "2022-08-21T12:00",
+          "end": "2022-08-21T16:00"
+        },
+        {
+          "title": "Vendors Open",
+          "start": "2022-08-21T12:00",
+          "end": "2022-08-21T16:00",
+          "location": "Main and Ligonier Streets"
+        },
+        {
+          "title": "Michael Christopher",
+          "start": "2022-08-21T12:30",
+          "end": "2022-08-21T14:00"
+        },
+        {
+          "title": "Joe Grushecky",
+          "start": "2022-08-21T15:00",
+          "end": "2022-08-21T17:00"
+        }
+      ]
+}
