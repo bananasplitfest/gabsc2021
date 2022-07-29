@@ -3,24 +3,28 @@
     {
       "id": "wccc-latrobe",
       "title": "WCCC Latrobe Campus",
-      "address": "130 Depot St"
+      "address": "130 Depot St",
+      "eventColor": "FireBrick"
     },
     {
       "id": "memorial-stadium",
-      "title": "Latrobe Memorial Stadium"
+      "title": "Latrobe Memorial Stadium",
+      "eventColor": "DarkOrange"
     },
     {
       "id": "downtown-latrobe",
       "title": "Downtown Latrobe",
-      "address": "Main and Ligonier Streets"
+      "address": "Main and Ligonier Streets",
+      "eventColor": "DarkGoldenRod"
     },
     {
       "id": "art-center",
       "title": "Latrobe Art Center",
-      "address": "819 Ligonier St"
+      "address": "819 Ligonier St",
+      "eventColor": "DarkMagenta"
     },
-    { "id": "stage1", "title": "Main Stage"},
-    { "id": "stage2", "title": "Stage"},
-    { "id": "expo", "title": "Exposition Area"}
+    { "id": "stage1", "title": "Main Stage","eventColor":"DodgerBlue"},
+    { "id": "stage2", "title": "Stage","eventColor":"MidnightBlue"},
+    { "id": "expo", "title": "Exposition Area","eventColor":"ForestGreen"}
   ]
 }
