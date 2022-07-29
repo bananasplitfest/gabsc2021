@@ -25,6 +25,7 @@
     },
     { "id": "stage1", "title": "Main Stage","eventColor":"DodgerBlue"},
     { "id": "stage2", "title": "Stage","eventColor":"MidnightBlue"},
-    { "id": "expo", "title": "Exposition Area","eventColor":"ForestGreen"}
+    { "id": "expo", "title": "Exposition Area","eventColor":"ForestGreen"},
+    { "id": "invalid", "title": "No Location Set","eventColor":"Black"}
   ]
 }
