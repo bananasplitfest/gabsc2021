@@ -1,0 +1,26 @@
+{
+  "resources": [
+    {
+      "id": "wccc-latrobe",
+      "title": "WCCC Latrobe Campus",
+      "address": "130 Depot St"
+    },
+    {
+      "id": "memorial-stadium",
+      "title": "Latrobe Memorial Stadium"
+    },
+    {
+      "id": "downtown-latrobe",
+      "title": "Downtown Latrobe",
+      "address": "Main and Ligonier Streets"
+    },
+    {
+      "id": "art-center",
+      "title": "Latrobe Art Center",
+      "address": "819 Ligonier St"
+    },
+    { "id": "stage1", "title": "Main Stage"},
+    { "id": "stage2", "title": "Stage"},
+    { "id": "expo", "title": "Exposition Area"}
+  ]
+}

@@ -14,46 +14,19 @@ block navbar
 block content
   script(src="//unpkg.com/alpinejs", defer)
   -
-    const months = [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
-      'July',
-      'August',
-      'September',
-      'October',
-      'November',
-      'December'
-    ];
-    const monthAbbv = [
-      'Jan',
-      'Feb',
-      'Mar',
-      'Apr',
-      'May',
-      'Jun',
-      'Jul',
-      'Aug',
-      'Sept',
-      'Oct',
-      'Nov',
-      'Dec'
-    ];
-    const days = [
-      'Sun',
-      'Mon',
-      'Tue',
-      'Wed',
-      'Thu',
-      'Fri',
-      'Sat'
-    ];
+    const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    const monthAbbv = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'];
+    const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
     activities.sort( function(a,b) {
       return new Date(a.start) - new Date(b.start) || new Date(a.end) - new Date(b.end) || a.title.localeCompare(b.title);   
     });
+    let resourcesArray = {}
+    for (const i of resources) {
+      resourcesArray[i.id] = i
+    }
+
+
+
 
   .sidebar-enabled
     .container-fluid
@@ -80,40 +53,40 @@ block content
           // Content
           .schedule
             each a in activities
-              - const dayStr = monthAbbv[new Date(a.start).getMonth()].toLowerCase() + new Date(a.start).getDate();
-              .border-top.py-4.activity(x-show=`day.includes("${dayStr}")`)
-                
-                .row.py-md-2
-                  .col-lg-2.col-sm-3
-                    .text-body.h6.my-0 #{ days[new Date(a.start).getDay()] }, #{ months[new Date(a.start).getMonth()] } #{ new Date(a.start).getDate() }
-                    .text-body.my-0 #{new Date(a.start).toLocaleTimeString('en-US',{ timeStyle: 'short' })} - #{new Date(a.end).toLocaleTimeString('en-US',{ timeStyle: 'short' })}
-                  .col-lg-10.col-sm-9
-                    .d-flex.align-items-start
-                      if a.image
-                        img(src='img/schedule/'+a.image.file alt=a.image.alt width='75').rounded-circle.me-4
-                      div(style='max-width: 580px;')
-                        .activity-title.mb-2
-                          if a.pre
-                            .small.text-body.my-0.py-0 #{a.pre}
-                          if a.link
-                            a(href=a.link).h4.text-body.my-0.py-0 #{a.title}
-                          else
-                            .h4.text-body.my-0.py-0 #{a.title}
-                          if a.post
-                            .small.text-body.my-0.py-0 #{a.post}
-                        if a.description
-                          .activity-description.mb-2
-                            p.my-0 #{a.description}
-                        if ( a.buttons || a.location )
-                          .activity-meta
-                            ul.list-inline.my-0
-                              if a.buttons
-                                each b in a.buttons
-                                  li.list-inline-item.my-0: a(href=b.link target="_blank").btn.btn-outline-primary.btn-sm.d-inline-block.align-self-center
-                                    | #{b.title}
-                              if a.location
-                                li.list-inline-item
-                                  p.fs-sm.align-self-center.my-0 #[i.fas.fa-map-marker-alt.pe-2] #{a.location}
+              if a.start
+                - const dayStr = monthAbbv[new Date(a.start).getMonth()].toLowerCase() + new Date(a.start).getDate();
+                .border-top.py-4.activity(x-show=`day.includes("${dayStr}")`)
+                  .row.py-md-2
+                    .col-lg-2.col-sm-3
+                      .text-body.h6.my-0 #{ days[new Date(a.start).getDay()] }, #{ months[new Date(a.start).getMonth()] } #{ new Date(a.start).getDate() }
+                      .text-body.my-0 #{new Date(a.start).toLocaleTimeString('en-US',{ timeStyle: 'short' })} - #{new Date(a.end).toLocaleTimeString('en-US',{ timeStyle: 'short' })}
+                    .col-lg-10.col-sm-9
+                      .d-flex.align-items-start
+                        if a.image
+                          img(src='img/schedule/'+a.image.file alt=a.image.alt width='75').rounded-circle.me-4
+                        div(style='max-width: 580px;')
+                          .activity-title.mb-2
+                            if a.pre
+                              .small.text-body.my-0.py-0 #{a.pre}
+                            if a.link
+                              a(href=a.link).h4.text-body.my-0.py-0 #{a.title}
+                            else
+                              .h4.text-body.my-0.py-0 #{a.title}
+                            if a.post
+                              .small.text-body.my-0.py-0 #{a.post}
+                          if a.description
+                            .activity-description.mb-2
+                              p.my-0 #{a.description}
+                          if ( a.buttons || a.resourceId )
+                            .activity-meta
+                              ul.list-inline.my-0
+                                if a.buttons
+                                  each b in a.buttons
+                                    li.list-inline-item.my-0: a(href=b.link target="_blank").btn.btn-outline-primary.btn-sm.d-inline-block.align-self-center
+                                      | #{b.title}
+                                if ( a.resourceId && resourcesArray.hasOwnProperty(a.resourceId) )
+                                  li.list-inline-item
+                                    p.fs-sm.align-self-center.my-0 #[i.fas.fa-map-marker-alt.pe-2] #{resourcesArray[a.resourceId].title}
 
 
 //- Footer

@@ -154,8 +154,11 @@ gulp.task('pug', () =>
       gulp.src(['**/*.pug', '!helpers/**', '!partials/**'], sourceOptions)
         .pipe(gulpif(global.watch, emitty.filter(global.emittyChangedFile)))
         .pipe(data(function(file) {
-            const j = JSON.parse(fs.readFileSync(path.src_pug+'/data/2022-schedule.json'))
-            //console.log(j)
+            const j = JSON.parse(fs.readFileSync(path.src_static+'/data/2022-schedule.json'))
+            return j
+        }))
+        .pipe(data(function(file) {
+            const j = JSON.parse(fs.readFileSync(path.src_static+'/data/resources.json'))
             return j
         }))
         .pipe(pug({ pretty: true }))
