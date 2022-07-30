@@ -3,17 +3,17 @@ ul.navbar-nav
   li()&attributes(parentMenu === 'Activities' ? {'class': 'nav-item dropdown dropdown-mega active'} : {'class': 'nav-item dropdown dropdown-mega'})
     a(href='#' data-bs-toggle='dropdown').nav-link.dropdown-toggle Activities
     .dropdown-menu
-      a(href='#' style='background-image: url(img/menu/activities-pong-thumb.jpg);').dropdown-column.dropdown-column-img.bg-secondary
+      a(href='#')&attributes(isNestedFile ? {'style': 'background-image: url(../img/menu/activities-pong-thumb.jpg);'} : {'style': 'background-image: url(img/menu/activities-pong-thumb.jpg);'}).dropdown-column.dropdown-column-img.bg-secondary
       .dropdown-column
         h5.dropdown-header Activities
-        a(href='5k-banana-run.html').dropdown-item 5k Banana Run
-        a(href='blood-drive.html').dropdown-item Blood Drive
-        a(href='car-show.html').dropdown-item Car Show
-        a(href='pie-eating-contest.html').dropdown-item Pie Eating Contest
-        a(href='princess-pageant.html').dropdown-item Princess Pageant
+        a&attributes(isNestedFile ? {'href': '../5k-banana-run.html'} : {'href': '5k-banana-run.html'}).dropdown-item 5k Banana Run
+        a&attributes(isNestedFile ? {'href': '../blood-drive.html'} : {'href': 'blood-drive.html'}).dropdown-item Blood Drive
+        a&attributes(isNestedFile ? {'href': '../car-show.html'} : {'href': 'car-show.html'}).dropdown-item Car Show
+        a&attributes(isNestedFile ? {'href': '../pie-eating-contest.html'} : {'href': 'pie-eating-contest.html'}).dropdown-item Pie Eating Contest
+        a&attributes(isNestedFile ? {'href': '../princess-pageant.html'} : {'href': 'princess-pageant.html'}).dropdown-item Princess Pageant
         a(href='https://www.latrobeartcenter.org/events-all/2022-yellow-tie-gala', target="_blank").dropdown-item Yellow Tie Gala
   li()&attributes(parentMenu === 'Entertainment' ? {'class': 'nav-item active'} : {'class': 'nav-item'})
-    a(href='entertainment.html').nav-link Entertainment
+    a&attributes(isNestedFile ? {'href': '../entertainment.html'} : {'href': 'entertainment.html'}).nav-link Entertainment
   
   //- li()&attributes(parentMenu === 'Entertainment' ? {'class': 'nav-item dropdown dropdown-mega active'} : {'class': 'nav-item dropdown dropdown-mega'})
   //-   a(href='#' data-bs-toggle='dropdown').nav-link.dropdown-toggle Entertainment
@@ -31,30 +31,30 @@ ul.navbar-nav
   li()&attributes(parentMenu === 'Vendors' ? {'class': 'nav-item dropdown dropdown-mega active'} : {'class': 'nav-item dropdown dropdown-mega'})
     a(href='#' data-bs-toggle='dropdown').nav-link.dropdown-toggle Vendors
     .dropdown-menu
-      a(href='#' style='background-image: url(img/menu/vendor-artist-thumb.jpg);').dropdown-column.dropdown-column-img.bg-secondary
+      a(href='#')&attributes(isNestedFile ? {'style': 'background-image: url(../img/menu/vendor-artist-thumb.jpg);'} : {'style': 'background-image: url(img/menu/vendor-artist-thumb.jpg);'}).dropdown-column.dropdown-column-img.bg-secondary
       .dropdown-column
         h5.dropdown-header Vendor Information
-        a(href='vendors.html').dropdown-item Application
-        a(href='vendors.html').dropdown-item Guidelines
+        a&attributes(isNestedFile ? {'href': '../vendors.html'} : {'href': 'vendors.html'}).dropdown-item Application
+        a&attributes(isNestedFile ? {'href': '../vendors.html'} : {'href': 'vendors.html'}).dropdown-item Guidelines
         
   li()&attributes(parentMenu === 'Attend' ? {'class': 'nav-item dropdown dropdown-mega active'} : {'class': 'nav-item dropdown dropdown-mega'})
     a(href='#' data-bs-toggle='dropdown').nav-link.dropdown-toggle Attend
     .dropdown-menu
-      a(href='#' style='background-image: url(img/menu/banana-split-boy-thumb.jpg);').dropdown-column.dropdown-column-img.bg-secondary
+      a(href='#')&attributes(isNestedFile ? {'style': 'background-image: url(../img/menu/banana-split-boy-thumb.jpg);'} : {'style': 'background-image: url(img/menu/banana-split-boy-thumb.jpg);'}).dropdown-column.dropdown-column-img.bg-secondary
       .dropdown-column
         h5.dropdown-header Attend
-        a(href='attend.html').dropdown-item Getting to the Event
-        a(href='attend.html').dropdown-item Parking
-        a(href='attend.html').dropdown-item What to bring
+        a&attributes(isNestedFile ? {'href': '../attend.html'} : {'href': 'attend.html'}).dropdown-item Getting to the Event
+        a&attributes(isNestedFile ? {'href': '../attend.html'} : {'href': 'attend.html'}).dropdown-item Parking
+        a&attributes(isNestedFile ? {'href': '../attend.html'} : {'href': 'attend.html'}).dropdown-item What to bring
   li()&attributes(parentMenu === 'History' ? {'class': 'nav-item dropdown dropdown-mega active'} : {'class': 'nav-item dropdown dropdown-mega'})
     a(href='#' data-bs-toggle='dropdown').nav-link.dropdown-toggle History
     .dropdown-menu
-      a(href='#' style='background-image: url(img/menu/usps-stamp-thumb.jpg);').dropdown-column.dropdown-column-img.bg-secondary
+      a(href='#')&attributes(isNestedFile ? {'style': 'background-image: url(../img/menu/usps-stamp-thumb.jpg);'} : {'style': 'background-image: url(img/menu/usps-stamp-thumb.jpg);'}).dropdown-column.dropdown-column-img.bg-secondary
       .dropdown-column
         h5.dropdown-header History
-        a(href='history.html').dropdown-item The invention
-        a(href='history.html').dropdown-item Latrobe's celebration
-        a(href='history.html').dropdown-item Past Banana Split Princesses
-        a(href='history.html').dropdown-item Past Honorary Chairs
+        a&attributes(isNestedFile ? {'href': '../history.html'} : {'href': 'history.html'}).dropdown-item The invention
+        a&attributes(isNestedFile ? {'href': '../history.html'} : {'href': 'history.html'}).dropdown-item Latrobe's celebration
+        a&attributes(isNestedFile ? {'href': '../history.html'} : {'href': 'history.html'}).dropdown-item Past Banana Split Princesses
+        a&attributes(isNestedFile ? {'href': '../history.html'} : {'href': 'history.html'}).dropdown-item Past Honorary Chairs
   //- li()&attributes(parentMenu === 'News' ? {'class': 'nav-item active'} : {'class': 'nav-item'})
   //-   a(href='news.html').nav-link News
