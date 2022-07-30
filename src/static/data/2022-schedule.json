@@ -38,7 +38,15 @@
       {
         "title": "Over 21 Area",
         "start": "2022-08-19T15:00",
-        "end": "2022-08-19T20:00"
+        "end": "2022-08-19T20:00",
+        "resourceId": "over-21-area"
+      },
+      {
+        "title": "Anttolena and Scottie",
+        "pre": " ",
+        "start": "2022-08-19T18:00",
+        "end": "2022-08-19T19:00",
+        "resourceId": "stage2"
       },
       {
         "title": "Yellow Tie Gala",
@@ -87,7 +95,8 @@
         "title": "Face painting ",
         "pre": "PNC",
         "start": "2022-08-20T10:00",
-        "end": "2022-08-20T18:00"
+        "end": "2022-08-20T18:00",
+        "resourceId": "rogers-park"
       },
       {
         "title": "5k Banana Run Awards Ceremony",
@@ -96,6 +105,12 @@
         "end": "2022-08-20T11:30",
         "resourceId": "memorial-stadium",
         "link": "bananan-run.html"
+      },
+      {
+        "title": "Jason Gamble",
+        "start": "2022-08-20T12:00",
+        "end": "2022-08-19T13:30",
+        "resourceId": "stage2"
       },
       {
         "title": "Car Show",
@@ -119,7 +134,8 @@
       {
         "title": "Over 21 Area",
         "start": "2022-08-20T12:00",
-        "end": "2022-08-20T20:00"
+        "end": "2022-08-20T20:00",
+        "resourceId": "over-21-area"
       },
       {
         "title": "Vendors Open",
@@ -129,19 +145,33 @@
       },
       {
         "title": "Corn Hole Tournament",
-        "pre": "Kelly Sparber White & Associates",
+        "pre": "Commercial Bank and Trust of PA and Kelly Sparber White & Associates",
         "start": "2022-08-20T13:00",
-        "end": "2022-08-20T17:00"
+        "end": "2022-08-20T17:00",
+        "resourceId": "over-21-area"
       },
       {
         "title": "Kevin Dale Band",
         "start": "2022-08-20T13:30",
-        "end": "2022-08-20T14:30"
+        "end": "2022-08-20T14:30",
+        "resourceId": "stage1"
       },
       {
         "title": "Pie Eating Contest",
         "start": "2022-08-20T14:00",
         "end": "2022-08-20T14:30"
+      },
+      {
+        "title": "Laurel Valley Academy of Dance",
+        "start": "2022-08-20T14:00",
+        "end": "2022-08-20T15:00",
+        "resourceId": "stage2"
+      },
+      {
+        "title": "Brachtopus",
+        "start": "2022-08-20T15:00",
+        "end": "2022-08-20T16:00",
+        "resourceId": "stage1"
       },
       {
         "title": "Car Show Awards Ceremony",
@@ -152,6 +182,12 @@
         "link": "car-show.html"
       },
       {
+        "title": "Shattered Accoustic",
+        "start": "2022-08-20T15:30",
+        "end": "2022-08-20T16:30",
+        "resourceId": "stage2"
+      },
+      {
         "title": "Crystal Blue Band",
         "start": "2022-08-20T19:30",
         "end": "2022-08-20T21:00",
@@ -159,14 +195,34 @@
         "description": "Final live public performance"
       },
       {
+        "title": "Art Center Craft",
+        "start": "2022-08-21T10:00",
+        "end": "2022-08-21T14:00",
+        "resourceId": "rogers-park"
+      },
+      {
+        "title": "YaJagoff! Podcast",
+        "start": "2022-08-21T12:00",
+        "end": "2022-08-21T13:00",
+        "resourceId": "stage1"
+      },
+      {
+        "title": "Michael Christopher",
+        "start": "2022-08-21T12:00",
+        "end": "2022-08-21T13:30",
+        "resourceId": "stage2"
+      },
+      {
         "title": "Joe Porembka Polka band",
         "start": "2022-08-21T12:00",
-        "end": "2022-08-21T14:00"
+        "end": "2022-08-21T14:00",
+        "resourceId": "stage2"
       },
       {
         "title": "Over 21 Area",
         "start": "2022-08-21T12:00",
-        "end": "2022-08-21T16:00"
+        "end": "2022-08-21T16:00",
+        "resourceId": "over-21-area"
       },
       {
         "title": "Vendors Open",
@@ -175,54 +231,58 @@
         "resourceId": "downtown-latrobe"
       },
       {
-        "title": "Michael Christopher",
-        "start": "2022-08-21T12:30",
-        "end": "2022-08-21T14:00"
+        "title": "Mark Anderson",
+        "start": "2022-08-21T14:30",
+        "end": "2022-08-21T16:00",
+        "resourceId": "stage2"
       },
       {
         "title": "Joe Grushecky",
         "pre": "1st Summit Bank presents",
-        "start": "2022-08-21T15:00",
-        "end": "2022-08-21T17:00"
+        "start": "2022-08-21T14:30",
+        "end": "2022-08-21T16:30",
+        "resourceId": "stage1"
       },
       {
-        "title": "YaJagoff! Podcast",
-        "start": "2025-08-21T12:00",
-        "end": "2025-08-21T13:00"
+        "title": "Kyle Green Band",
+        "start": "2022-08-21T17:00",
+        "end": "2022-08-21T18:00",
+        "resourceId": "stage2"
       },
       {
-        "title": "Art Center Craft"
-      },
-      {
-        "title": "Banana Split Princess Meet-n-Greet"
+        "title": "Banana Split Princess Meet-n-Greet",
+        "resourceId": "parklet"
       },
       {
         "title": "Candy Bar Bingo",
         "pre": "Keystone Candy"
       },
       {
-        "title": "East End Kids"
+        "title": "East End Kids",
+        "resourceId": "expo"
       },
       {
-        "title": "Goat Yoga"
+        "title": "Goat Yoga",
+        "resourceId": "expo"
       },
       {
-        "title": "Library"
+        "title": "Library "
       },
       {
-        "title": "Limbo Contest"
+        "title": "Limbo Contest",
+        "resourceId": "rogers-park"
       },
       {
-        "title": "LVAD"
+        "title": "Potato Sack Race",
+        "resourceId": "rogers-park"
       },
       {
-        "title": "Potato Sack Race"
+        "title": "Stage Right",
+        "resourceId": "expo"
       },
       {
-        "title": "Stage Right"
-      },
-      {
-        "title": "Westmoreland Performing Arts"
+        "title": "Westmoreland Performing Arts",
+        "resourceId": "expo"
       }
     ]
 }

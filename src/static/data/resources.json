@@ -1,31 +1,75 @@
 {
   "resources": [
     {
+      "id": "downtown-latrobe",
+      "title": "Downtown Latrobe",
+      "address": "Main and Ligonier Streets",
+      "sortOrder": "1",
+      "eventColor": "#673AB7"
+    },
+    {"id" : "stage1", "title" : "Main Stage", "address" : "320 Main St", "sortOrder" : "10", "eventColor" : "#4DB6AC"},
+    {
+      "id": "stage2",
+      "title": "Stage",
+      "address": "",
+      "sortOrder": "11",
+      "eventColor": "#FFD600"
+    },
+    {
+      "id": "expo",
+      "title": "Exposition Area",
+      "address": "",
+      "sortOrder": "12",
+      "eventColor": "#18FFFF"
+    },
+    {
+      "id": "over-21-area",
+      "title": "Main Street Parking Lot",
+      "address": "329 Main St",
+      "sortOrder": "20",
+      "eventColor": "#3F51B5"
+    },
+    {
+      "id": "rogers-park",
+      "title": "Rogers Memorial Park",
+      "address": "",
+      "sortOrder": "21",
+      "eventColor": "#4CAF50"
+    },
+    {
+      "id": "parklet",
+      "title": "Downtown Parklet",
+      "address": "",
+      "sortOrder": "22",
+      "eventColor": "#4A148C"
+    },
+    {
       "id": "wccc-latrobe",
       "title": "WCCC Latrobe Campus",
       "address": "130 Depot St",
-      "eventColor": "FireBrick"
+      "sortOrder": "30",
+      "eventColor": "#2196F3"
     },
     {
       "id": "memorial-stadium",
       "title": "Latrobe Memorial Stadium",
-      "eventColor": "DarkOrange"
-    },
-    {
-      "id": "downtown-latrobe",
-      "title": "Downtown Latrobe",
-      "address": "Main and Ligonier Streets",
-      "eventColor": "DarkGoldenRod"
+      "address": "",
+      "sortOrder": "31",
+      "eventColor": "#FF6F00"
     },
     {
       "id": "art-center",
       "title": "Latrobe Art Center",
       "address": "819 Ligonier St",
-      "eventColor": "DarkMagenta"
+      "sortOrder": "32",
+      "eventColor": "#D32F2F"
     },
-    { "id": "stage1", "title": "Main Stage","eventColor":"DodgerBlue"},
-    { "id": "stage2", "title": "Stage","eventColor":"MidnightBlue"},
-    { "id": "expo", "title": "Exposition Area","eventColor":"ForestGreen"},
-    { "id": "invalid", "title": "No Location Set","eventColor":"Black"}
+    {
+      "id": "invalid",
+      "title": "No Location Set",
+      "address": "",
+      "sortOrder": "999",
+      "eventColor": "#212121"
+    }
   ]
 }
