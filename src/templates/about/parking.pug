@@ -1,14 +1,15 @@
-extends partials/layout
+extends ../partials/layout
 
 //- Override default config variables
 append config
   - var parentMenu = 'Attend'
   - var pageTitle = 'Parking'
   - var isSidebar = true
+  - var isNestedFile = true
 
 //- Navbar
 block navbar
-  include partials/navbar-solid-shadow
+  include ../partials/navbar-solid-shadow
 
 //- Page Content
 block content
@@ -23,8 +24,8 @@ block content
               h5.mt-1.mb-0 Sidebar
               button(type='button' data-bs-dismiss='offcanvas' aria-label='Close').btn-close.lead
             .offcanvas-body.pt-3.pt-lg-0.ps-lg-0.pe-lg-2.pe-xl-4(data-simplebar)
-              //- partials/sidebar-help.pug
-              include partials/sidebar-help
+              //- ../partials/sidebar-help.pug
+              include ../partials/sidebar-help
 
 
         .col-lg-9.content.py-4
@@ -74,7 +75,7 @@ block content
 
 //- Footer
 block footer
-  include partials/footer-default
+  include ../partials/footer-default
 
   // Sidebar toggle button
   button(type='button' data-bs-toggle='offcanvas' data-bs-target='#help-sidebar').btn.btn-primary.btn-sm.sidebar-toggle

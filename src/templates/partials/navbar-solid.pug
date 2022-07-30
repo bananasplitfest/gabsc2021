@@ -1,12 +1,13 @@
 // Navbar (Solid background)
 // Remove "navbar-sticky" class to make navigation bar scrollable with the page.
+
 header.header.navbar.navbar-expand-lg.navbar-light.bg-light.navbar-sticky(data-scroll-header data-fixed-element)
   .container.px-0.px-xl-3
     button(type='button' data-bs-toggle='offcanvas' data-bs-target='#primaryMenu').navbar-toggler.ms-n2.me-2
       span.navbar-toggler-icon
-    a(href='index.html').navbar-brand.flex-shrink-0.order-lg-1.mx-auto.ms-lg-0.pe-lg-2.me-lg-4
-      img(src='img/logo/logo.svg' alt='Great American Banana Split Celebration' width='153').d-none.d-lg-block
-      img(src='img/logo/logo.svg' alt='Great American Banana Split Celebration' width='58').d-lg-none
+    a&attributes(isNestedFile ? {'href': '../index.html'} : {'href': 'index.html'}).navbar-brand.flex-shrink-0.order-lg-1.mx-auto.ms-lg-0.pe-lg-2.me-lg-4
+      img(alt='Great American Banana Split Celebration' width='153')&attributes(isNestedFile ? {'src': '../img/logo/logo.svg'} : {'src': 'img/logo/logo.svg'}).d-none.d-lg-block
+      img(alt='Great American Banana Split Celebration' width='58')&attributes(isNestedFile ? {'src': '../img/logo/logo.svg'} : {'src': 'img/logo/logo.svg'}).d-lg-none
     .d-flex.align-items-center.order-lg-3.ms-lg-auto
       a(href='schedule.html').btn.btn-primary.ms-grid-gutter.d-inline-block Schedule
     #primaryMenu.offcanvas.offcanvas-collapse.order-lg-2

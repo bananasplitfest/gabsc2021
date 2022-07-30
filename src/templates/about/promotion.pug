@@ -1,0 +1,234 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+  - var parentMenu = 'Attend'
+  - var pageTitle = 'When and where is the event?'
+  - var isSidebar = true
+  - var isNestedFile = true
+
+//- Navbar
+block navbar
+  include ../partials/navbar-solid-shadow
+
+//- Page Content
+block content
+  .sidebar-enabled
+    .container
+      .row
+
+        // Sidebar
+        .sidebar.col-lg-3.pt-lg-5
+          #help-sidebar.offcanvas.offcanvas-collapse
+            .offcanvas-header.navbar-shadow.mb-3
+              h5.mt-1.mb-0 Sidebar
+              button(type='button' data-bs-dismiss='offcanvas' aria-label='Close').btn-close.lead
+            .offcanvas-body.pt-3.pt-lg-0.ps-lg-0.pe-lg-2.pe-xl-4(data-simplebar)
+              //- partials/sidebar-help.pug
+              include ../partials/sidebar-help
+
+
+        .col-lg-9.content.py-4
+
+          // Page title
+          .d-md-flex.justify-content-between.pb-2.mb-4
+            h1.me-3(style='max-width: 38rem;') Promotion materials
+            span.fs-sm.text-muted.text-md-nowrap.pt-2 Last updated July 29, 2022
+          
+          // Content
+          p Latrobe is a special place. Use these files to help share the Banana Split Celebration with your family, friends, sports teams, walking group, church, and co-workers.
+
+          h2.h3.mb-4#general General
+
+          h3.h5.mb-2 8.5" x 11" Flyers
+          .row.pb-3.pb-md-0.mb-4.d-flex.justify-content-center
+            .col-lg-3.col-sm-6.mb-grid-gutter
+              .card.card-hover.border-1.shadow.mx-auto(style='max-width: 20rem;')
+                a(href='../pdf/2022-blood-drive-poster.pdf', download)
+                  .card-img-top
+                    img(src='../img/promotion/poster-22-blood-drive.png')
+                .card-body.p-2.text-center
+                  h3.h6.card-title.mb-1 Blood Drive
+                  p.fs-xs.text-body.mb-0 PDF
+
+          h2.h3.mb-4#vendors Vendors
+
+          h3.h5.mb-2 Designed for Facebook
+          .row.pb-3.pb-md-0.mb-4.d-flex.justify-content-center
+            .col-lg-3.col-sm-6.mb-grid-gutter
+              .card.card-hover.border-1.shadow.mx-auto(style='max-width: 20rem;')
+                a(href='../img/promotion/fb-my-booth-weekend_fullsize.png', download)
+                  .card-img-top
+                    img(src='../img/promotion/fb-my-booth-weekend_thumb.png')
+                .card-body.p-2.text-center
+                  h3.h6.card-title.mb-1 Find My Booth
+                  p.fs-xs.text-body.mb-0 August 19-21
+            .col-lg-3.col-sm-6.mb-grid-gutter
+              .card.card-hover.border-1.shadow.mx-auto(style='max-width: 20rem;')
+                a(href='../img/promotion/fb-our-booth-weekend_fullsize.png', download)
+                  .card-img-top
+                    img(src='../img/promotion/fb-our-booth-weekend_thumb.png')
+                .card-body.p-2.text-center
+                  h3.h6.card-title.mb-1 Find Our Booth
+                  p.fs-xs.text-body.mb-0 August 19-21
+            .col-lg-3.col-sm-6.mb-grid-gutter
+              .card.card-hover.border-1.shadow.mx-auto(style='max-width: 20rem;')
+                a(href='../img/promotion/fb-our-food-weekend_fullsize.png', download)
+                  .card-img-top
+                    img(src='../img/promotion/fb-our-food-weekend_thumb.png')
+                .card-body.p-2.text-center
+                  h3.h6.card-title.mb-1 Enjoy Our Food
+                  p.fs-xs.text-body.mb-0 August 19-21
+
+          h3.h5.mb-2 Designed for Instagram
+          .row.pb-3.pb-md-0.mb-4.d-flex.justify-content-center
+            .col-lg-3.col-sm-6.mb-grid-gutter
+              .card.card-hover.border-1.shadow.mx-auto(style='max-width: 20rem;')
+                a(href='../img/promotion/insta-my-booth-weekend_fullsize.png', download)
+                  .card-img-top
+                    img(src='../img/promotion/insta-my-booth-weekend_thumb.png')
+                .card-body.p-2.text-center
+                  h3.h6.card-title.mb-1 Find My Booth
+                  p.fs-xs.text-body.mb-0 August 19-21
+            .col-lg-3.col-sm-6.mb-grid-gutter
+              .card.card-hover.border-1.shadow.mx-auto(style='max-width: 20rem;')
+                a(href='../img/promotion/insta-our-booth-weekend_fullsize.png', download)
+                  .card-img-top
+                    img(src='../img/promotion/insta-our-booth-weekend_thumb.png')
+                .card-body.p-2.text-center
+                  h3.h6.card-title.mb-1 Find Our Booth
+                  p.fs-xs.text-body.mb-0 August 19-21
+            .col-lg-3.col-sm-6.mb-grid-gutter
+              .card.card-hover.border-1.shadow.mx-auto(style='max-width: 20rem;')
+                a(href='../img/promotion/insta-our-food-weekend_fullsize.png', download)
+                  .card-img-top
+                    img(src='../img/promotion/insta-our-food-weekend_thumb.png')
+                .card-body.p-2.text-center
+                  h3.h6.card-title.mb-1 Enjoy Our Food
+                  p.fs-xs.text-body.mb-0 August 19-21
+
+          h2.h3.mb-4#entertainers Entertainers
+
+          h3.h5.mb-2 Designed for Facebook
+          .row.pb-3.pb-md-0.mb-4.d-flex.justify-content-center
+            .col-lg-3.col-sm-6.mb-grid-gutter
+              .card.card-hover.border-1.shadow.mx-auto(style='max-width: 20rem;')
+                a(href='../img/promotion/fb-me-perform-friday_fullsize.png', download)
+                  .card-img-top
+                    img(src='../img/promotion/fb-me-perform-friday_thumb.png')
+                .card-body.p-2.text-center
+                  h3.h6.card-title.mb-1 Come See Me Perform
+                  p.fs-xs.text-body.mb-0 Friday August 19
+            .col-lg-3.col-sm-6.mb-grid-gutter
+              .card.card-hover.border-1.shadow.mx-auto(style='max-width: 20rem;')
+                a(href='../img/promotion/fb-us-perform-friday_fullsize.png', download)
+                  .card-img-top
+                    img(src='../img/promotion/fb-us-perform-friday_thumb.png')
+                .card-body.p-2.text-center
+                  h3.h6.card-title.mb-1 Come See Us Perform
+                  p.fs-xs.text-body.mb-0 Friday August 19
+          
+          .row.pb-3.pb-md-0.mb-4.d-flex.justify-content-center
+            .col-lg-3.col-sm-6.mb-grid-gutter
+              .card.card-hover.border-1.shadow.mx-auto(style='max-width: 20rem;')
+                a(href='../img/promotion/fb-me-perform-saturday_fullsize.png', download)
+                  .card-img-top
+                    img(src='../img/promotion/fb-me-perform-saturday_thumb.png')
+                .card-body.p-2.text-center
+                  h3.h6.card-title.mb-1 Come See Me Perform
+                  p.fs-xs.text-body.mb-0 Saturday August 20
+            .col-lg-3.col-sm-6.mb-grid-gutter
+              .card.card-hover.border-1.shadow.mx-auto(style='max-width: 20rem;')
+                a(href='../img/promotion/fb-us-perform-saturday_fullsize.png', download)
+                  .card-img-top
+                    img(src='../img/promotion/fb-us-perform-saturday_thumb.png')
+                .card-body.p-2.text-center
+                  h3.h6.card-title.mb-1 Come See Us Perform
+                  p.fs-xs.text-body.mb-0 Saturday August 20
+          
+          .row.pb-3.pb-md-0.mb-4.d-flex.justify-content-center
+            .col-lg-3.col-sm-6.mb-grid-gutter
+              .card.card-hover.border-1.shadow.mx-auto(style='max-width: 20rem;')
+                a(href='../img/promotion/fb-me-perform-sunday_fullsize.png', download)
+                  .card-img-top
+                    img(src='../img/promotion/fb-me-perform-sunday_thumb.png')
+                .card-body.p-2.text-center
+                  h3.h6.card-title.mb-1 Come See Me Perform
+                  p.fs-xs.text-body.mb-0 Sunday August 21
+            .col-lg-3.col-sm-6.mb-grid-gutter
+              .card.card-hover.border-1.shadow.mx-auto(style='max-width: 20rem;')
+                a(href='../img/promotion/fb-us-perform-sunday_fullsize.png', download)
+                  .card-img-top
+                    img(src='../img/promotion/fb-us-perform-sunday_thumb.png')
+                .card-body.p-2.text-center
+                  h3.h6.card-title.mb-1 Come See Us Perform
+                  p.fs-xs.text-body.mb-0 Sunday August 21
+          
+          h3.h5.mb-2 Designed for Instagram
+          .row.pb-3.pb-md-0.mb-4.d-flex.justify-content-center
+            .col-lg-3.col-sm-6.mb-grid-gutter
+              .card.card-hover.border-1.shadow.mx-auto(style='max-width: 20rem;')
+                a(href='../img/promotion/insta-me-perform-friday_fullsize.png', download)
+                  .card-img-top
+                    img(src='../img/promotion/insta-me-perform-friday_thumb.png')
+                .card-body.p-2.text-center
+                  h3.h6.card-title.mb-1 See Me Perform
+                  p.fs-xs.text-body.mb-0 Friday August 19
+            .col-lg-3.col-sm-6.mb-grid-gutter
+              .card.card-hover.border-1.shadow.mx-auto(style='max-width: 20rem;')
+                a(href='../img/promotion/insta-us-perform-friday_fullsize.png', download)
+                  .card-img-top
+                    img(src='../img/promotion/insta-us-perform-friday_thumb.png')
+                .card-body.p-2.text-center
+                  h3.h6.card-title.mb-1 See Us Perform
+                  p.fs-xs.text-body.mb-0 Friday August 19
+          
+          .row.pb-3.pb-md-0.mb-4.d-flex.justify-content-center
+            .col-lg-3.col-sm-6.mb-grid-gutter
+              .card.card-hover.border-1.shadow.mx-auto(style='max-width: 20rem;')
+                a(href='../img/promotion/insta-me-perform-saturday_fullsize.png', download)
+                  .card-img-top
+                    img(src='../img/promotion/insta-me-perform-saturday_thumb.png')
+                .card-body.p-2.text-center
+                  h3.h6.card-title.mb-1 See Me Perform
+                  p.fs-xs.text-body.mb-0 Saturday August 20
+            .col-lg-3.col-sm-6.mb-grid-gutter
+              .card.card-hover.border-1.shadow.mx-auto(style='max-width: 20rem;')
+                a(href='../img/promotion/insta-us-perform-saturday_fullsize.png', download)
+                  .card-img-top
+                    img(src='../img/promotion/insta-us-perform-saturday_thumb.png')
+                .card-body.p-2.text-center
+                  h3.h6.card-title.mb-1 See Us Perform
+                  p.fs-xs.text-body.mb-0 Saturday August 20
+          
+          .row.pb-3.pb-md-0.mb-4.d-flex.justify-content-center
+            .col-lg-3.col-sm-6.mb-grid-gutter
+              .card.card-hover.border-1.shadow.mx-auto(style='max-width: 20rem;')
+                a(href='../img/promotion/insta-me-perform-sunday_fullsize.png', download)
+                  .card-img-top
+                    img(src='../img/promotion/insta-me-perform-sunday_thumb.png')
+                .card-body.p-2.text-center
+                  h3.h6.card-title.mb-1 See Me Perform
+                  p.fs-xs.text-body.mb-0 Sunday August 21
+            .col-lg-3.col-sm-6.mb-grid-gutter
+              .card.card-hover.border-1.shadow.mx-auto(style='max-width: 20rem;')
+                a(href='../img/promotion/insta-us-perform-sunday_fullsize.png', download)
+                  .card-img-top
+                    img(src='../img/promotion/insta-us-perform-sunday_thumb.png')
+                .card-body.p-2.text-center
+                  h3.h6.card-title.mb-1 See Us Perform
+                  p.fs-xs.text-body.mb-0 Sunday August 21
+
+          
+
+
+
+
+//- Footer
+block footer
+  include ../partials/footer-default
+
+  // Sidebar toggle button
+  button(type='button' data-bs-toggle='offcanvas' data-bs-target='#help-sidebar').btn.btn-primary.btn-sm.sidebar-toggle
+    i.ai-sidebar.fs-base.me-2
+    | Sidebar
