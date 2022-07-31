@@ -15,7 +15,7 @@ block navbar
 block content
   -
     activities.sort( function(a,b) {
-      return new Date(a.start) - new Date(b.start) || new Date(a.end) - new Date(b.end) || a.title.localeCompare(b.title);   
+      return a.highlight ? -1 : 0 || new Date(a.start) - new Date(b.start) || new Date(a.end) - new Date(b.end) || a.title.localeCompare(b.title);   
     });
     let resourcesArray = {}
     for (const i of resources) {
@@ -34,6 +34,7 @@ block content
             if a.start && a.entertainer
               // Band
               article.card.card-horizontal.mb-grid-gutter&attributes(a.highlight ? {class: "bandShadow border-5", style: "border-color: #0757a4;"} : "")
+                // , a.image ? "" : {class: "col-md-6 col-lg-4 col-xl-3"}
                 if a.image
                   img(src='img/entertainment/2022/'+a.image.file)&attributes(
                     {style: "border-top-left-radius: calc(1rem - 5px);border-bottom-left-radius: calc(1rem - 5px);"}).card-img-top

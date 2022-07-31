@@ -1,0 +1,78 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var vendorStyles = [ 'tiny-slider/dist/tiny-slider.css', 'lightgallery.js/dist/css/lightgallery.min.css']
+  - var vendorScripts = ['tiny-slider/dist/min/tiny-slider.js', 'lightgallery.js/dist/js/lightgallery.min.js', 'lg-fullscreen.js/dist/lg-fullscreen.min.js', 'lg-zoom.js/dist/lg-zoom.min.js']
+  - var parentMenu = 'Vendors'
+  - var pageTitle = 'Over 21 Area'
+
+//- Navbar
+block navbar
+  include partials/navbar-solid-shadow
+
+//- Page Content
+block content
+  section.sidebar-enabled.sidebar-end
+    .container
+      .row
+
+        // Project description
+        .col-lg-4.sidebar.order-lg-2
+          .px-sm-4.pt-6.py-lg-6.position-relative.zindex-5
+            h1.h2 Vendors
+            a(href='https://dashboard.bananasplitfest.com/vendor/', target="_blank").btn.btn-success.btn-sm.ms-auto.mx-3.mb-3.d-inline-block Register Online
+            a(href='https://chambermaster.blob.core.windows.net/userfiles/UserFiles/chambers/2103/CMS/2022-vendor-welcome-packet-6.14.pdf', target="_blank").btn.btn-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block Welcome Packet
+            a(href='https://chambermaster.blob.core.windows.net/userfiles/UserFiles/chambers/2103/CMS/2022-06-10-vendor-guidelines.pdf', target="_blank").btn.btn-outline-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block Vendor Guidelines
+            a(href='https://chambermaster.blob.core.windows.net/userfiles/UserFiles/chambers/2103/CMS/Vendor-insurance-sample.pdf', target="_blank").btn.btn-outline-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block Additionaly Insured Instructions
+            a(href='https://chambermaster.blob.core.windows.net/userfiles/UserFiles/chambers/2103/CMS/2022-vendor-application.pdf', target="_blank").btn.btn-outline-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block Paper Form
+            a(href='#gallery' data-scroll).btn.btn-translucent-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block.d-lg-none Gallery
+            .d-sm-flex.align-items-center.pt-3.pb-2.mb-5.border-bottom.fs-sm
+
+            //-   .d-flex.align-items-center.mb-3
+            //-     .text-nowrap.text-muted.me-3
+            //-       i.ai-calendar.me-1
+            //-       span Aug 28, 2020
+            //-     .text-nowrap.text-muted
+            //-       i.ai-tag.me-1
+            //-       span 3D Modelling
+            h3.h5 Details
+            ul.list-unstyled.fs-md.mb-4.pb-2
+              li.mb-2
+                | Dates:
+                span.fw-medium.text-nav.ms-2 August 19-21, 2022
+              li.mb-2
+                | Time:
+                span.fw-medium.text-nav.ms-2 Noon - 8PM
+              li.mb-2
+                | Location:
+                span.fw-medium.text-nav.ms-2 Downtown Latrobe
+            h3.h4 Be a Vendor
+            p.fs-sm.mb-4.pb-2 We're accepting vendors for this year's event through the month of July. Spaces are available on a first-come, first-serve basis. Questions can be sent to #[a(href="mailto:vendors@bananasplitfest.com") vendors@bananasplitfest.com]
+            h3.h5 Categories
+            ul.list-unstyled.fs-md.mb-4.pb-2
+              li.mb-2
+                | General Vendor
+              li.mb-2
+                | Food Vendor
+              li.mb-2
+                | Alcohol Vendor
+              li.mb-2
+                | Marketplace Vendor
+              li.mb-2
+                | Non-profit Vendor
+
+
+        
+
+        // Project gallery (List)
+        #gallery.col-lg-8.content.pb-lg-4.order-lg-1
+          .gallery.pt-5.pb-4.py-lg-5
+            a(href='img/vendors/vendors-blue.jpg').gallery-item.rounded-3.mb-grid-gutter
+              img(src='img/vendors/vendor-artist.jpg' alt='Artist in his vendor booth')
+
+
+
+//- Footer
+block footer
+  include partials/footer-default
