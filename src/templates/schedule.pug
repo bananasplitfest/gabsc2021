@@ -14,9 +14,6 @@ block navbar
 block content
   script(src="//unpkg.com/alpinejs", defer)
   -
-    const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-    const monthAbbv = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'];
-    const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
     activities.sort( function(a,b) {
       return new Date(a.start) - new Date(b.start) || new Date(a.end) - new Date(b.end) || a.title.localeCompare(b.title);   
     });
@@ -24,8 +21,6 @@ block content
     for (const i of resources) {
       resourcesArray[i.id] = i
     }
-
-
 
 
   .sidebar-enabled
@@ -54,11 +49,11 @@ block content
           .schedule
             each a in activities
               if a.start
-                - const dayStr = monthAbbv[new Date(a.start).getMonth()].toLowerCase() + new Date(a.start).getDate();
+                - const dayStr = monthsAbbv[new Date(a.start).getMonth()].toLowerCase() + new Date(a.start).getDate();
                 .border-top.py-4.activity(x-show=`day.includes("${dayStr}")`)
                   .row.py-md-2
                     .col-lg-2.col-sm-3
-                      .text-body.h6.my-0 #{ days[new Date(a.start).getDay()] }, #{ months[new Date(a.start).getMonth()] } #{ new Date(a.start).getDate() }
+                      .text-body.h6.my-0 #{ daysAbbv[new Date(a.start).getDay()] }, #{ months[new Date(a.start).getMonth()] } #{ new Date(a.start).getDate() }
                       .text-body.my-0 #{new Date(a.start).toLocaleTimeString('en-US',{ timeStyle: 'short' })} - #{new Date(a.end).toLocaleTimeString('en-US',{ timeStyle: 'short' })}
                     .col-lg-10.col-sm-9
                       .d-flex.align-items-start

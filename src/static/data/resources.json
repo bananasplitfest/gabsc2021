@@ -7,7 +7,13 @@
       "sortOrder": "1",
       "eventColor": "#673AB7"
     },
-    {"id" : "stage1", "title" : "Main Stage", "address" : "320 Main St", "sortOrder" : "10", "eventColor" : "#4DB6AC"},
+    {
+      "id": "stage1",
+      "title": "Main Stage",
+      "address": "320 Main St",
+      "sortOrder": "10",
+      "eventColor": "#4DB6AC"
+    },
     {
       "id": "stage2",
       "title": "Stage",
@@ -43,6 +49,7 @@
       "sortOrder": "22",
       "eventColor": "#4A148C"
     },
+    {"id" : "banana-marker", "title" : "Banana Split Historial Marker", "address" : "805 Ligonier St", "sortOrder" : "23", "eventColor" : "#27AE60"},
     {
       "id": "wccc-latrobe",
       "title": "WCCC Latrobe Campus",

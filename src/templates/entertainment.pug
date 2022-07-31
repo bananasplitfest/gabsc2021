@@ -13,168 +13,100 @@ block navbar
 
 //- Page Content
 block content
+  -
+    activities.sort( function(a,b) {
+      return new Date(a.start) - new Date(b.start) || new Date(a.end) - new Date(b.end) || a.title.localeCompare(b.title);   
+    });
+    let resourcesArray = {}
+    for (const i of resources) {
+      resourcesArray[i.id] = i
+    }
+  
+
   .container.py-4.mb-2.mb-sm-0.pb-sm-5
     .row.justify-content-center
       .col-lg-9
         h1.mb-2 Entertainment
-        p.fs-4.mb-5 The line-up for the 2022 Great American Banana Split Celebration hasn't been announced quite yet.
+        p.fs-4.mb-5 The line-up for the 2022 Great American Banana Split Celebration is here.
 
-        // Band
-        //- article.card.card-horizontal.mb-grid-gutter.border-3.border-primary
-          img(src='img/entertainment/2021/in-the-sticks.jpg').card-img-top
-          .card-body
-            .meta-link.fs-sm.mb-2 Country &amp; Classic rock
-            h2.h4.nav-heading.mb-4
-              | In the Sticks
-            .d-flex.meta-link.fs-sm.align-items-center.pt-3
-                i.fal.fa-calendar-day
-                | &nbsp;Saturday, August 21
-                span.meta-divider
-                i.fal.fa-clock
-                | &nbsp;6:30 PM
-                span.meta-divider
-                i.fal.fa-map-marker-alt
-                | &nbsp;Legion Keener Band shell
-            .d-flex.meta-link.fs-sm.align-items-center.pt-3
-              | In the Sticks plays all your favorites hits from Miranda Lambert, Zac Brown, Reba and Hank, to AC/DC, Zeppelin, Skynyrd, and Heart. 
-            .mt-3.text-end.text-nowrap
-              a(href='https://inthesticksband.com/', target="_blank").meta-link.fs-xs
-                i.me-1.far.fa-link
-                | &nbsp;Website
-              span.meta-divider
-              a(href='https://www.facebook.com/In-The-Sticks-101033648552168', target="_blank").meta-link.fs-xs
-                i.me-1.fab.fa-facebook
-                | &nbsp;Facebook
+        .entertainment
+          each a in activities
+            if a.start && a.entertainer
+              // Band
+              article.card.card-horizontal.mb-grid-gutter&attributes(a.highlight ? {class: "bandShadow border-5", style: "border-color: #0757a4;"} : "")
+                if a.image
+                  img(src='img/entertainment/2022/'+a.image.file)&attributes(
+                    {style: "border-top-left-radius: calc(1rem - 5px);border-bottom-left-radius: calc(1rem - 5px);"}).card-img-top
+                .card-body
+                  if a.pre
+                    .fs-sm.m-0 #{a.pre}
+                  h2.h3.nav-heading.m-0
+                    | #{a.title}
+                  if a.post
+                    .fs-sm.m-0 #{a.post}
+                  
+                  if a.start || a.resourceId || a.genre
+                    ul.list-unstyled.d-flex.fs-sm.align-items-center.m-0.mt-3
+                      if a.start
+                        li.list-inline-item.m-0(style="margin-right:0;")
+                          i.fal.fa-calendar-day.fa-fw
+                          | &nbsp; #{ daysAbbv[new Date(a.start).getDay()] }, #{ monthsAbbv[new Date(a.start).getMonth()] } #{ new Date(a.start).getDate() }
+                      if a.start
+                        li.list-inline-item.m-0(style="margin-right:0;")
+                          i.fal.fa-clock.fa-fw
+                          | &nbsp; #{new Date(a.start).toLocaleTimeString('en-US',{ timeStyle: 'short' }) }
+                      if a.resourceId
+                        li.list-inline-item.m-0(style="margin-right:0;")
+                          i.fal.fa-map-marker-alt.fa-fw
+                          | &nbsp; #{resourcesArray[a.resourceId].title}
+                      if a.genre
+                        li.list-inline-item.m-0(style="margin-right:0;")
+                          i.fal.fa-music.fa-fw
+                          | &nbsp; #{a.genre}
 
-        // Band
-        //- article.card.card-horizontal.mb-grid-gutter
-          img(src='img/entertainment/2021/laurel-valley-academy-dance.jpg').card-img-top
-          .card-body
-            .meta-link.fs-sm.mb-2 Dance Performance
-            h2.h4.nav-heading.mb-4
-              | Laurel Valley Academy of Dance
-            .d-flex.meta-link.fs-sm.align-items-center.pt-3
-                i.fal.fa-calendar-day
-                | &nbsp;Saturday, August 21
-                span.meta-divider
-                i.fal.fa-clock
-                | &nbsp;11 AM
-                span.meta-divider
-                i.fal.fa-map-marker-alt
-                | &nbsp;Legion Keener Band shell
-            .d-flex.meta-link.fs-sm.align-items-center.pt-3
-              | Come early on Saturday for this high energy performance by the dancers of Laurel Valley Academy of Dance.
-            .mt-3.text-end.text-nowrap
-              a(href='https://laurelvalleyacademyofdance.com/', target="_blank").meta-link.fs-xs
-                i.me-1.far.fa-link
-                | &nbsp;Website
-              span.meta-divider
-              a(href='https://www.facebook.com/Laurel-Valley-Academy-of-Dance-116626805077186/', target="_blank").meta-link.fs-xs
-                i.me-1.fab.fa-facebook
-                | &nbsp;Facebook
-              span.meta-divider
-              a(href='https://www.instagram.com/laurelvalleyacademyofdance/', target="_blank").meta-link.fs-xs
-                i.me-1.fab.fa-instagram
-                | &nbsp;Instagram
+                  if a.description
+                    .d-flex.fs-sm.align-items-center.mt-3
+                      | #{a.description}
 
-        // Band
-        //- article.card.card-horizontal.mb-grid-gutter
-          img(src='img/entertainment/2021/david-stout.jpg').card-img-top
-          .card-body.order-sm-1
-            .meta-link.fs-sm.mb-2 Classic Country &amp; Rock
-            h2.h4.nav-heading
-              | Dave Stout Music
-            .d-flex.meta-link.fs-sm.align-items-center.mb-4
-                i.fal.fa-star
-                | &nbsp; presented by Springhill Outdoor Power Equipment
-            .d-flex.meta-link.fs-sm.align-items-center.pt-3
-                i.fal.fa-calendar-day
-                | &nbsp;Saturday, August 21
-                span.meta-divider
-                i.fal.fa-clock
-                | &nbsp;12 PM
-                span.meta-divider
-                i.fal.fa-map-marker-alt
-                | &nbsp;Legion Keener Band shell
-            .mt-3.text-end.text-nowrap
-              a(href='https://www.facebook.com/Dave-Stout-Music-413249509125242', target="_blank").meta-link.fs-xs
-                i.me-1.fab.fa-facebook
-                | &nbsp;Facebook
-        
-        // Band
-        //- article.card.card-horizontal.mb-grid-gutter
-          img(src='img/entertainment/2021/timeless.jpg').card-img-top
-          .card-body
-            .meta-link.fs-sm.mb-2 Folk
-            h2.h4.nav-heading
-              | Timeless
-            .d-flex.meta-link.fs-sm.align-items-center.mb-4
-                i.fal.fa-star
-                | &nbsp; presented by MPS Tax Service
-            .d-flex.meta-link.fs-sm.align-items-center.pt-3
-                i.fal.fa-calendar-day
-                | &nbsp;Saturday, August 21
-                span.meta-divider
-                i.fal.fa-clock
-                | &nbsp;1 PM
-                span.meta-divider
-                i.fal.fa-map-marker-alt
-                | &nbsp;Legion Keener Band shell
-            .d-flex.meta-link.fs-sm.align-items-center.pt-3
-              | Cliff and Becky Jobe, married for 44 years, Westmoreland County natives, have been singing together for 44 years and performing publicly together for the past 20.
-              | Performing as “Timeless”, and as the lead members of the well known local band “On Our Way Home”, their music  covers a variety of time tested favorites from folk-rock/country to old time gospel, including some original tributes to events of our time, including Cliff’s 2002 copyrighted “Ode To Flight 93” commemorating the 2001, September 11th passenger and crew of United Flight 93, battle in the air with terrorist hijackers, over Shanksville, PA.
-              | They always look forward to bringing the best of “timeless”  memories to their audience.
-
-        // Band
-        //- article.card.card-horizontal.mb-grid-gutter
-          img(src='img/entertainment/2021/high-kix.jpg').card-img-top
-          .card-body
-            .meta-link.fs-sm.mb-2 Martial Arts
-            h2.h4.nav-heading.mb-4
-              | HighKix Martial Arts
-            .d-flex.meta-link.fs-sm.align-items-center.pt-3
-                i.fal.fa-calendar-day
-                | &nbsp;Saturday, August 21
-                span.meta-divider
-                i.fal.fa-clock
-                | &nbsp;2:30 PM
-                span.meta-divider
-                i.fal.fa-map-marker-alt
-                | &nbsp;Legion Keener Band shell
-            .d-flex.meta-link.fs-sm.align-items-center.pt-3
-              | These students demonstrate their skills 
-            .mt-3.text-end.text-nowrap
-              a(href='https://www.highkix.com/', target="_blank").meta-link.fs-xs
-                i.me-1.far.fa-link
-                | &nbsp;Website
-              span.meta-divider
-              a(href='https://www.facebook.com/highkix/', target="_blank").meta-link.fs-xs
-                i.me-1.fab.fa-facebook
-                | &nbsp;Facebook
-              span.meta-divider
-              a(href='https://instagram.com/hkmatsd', target="_blank").meta-link.fs-xs
-                i.me-1.fab.fa-instagram
-                | &nbsp;Instagram
-
-        // Band
-        //- article.card.card-horizontal.mb-grid-gutter
-          img(src='img/entertainment/2021/antolena.jpg').card-img-top
-          .card-body
-            .meta-link.fs-sm.mb-2 Performer
-            h2.h4.nav-heading
-              | Antolena
-            .d-flex.meta-link.fs-sm.align-items-center.mb-4
-                i.fal.fa-star
-                | &nbsp; presented by Valley Dairy Restaurants
-            .d-flex.meta-link.fs-sm.align-items-center.pt-3
-                i.fal.fa-calendar-day
-                | &nbsp;Saturday, August 21
-                span.meta-divider
-                i.fal.fa-clock
-                | &nbsp;3 PM
-                span.meta-divider
-                i.fal.fa-map-marker-alt
-                | &nbsp;Legion Keener Band shell
+                  if a.links
+                    ul.list-unstyled.m-0.align-items-center.mt-4
+                      each l in a.links
+                        case l.type
+                          when "website"
+                            li.list-inline-item.m-0(style="margin-right:0;")
+                              a(href=l.link, target="_blank").meta-link.fs-xs
+                                i.me-1.far.fa-link.fa-fw
+                                | &nbsp;Website
+                          when "facebook"
+                            li.list-inline-item.m-0(style="margin-right:0;")
+                              a(href=l.link, target="_blank").meta-link.fs-xs
+                                i.me-1.fab.fa-facebook.fa-fw
+                                | &nbsp;Facebook
+                          when "instagram"
+                            li.list-inline-item.m-0(style="margin-right:0;")
+                              a(href=l.link, target="_blank").meta-link.fs-xs
+                                i.me-1.fab.fa-instagram.fa-fw
+                                | &nbsp;Instagram
+                          when "twitter"
+                            li.list-inline-item.m-0(style="margin-right:0;")
+                              a(href=l.link, target="_blank").meta-link.fs-xs
+                                i.me-1.fab.fa-twitter.fa-fw
+                                | &nbsp;Twitter
+                          when "spotify"
+                            li.list-inline-item.m-0(style="margin-right:0;")
+                              a(href=l.link, target="_blank").meta-link.fs-xs
+                                i.me-1.fab.fa-spotify.fa-fw
+                                | &nbsp;Spotify
+                          when "appleMusic"
+                            li.list-inline-item.m-0(style="margin-right:0;")
+                              a(href=l.link, target="_blank").meta-link.fs-xs
+                                i.me-1.fab.fa-apple.fa-fw
+                                | &nbsp;Apple Music
+                          when "youtube"
+                            li.list-inline-item.m-0(style="margin-right:0;")
+                              a(href=l.link, target="_blank").meta-link.fs-xs
+                                i.me-1.fab.fa-youtube.fa-fw
+                                | &nbsp;YouTube
         
         // Band
         //- article.card.card-horizontal.mb-grid-gutter
@@ -223,7 +155,7 @@ block content
                 | &nbsp;Apple Music
               span.meta-divider
               a(href='https://youtube.com/user/ConnerGilbertMusic', target="_blank").meta-link.fs-xs
-                i.me-1.fab.fa-apple
+                i.me-1.fab.fa-youtube
                 | &nbsp;YouTube
 
         // Band

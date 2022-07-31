@@ -39,10 +39,13 @@ block content
             .position-relative
               .frame-browser-label
                 .tns-carousel-label
-                  i.far.fa-running
-                  span 5k Banana Run
+                  i.fas.fa-gem
+                  span Crystal Blue Band - The "original" Shondells
               .frame-browser-body
                 .tns-carousel-inner(data-carousel-options='{"mode": "gallery", "controls": false, "nav": false, "autoplay": true, "autoplayTimeout": 3000}')
+                  div(data-carousel-label='<i class="fas fa-gem"></i><span>Crystal Blue Band - The "original" Shondells</span>')
+                    a(href="entertainment.html")
+                      img(src='img/entertainment/2022/crystal-blue-band.jpg' alt='Crystal Blue Band the original Shondells').rounded
                   div(data-carousel-label='<i class="far fa-running"></i><span>5k Banana Run</span>')
                     a(href="5k-banana-run.html")
                       img(src='img/generic/banana-run-finish-2021.jpg' alt='5k Banana Run finish line').rounded
@@ -59,6 +62,7 @@ block content
               button(data-nav data-goto='2')
               button(data-nav data-goto='3')
               button(data-nav data-goto='4')
+              button(data-nav data-goto='5')
 
   //- // Hero
   //- section.bg-size-cover.overflow-hidden.py-5.py-md-6.py-lg-7(style='max-height: 750px; background-image: url(img/generic/banana-costumes.jpg); background-position: center;')
@@ -128,15 +132,7 @@ block content
   // Speakers
   section.container.pt-5.pb-4.pb-md-5.pb-lg-6.pt-md-6.pt-lg-7
     h2.text-center.pt-2.pt-md-0.mb-5 Speakers
-    .row.pb-3.pb-md-0
-        .col-lg-4.col-sm-6.mb-grid-gutter
-            .card.card-hover.border-1.shadow.mx-auto(style='max-width: 20rem;')
-              a(href='img/promotion/fb-me-perform-sunday_fullsize.png', download)
-                .card-img-top
-                  img(src='img/promotion/fb-me-perform-sunday_thumb.png' alt='Sarah Cole')
-              .card-body.text-center
-                h3.h6.card-title.mb-2 Come See Me Perform
-                p.fs-xs.text-body.mb-0 Sunday August 21
+     
 
   //- section.container.pt-5.pb-4.pb-md-5.pb-lg-6.pt-md-6.pt-lg-7
     h2.text-center.pt-2.pt-md-0.mb-5 Speakers

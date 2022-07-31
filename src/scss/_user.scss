@@ -2,3 +2,19 @@
 // user.scss
 // Use this to write your custom SCSS
 //
+
+$enable-shadows: false;
+
+.list-inline-item:not(:last-child):after {
+    content: " ";
+    display: inline-block;
+    width: 1px;
+    height: 1rem;
+    margin: 0 0.625rem;
+    background-color: #dfdfec;
+    vertical-align: middle;
+}
+
+.bandShadow {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
