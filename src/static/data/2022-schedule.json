@@ -3,8 +3,8 @@
       {
         "title": "Blood Drive",
         "pre": "American Red Cross",
-        "start": "2022-08-19 11:00 AM",
-        "end": "2022-08-19 4:00 PM",
+        "start": "2022-08-19T11:00",
+        "end": "2022-08-19T16:00",
         "resourceId": "wccc-latrobe",
         "link": "blood-drive.html",
         "image": {
@@ -21,15 +21,15 @@
       },
       {
         "title": "Vendors Open",
-        "start": "2022-08-19 12:00 PM",
-        "end": "2022-08-19 8:00 PM",
+        "start": "2022-08-19T12:00",
+        "end": "2022-08-19T20:00",
         "resourceId": "downtown-latrobe"
       },
       {
         "title": "Climbing Wall",
         "pre": "Technimark",
-        "start": "2022-08-19 3:00 PM",
-        "end": "2022-08-19 8:00 PM",
+        "start": "2022-08-19T15:00",
+        "end": "2022-08-19T20:00",
         "resourceId": "downtown-latrobe",
         "image": {
           "file": "climbing-wall.jpg",
@@ -38,22 +38,22 @@
       },
       {
         "title": "Over 21 Area",
-        "start": "2022-08-19 3:00 PM",
-        "end": "2022-08-19 8:00 PM",
+        "start": "2022-08-19T15:00",
+        "end": "2022-08-19T20:00",
         "resourceId": "over-21-area"
       },
       {
         "title": "Anttolena and Scottie",
-        "start": "2022-08-19 6:00 PM",
-        "end": "2022-08-19 7:00 PM",
+        "start": "2022-08-19T18:00",
+        "end": "2022-08-19T19:00",
         "resourceId": "stage2",
         "entertainer": true
       },
       {
         "title": "Yellow Tie Gala",
         "pre": "Latrobe Art Center",
-        "start": "2022-08-19 6:00 PM",
-        "end": "2022-08-19 9:00 PM",
+        "start": "2022-08-19T18:00",
+        "end": "2022-08-19T21:00",
         "resourceId": "art-center",
         "link": "https://www.latrobeartcenter.org/events-all/2021-yellow-tie-gala",
         "image": {
@@ -70,16 +70,16 @@
       },
       {
         "title": "5k Banana Run Check-in",
-        "start": "2022-08-20 7:30 AM",
-        "end": "2022-08-20 9:00 AM",
+        "start": "2022-08-20T07:30",
+        "end": "2022-08-20T09:00",
         "resourceId": "memorial-stadium",
         "link": "bananan-run.html"
       },
       {
         "title": "5k Banana Run",
         "pre": "Robindale",
-        "start": "2022-08-20 9:00 AM",
-        "end": "2022-08-20 11:30 AM",
+        "start": "2022-08-20T09:00",
+        "end": "2022-08-20T11:30",
         "resourceId": "memorial-stadium",
         "link": "bananan-run.html",
         "image": {
@@ -101,22 +101,22 @@
       {
         "title": "Face painting ",
         "pre": "PNC",
-        "start": "2022-08-20 10:00 AM",
-        "end": "2022-08-20 6:00 PM",
+        "start": "2022-08-20T10:00",
+        "end": "2022-08-20T18:00",
         "resourceId": "rogers-park"
       },
       {
         "title": "5k Banana Run Awards Ceremony",
         "pre": "Loyalhanna Continuing Care",
-        "start": "2022-08-20 10:30 AM",
-        "end": "2022-08-20 11:30 AM",
+        "start": "2022-08-20T10:30",
+        "end": "2022-08-20T11:30",
         "resourceId": "memorial-stadium",
         "link": "bananan-run.html"
       },
       {
         "title": "Jason Gamble",
-        "start": "2022-08-20 12:00 PM",
-        "end": "2022-08-19 1:30 PM",
+        "start": "2022-08-20T12:00",
+        "end": "2022-08-19T13:30",
         "resourceId": "stage2",
         "entertainer": true
       },
@@ -124,8 +124,8 @@
         "title": "Car Show",
         "pre": "State Farm Agent Sarah Crispin-Thomas",
         "post": "benefitting Relay for Life Latrobe",
-        "start": "2022-08-20 12:00 PM",
-        "end": "2022-08-20 4:00 PM",
+        "start": "2022-08-20T12:00",
+        "end": "2022-08-20T16:00",
         "resourceId": "wccc-latrobe",
         "link": "car-show.html",
         "image": {
@@ -142,69 +142,69 @@
       },
       {
         "title": "Over 21 Area",
-        "start": "2022-08-20 12:00 PM",
-        "end": "2022-08-20 8:00 PM",
+        "start": "2022-08-20T12:00",
+        "end": "2022-08-20T20:00",
         "resourceId": "over-21-area"
       },
       {
         "title": "Vendors Open",
-        "start": "2022-08-20 12:00 PM",
-        "end": "2022-08-20 8:00 PM",
+        "start": "2022-08-20T12:00",
+        "end": "2022-08-20T20:00",
         "resourceId": "downtown-latrobe"
       },
       {
         "title": "Corn Hole Tournament",
         "pre": "Commercial Bank and Trust of PA and Kelly Sparber White & Associates",
-        "start": "2022-08-20 1:00 PM",
-        "end": "2022-08-20 5:00 PM",
+        "start": "2022-08-20T13:00",
+        "end": "2022-08-20T17:00",
         "resourceId": "over-21-area"
       },
       {
         "title": "Kevin Dale Band",
-        "start": "2022-08-20 1:30 PM",
-        "end": "2022-08-20 2:30 PM",
+        "start": "2022-08-20T13:30",
+        "end": "2022-08-20T14:30",
         "resourceId": "stage1",
         "entertainer": true
       },
       {
         "title": "Pie Eating Contest",
-        "start": "2022-08-20 2:00 PM",
-        "end": "2022-08-20 2:30 PM",
+        "start": "2022-08-20T14:00",
+        "end": "2022-08-20T14:30",
         "highlight": true
       },
       {
         "title": "Laurel Valley Academy of Dance",
-        "start": "2022-08-20 2:00 PM",
-        "end": "2022-08-20 3:00 PM",
+        "start": "2022-08-20T14:00",
+        "end": "2022-08-20T15:00",
         "resourceId": "stage2",
         "entertainer": true
       },
       {
         "title": "Brachtopus",
-        "start": "2022-08-20 3:00 PM",
-        "end": "2022-08-20 4:00 PM",
+        "start": "2022-08-20T15:00",
+        "end": "2022-08-20T16:00",
         "resourceId": "stage1",
         "entertainer": true
       },
       {
         "title": "Car Show Awards Ceremony",
         "pre": "Superior Motors",
-        "start": "2022-08-20 3:30 PM",
-        "end": "2022-08-20 4:00 PM",
+        "start": "2022-08-20T15:30",
+        "end": "2022-08-20T16:00",
         "resourceId": "wccc-latrobe",
         "link": "car-show.html"
       },
       {
         "title": "Shattered Accoustic",
-        "start": "2022-08-20 3:30 PM",
-        "end": "2022-08-20 4:30 PM",
+        "start": "2022-08-20T15:30",
+        "end": "2022-08-20T16:30",
         "resourceId": "stage2",
         "entertainer": true
       },
       {
         "title": "Crystal Blue Band",
-        "start": "2022-08-20 7:30 PM",
-        "end": "2022-08-20 9:00 PM",
+        "start": "2022-08-20T19:30",
+        "end": "2022-08-20T21:00",
         "resourceId": "stage1",
         "description": "Final live public performance",
         "image": {
@@ -216,54 +216,55 @@
       },
       {
         "title": "Art Center Craft",
-        "start": "2022-08-21 10:00 AM",
-        "end": "2022-08-21 2:00 PM",
+        "pre": "Latrobe Art Center",
+        "start": "2022-08-21T10:00",
+        "end": "2022-08-21T14:00",
         "resourceId": "rogers-park"
       },
       {
         "title": "YaJagoff! Podcast",
-        "start": "2022-08-21 12:00 PM",
-        "end": "2022-08-21 1:00 PM",
+        "start": "2022-08-21T12:00",
+        "end": "2022-08-21T13:00",
         "resourceId": "over-21-area"
       },
       {
         "title": "Michael Christopher",
-        "start": "2022-08-21 12:00 PM",
-        "end": "2022-08-21 1:30 PM",
+        "start": "2022-08-21T12:00",
+        "end": "2022-08-21T13:30",
         "resourceId": "stage1",
         "entertainer": true
       },
       {
         "title": "Joe Porembka Polka band",
-        "start": "2022-08-21 12:00 PM",
-        "end": "2022-08-21 2:00 PM",
+        "start": "2022-08-21T12:00",
+        "end": "2022-08-21T14:00",
         "resourceId": "stage2",
         "entertainer": true
       },
       {
         "title": "Over 21 Area",
-        "start": "2022-08-21 12:00 PM",
-        "end": "2022-08-21 4:00 PM",
+        "start": "2022-08-21T12:00",
+        "end": "2022-08-21T16:00",
         "resourceId": "over-21-area"
       },
       {
         "title": "Vendors Open",
-        "start": "2022-08-21 12:00 PM",
-        "end": "2022-08-21 4:00 PM",
+        "start": "2022-08-21T12:00",
+        "end": "2022-08-21T16:00",
         "resourceId": "downtown-latrobe"
       },
       {
         "title": "Mark Anderson",
-        "start": "2022-08-21 2:30 PM",
-        "end": "2022-08-21 4:00 PM",
+        "start": "2022-08-21T14:30",
+        "end": "2022-08-21T16:00",
         "resourceId": "stage2",
         "entertainer": true
       },
       {
         "title": "Joe Grushecky",
         "pre": "1st Summit Bank presents",
-        "start": "2022-08-21 2:30 PM",
-        "end": "2022-08-21 4:30 PM",
+        "start": "2022-08-21T14:30",
+        "end": "2022-08-21T16:30",
         "resourceId": "stage1",
         "image": {
           "file": "joe-grushecky.jpg",
@@ -296,8 +297,8 @@
       },
       {
         "title": "Kyle Green Band",
-        "start": "2022-08-21 5:00 PM",
-        "end": "2022-08-21 6:00 PM",
+        "start": "2022-08-21T17:00",
+        "end": "2022-08-21T18:00",
         "resourceId": "stage2",
         "entertainer": true
       },
@@ -330,10 +331,20 @@
       },
       {
         "title": "Stage Right",
+        "start": "2022-08-20T16:00",
+        "end": "2022-08-20T17:00",
         "resourceId": "expo"
       },
       {
         "title": "Westmoreland Performing Arts",
+        "start": "2022-08-21T13:00",
+        "end": "2022-08-21T14:00",
+        "resourceId": "expo"
+      },
+      {
+        "title": "Diamond Dolls Twirling Team",
+        "start": "2022-08-21T11:30",
+        "end": "2022-08-21T12:30",
         "resourceId": "expo"
       }
     ]

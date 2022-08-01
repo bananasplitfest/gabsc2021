@@ -6,6 +6,9 @@ for (const a of activities){
 import resourcesJson from '../data/resources.json' assert {type: 'json'};
 const resources = resourcesJson.resources;
 
+console.log(activities);
+console.log(resources);
+
 document.addEventListener("DOMContentLoaded", function () {
   var calendarEl = document.getElementById("calendar");
   var calendar = new FullCalendar.Calendar(calendarEl, {
