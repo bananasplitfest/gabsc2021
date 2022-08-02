@@ -167,12 +167,6 @@
         "entertainer": true
       },
       {
-        "title": "Pie Eating Contest",
-        "start": "2022-08-20T14:00",
-        "end": "2022-08-20T14:30",
-        "highlight": true
-      },
-      {
         "title": "Laurel Valley Academy of Dance",
         "start": "2022-08-20T14:00",
         "end": "2022-08-20T15:00",
@@ -202,6 +196,19 @@
         "entertainer": true
       },
       {
+        "title": "Stage Right",
+        "start": "2022-08-20T16:00",
+        "end": "2022-08-20T17:00",
+        "resourceId": "expo"
+      },
+      {
+        "title": "Pie Eating Contest",
+        "start": "2022-08-20T16:30",
+        "end": "2022-08-20T17:00",
+        "resourceId": "stage1",
+        "highlight": true
+      },
+      {
         "title": "Crystal Blue Band",
         "start": "2022-08-20T19:30",
         "end": "2022-08-20T21:00",
@@ -215,11 +222,18 @@
         "highlight": true
       },
       {
-        "title": "Art Center Craft",
+        "title": "Craft: Framed Banana Split Collage",
         "pre": "Latrobe Art Center",
         "start": "2022-08-21T10:00",
-        "end": "2022-08-21T14:00",
-        "resourceId": "rogers-park"
+        "end": "2022-08-21T15:00",
+        "resourceId": "rogers-park",
+        "description": "Staff from the Latrobe Art Center will guide you through making your own framed banana split collage that you can take home. While supplies last."
+      },
+      {
+        "title": "Diamond Dolls Twirling Team",
+        "start": "2022-08-21T11:30",
+        "end": "2022-08-21T12:30",
+        "resourceId": "expo"
       },
       {
         "title": "YaJagoff! Podcast",
@@ -232,6 +246,29 @@
         "start": "2022-08-21T12:00",
         "end": "2022-08-21T13:30",
         "resourceId": "stage1",
+        "description": "Country rock artist Michael Christopher's musical journey did not begin in a traditional way. A twist of fate at a line dance club in college ignited a passion for country music that has taken him across the country headlining shows and sharing the stage with some of the biggest names in the genre.",
+        "image": {
+          "file": "michael-christopher.jpg",
+          "alt": "Michael Christopher"
+        },
+        "links": [
+          {
+            "type": "website",
+            "link": "https://michaelchristophercountry.com/"
+          },
+          {
+            "type": "facebook",
+            "link": "https://www.facebook.com/michaelchristophercountry"
+          },
+          {
+            "type": "instagram",
+            "link": "https://www.instagram.com/michaelchristophercountry"
+          },
+          {
+            "type": "youtube",
+            "link": "http://www.youtube.com/mcbcountry"
+          }
+        ],
         "entertainer": true
       },
       {
@@ -254,6 +291,12 @@
         "resourceId": "downtown-latrobe"
       },
       {
+        "title": "Westmoreland Performing Arts",
+        "start": "2022-08-21T13:00",
+        "end": "2022-08-21T14:00",
+        "resourceId": "expo"
+      },
+      {
         "title": "Mark Anderson",
         "start": "2022-08-21T14:30",
         "end": "2022-08-21T16:00",
@@ -266,6 +309,7 @@
         "start": "2022-08-21T14:30",
         "end": "2022-08-21T16:30",
         "resourceId": "stage1",
+        "description": "Joe Grushecky\u2019s music has stood the test of time.  Forty plus years since the creation of the Iron City Houserockers, Grushecky continues to create vital, complex music that is lyrically eloquent and relevant while remaining timeless in scope. After so many years, Grushecky continues to find new ways to express his muse in song. Publications such as Billboard, Rolling Stone, Village Voice, No Depression, and countless others have hailed him as one of rock & roll\u2019s most talented singer-songwriters.",
         "image": {
           "file": "joe-grushecky.jpg",
           "alt": "Joe Grushecky and the Houserockers"
@@ -328,24 +372,6 @@
       {
         "title": "Potato Sack Race",
         "resourceId": "rogers-park"
-      },
-      {
-        "title": "Stage Right",
-        "start": "2022-08-20T16:00",
-        "end": "2022-08-20T17:00",
-        "resourceId": "expo"
-      },
-      {
-        "title": "Westmoreland Performing Arts",
-        "start": "2022-08-21T13:00",
-        "end": "2022-08-21T14:00",
-        "resourceId": "expo"
-      },
-      {
-        "title": "Diamond Dolls Twirling Team",
-        "start": "2022-08-21T11:30",
-        "end": "2022-08-21T12:30",
-        "resourceId": "expo"
       }
     ]
 }
