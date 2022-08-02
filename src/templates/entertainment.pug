@@ -35,8 +35,8 @@ block content
               // Band
               article.card.card-horizontal.mb-grid-gutter&attributes(a.highlight ? {class: "bandShadow border-5", style: "border-color: #0757a4;"} : "")
                 //- , a.image ? "" : {class: "col-md-6 col-lg-4 col-xl-3"}
-                if a.image
-                  img(src='img/entertainment/2022/'+a.image.file).card-img-top
+                if a.image && a.image.page
+                  img(src='img/entertainment/2022/'+a.image.page.file).card-img-top
                 .card-body
                   if a.pre
                     .fs-sm.m-0 #{a.pre}
@@ -47,6 +47,10 @@ block content
                   
                   if a.start || a.resourceId || a.genre
                     ul.list-unstyled.fs-sm.align-items-center.m-0.mt-3
+                      if a.genre
+                        li.list-inline-item.m-0.me-3
+                          i.fal.fa-music.fa-fw
+                          | &nbsp; #{a.genre}
                       if a.start
                         li.list-inline-item.m-0.me-3
                           i.fal.fa-calendar-day.fa-fw
@@ -59,10 +63,7 @@ block content
                         li.list-inline-item.m-0.me-3
                           i.fal.fa-map-marker-alt.fa-fw
                           | &nbsp; #{resourcesArray[a.resourceId].title}
-                      if a.genre
-                        li.list-inline-item.m-0.me-3
-                          i.fal.fa-music.fa-fw
-                          | &nbsp; #{a.genre}
+                      
 
                   if a.description
                     .d-flex.fs-sm.align-items-center.mt-3

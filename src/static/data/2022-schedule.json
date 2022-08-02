@@ -8,8 +8,11 @@
         "resourceId": "wccc-latrobe",
         "link": "blood-drive.html",
         "image": {
-          "file": "blood-drive.gif",
-          "alt": "Red Cross logo inside blood drop"
+          "schedule": {
+            "type": "schedule",
+            "file": "blood-drive.gif",
+            "alt": "Red Cross logo inside blood drop"
+          }
         },
         "buttons": [
           {
@@ -32,9 +35,13 @@
         "end": "2022-08-19T20:00",
         "resourceId": "downtown-latrobe",
         "image": {
-          "file": "climbing-wall.jpg",
-          "alt": "Climber on wall"
-        }
+          "schedule": {
+            "type": "schedule",
+            "file": "climbing-wall.jpg",
+            "alt": "Climber on wall"
+          }
+        },
+        "activity": true
       },
       {
         "title": "Over 21 Area",
@@ -57,8 +64,11 @@
         "resourceId": "art-center",
         "link": "https://www.latrobeartcenter.org/events-all/2021-yellow-tie-gala",
         "image": {
-          "file": "yellow-tie.jpg",
-          "alt": "Yellow Tie Gala"
+          "schedule": {
+            "type": "schedule",
+            "file": "yellow-tie.jpg",
+            "alt": "Yellow Tie Gala"
+          }
         },
         "buttons": [
           {
@@ -83,8 +93,11 @@
         "resourceId": "memorial-stadium",
         "link": "bananan-run.html",
         "image": {
-          "file": "5k-run.png",
-          "alt": "2021 Banana Run shirt design"
+          "schedule": {
+            "type": "schedule",
+            "file": "5k-run.png",
+            "alt": "2021 Banana Run shirt design"
+          }
         },
         "buttons": [
           {
@@ -100,10 +113,11 @@
       },
       {
         "title": "Face painting ",
-        "pre": "PNC",
+        "pre": "PNC and Dairy Queen",
         "start": "2022-08-20T10:00",
         "end": "2022-08-20T18:00",
-        "resourceId": "rogers-park"
+        "resourceId": "rogers-park",
+        "activity": true
       },
       {
         "title": "5k Banana Run Awards Ceremony",
@@ -129,8 +143,11 @@
         "resourceId": "wccc-latrobe",
         "link": "car-show.html",
         "image": {
-          "file": "car-show.jpg",
-          "alt": "Blue show car"
+          "schedule": {
+            "type": "schedule",
+            "file": "car-show.jpg",
+            "alt": "Blue show car"
+          }
         },
         "buttons": [
           {
@@ -154,10 +171,11 @@
       },
       {
         "title": "Corn Hole Tournament",
-        "pre": "Commercial Bank and Trust of PA and Kelly Sparber White & Associates",
+        "pre": "Innate Fitness, Commercial Bank and Trust of PA, and Kelly Sparber White & Associates",
         "start": "2022-08-20T13:00",
         "end": "2022-08-20T17:00",
-        "resourceId": "over-21-area"
+        "resourceId": "over-21-area",
+        "activity": true
       },
       {
         "title": "Kevin Dale Band",
@@ -215,8 +233,11 @@
         "resourceId": "stage1",
         "description": "Final live public performance",
         "image": {
-          "file": "crystal-blue-band.jpg",
-          "alt": "Crystal Blue Band"
+          "page": {
+            "type": "page",
+            "file": "crystal-blue-band.jpg",
+            "alt": "Crystal Blue Band"
+          }
         },
         "entertainer": true,
         "highlight": true
@@ -227,7 +248,8 @@
         "start": "2022-08-21T10:00",
         "end": "2022-08-21T15:00",
         "resourceId": "rogers-park",
-        "description": "Staff from the Latrobe Art Center will guide you through making your own framed banana split collage that you can take home. While supplies last."
+        "description": "Staff from the Latrobe Art Center will guide you through making your own framed banana split collage that you can take home. While supplies last.",
+        "activity": true
       },
       {
         "title": "Diamond Dolls Twirling Team",
@@ -239,7 +261,8 @@
         "title": "YaJagoff! Podcast",
         "start": "2022-08-21T12:00",
         "end": "2022-08-21T13:00",
-        "resourceId": "over-21-area"
+        "resourceId": "over-21-area",
+        "entertainer": true
       },
       {
         "title": "Michael Christopher",
@@ -248,8 +271,11 @@
         "resourceId": "stage1",
         "description": "Country rock artist Michael Christopher's musical journey did not begin in a traditional way. A twist of fate at a line dance club in college ignited a passion for country music that has taken him across the country headlining shows and sharing the stage with some of the biggest names in the genre.",
         "image": {
-          "file": "michael-christopher.jpg",
-          "alt": "Michael Christopher"
+          "page": {
+            "type": "page",
+            "file": "michael-christopher.jpg",
+            "alt": "Michael Christopher"
+          }
         },
         "links": [
           {
@@ -269,7 +295,8 @@
             "link": "http://www.youtube.com/mcbcountry"
           }
         ],
-        "entertainer": true
+        "entertainer": true,
+        "genre": "Country Rock"
       },
       {
         "title": "Joe Porembka Polka band",
@@ -311,8 +338,11 @@
         "resourceId": "stage1",
         "description": "Joe Grushecky\u2019s music has stood the test of time.  Forty plus years since the creation of the Iron City Houserockers, Grushecky continues to create vital, complex music that is lyrically eloquent and relevant while remaining timeless in scope. After so many years, Grushecky continues to find new ways to express his muse in song. Publications such as Billboard, Rolling Stone, Village Voice, No Depression, and countless others have hailed him as one of rock & roll\u2019s most talented singer-songwriters.",
         "image": {
-          "file": "joe-grushecky.jpg",
-          "alt": "Joe Grushecky and the Houserockers"
+          "page": {
+            "type": "page",
+            "file": "joe-grushecky.jpg",
+            "alt": "Joe Grushecky and the Houserockers"
+          }
         },
         "links": [
           {
@@ -337,7 +367,8 @@
           }
         ],
         "entertainer": true,
-        "highlight": true
+        "highlight": true,
+        "genre": "Rock"
       },
       {
         "title": "Kyle Green Band",
@@ -352,7 +383,8 @@
       },
       {
         "title": "Candy Bar Bingo",
-        "pre": "Keystone Candy"
+        "pre": "Keystone Candy",
+        "activity": true
       },
       {
         "title": "East End Kids",
@@ -360,18 +392,22 @@
       },
       {
         "title": "Goat Yoga",
-        "resourceId": "banana-marker"
+        "resourceId": "banana-marker",
+        "activity": true
       },
       {
-        "title": "Library "
+        "title": "Library ",
+        "activity": true
       },
       {
         "title": "Limbo Contest",
-        "resourceId": "rogers-park"
+        "resourceId": "rogers-park",
+        "activity": true
       },
       {
         "title": "Potato Sack Race",
-        "resourceId": "rogers-park"
+        "resourceId": "rogers-park",
+        "activity": true
       }
     ]
 }
