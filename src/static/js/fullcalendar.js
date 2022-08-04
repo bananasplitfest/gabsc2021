@@ -3,13 +3,14 @@ document.addEventListener("DOMContentLoaded", function () {
   var calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: "resourceTimeline",
     resources: async function fetchActivities() {
-      let response = await fetch('../data/resources.json');
+      let response = await fetch('https://misty-apartment-xwcb8y.netlify.app/.netlify/functions/resources');
     
       console.log(response.status); // 200
       console.log(response.statusText); // OK
     
       if (response.status === 200) {
         let data = await response.json();
+        console.log(data)
         const resources = data.resources;
         return resources;
       }
@@ -17,13 +18,14 @@ document.addEventListener("DOMContentLoaded", function () {
     resourceOrder: 'sortOrder',
     schedulerLicenseKey: "CC-Attribution-NonCommercial-NoDerivatives",
     events: async function fetchActivities() {
-      let response = await fetch('../data/2022-schedule.json');
+      let response = await fetch('https://misty-apartment-xwcb8y.netlify.app/.netlify/functions/schedule');
     
       console.log(response.status); // 200
       console.log(response.statusText); // OK
     
       if (response.status === 200) {
         let data = await response.json();
+        console.log(data)
         const activities = data.activities;
         for (const a of activities){
             if (a.resourceId == "" || !a.resourceId) a.resourceId = "invalid";
