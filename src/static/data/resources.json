@@ -12,21 +12,24 @@
       "title": "Main Stage",
       "address": "320 Main St",
       "sortOrder": "10",
-      "eventColor": "#4DB6AC"
+      "eventColor": "#4DB6AC",
+      "eventTextColor": "#212121"
     },
     {
       "id": "stage2",
       "title": "Stage",
       "address": "",
       "sortOrder": "11",
-      "eventColor": "#FFD600"
+      "eventColor": "#FFD600",
+      "eventTextColor": "#212121"
     },
     {
       "id": "expo",
       "title": "Exposition Area",
       "address": "",
       "sortOrder": "12",
-      "eventColor": "#18FFFF"
+      "eventColor": "#18FFFF",
+      "eventTextColor": "#212121"
     },
     {
       "id": "over-21-area",
@@ -49,7 +52,13 @@
       "sortOrder": "22",
       "eventColor": "#4A148C"
     },
-    {"id" : "banana-marker", "title" : "Banana Split Historial Marker", "address" : "805 Ligonier St", "sortOrder" : "23", "eventColor" : "#27AE60"},
+    {
+      "id": "banana-marker",
+      "title": "Banana Split Historial Marker",
+      "address": "805 Ligonier St",
+      "sortOrder": "23",
+      "eventColor": "#27AE60"
+    },
     {
       "id": "wccc-latrobe",
       "title": "WCCC Latrobe Campus",
@@ -70,6 +79,12 @@
       "address": "819 Ligonier St",
       "sortOrder": "32",
       "eventColor": "#D32F2F"
+    },
+    {
+      "id": "library",
+      "title": "Adams Memorial Library",
+      "address": "1112 Ligonier St",
+      "sortOrder": "33"
     },
     {
       "id": "invalid",

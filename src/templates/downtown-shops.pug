@@ -1,0 +1,128 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var vendorStyles = ['tiny-slider/dist/tiny-slider.css', 'lightgallery.js/dist/css/lightgallery.min.css']
+  - var vendorScripts = ['tiny-slider/dist/min/tiny-slider.js', 'lightgallery.js/dist/js/lightgallery.min.js', 'lg-fullscreen.js/dist/lg-fullscreen.min.js', 'lg-zoom.js/dist/lg-zoom.min.js', 'lg-video.js/dist/lg-video.min.js']
+  - var parentMenu = 'Vendors'
+  - var pageTitle = 'Downtown shops'
+
+//- Navbar
+block navbar
+  include partials/navbar-solid-shadow
+
+//- Page Content
+block content
+  .container
+    .row.justify-content-center
+
+      // Content
+      .col-lg-9.py-4.mb-2.mb-sm-0.pb-sm-5
+        .pb-4(style='max-width: 38rem;')
+          h1 Shop local downtown shops
+
+        // Post content
+        .row.d-flex.align-items-baseline
+          .col-sm-6.col-md-3
+            img(src='img/downtown-shops/shop-local-trolley.png' alt='Shop Local Latrobe Trolley')
+          .col-sm-6.col-md-9
+            p.py-3 Downtown Latrobe is home to a variety of shops year-round. As you're enjoying all that the celebration has to offer, take a moment to stop by these local businesses.
+
+        .row.pt-5.pb-4.py-lg-5
+          .col-sm-4.mb-grid-gutter
+            .card
+              .card-body
+                h5 The Paper Heart
+                ul.list-unstyled.mb-0
+                  li.d-flex.pb-3.border-bottom
+                    a(href="https://www.instagram.com/thepaperheart_").btn-social.bs-tumblr.bs-round.bs-outline.bs-sm.me-2
+                      i.fab.fa-instagram.fa-fw
+                    a(href="http://paperheartaffairs.com/").btn-social.bs-tumblr.bs-round.bs-outline.bs-sm.me-2
+                      i.fas.fa-link.fa-fw
+                  li.d-flex.pb-3.border-bottom
+                    i.fas.fa-map-marker-alt.fa-fw.fs-lg.mt-2.mb-0.text-primary
+                    .ps-3
+                      span.fs-ms.text-muted Find us
+                      a(href="https://g.page/ThePaperHeart").d-block.nav-link-style.fs-sm
+                        | 807 Ligonier St
+                  li.d-flex.pt-2.pb-3.border-bottom
+                    i.fas.fa-clock.fa-fw.fs-lg.mt-2.mb-0.text-primary
+                    .ps-3
+                      span.fs-ms.text-muted Weekend hours
+                      .d-block.nav-link-style.fs-sm
+                        | Friday: 10 AM - 5 PM
+                        br
+                        | Saturday: 10 AM - 7 PM
+                  li.d-flex.pt-2
+                    i.fas.fa-ice-cream.fa-fw.fs-lg.mt-2.mb-0.text-primary
+                    .ps-3
+                      span.fs-ms.text-muted Come see
+                      .d-block.nav-link-style.fs-sm
+                        | The Paper Heart Bananarama Event with games, prizes, and themed photo opportunities
+          .col-sm-4.mb-grid-gutter
+            .card
+              .card-body
+                h5 Eclectique
+                ul.list-unstyled.mb-0
+                  li.d-flex.pb-3.border-bottom
+                    a(href="https://www.facebook.com/shopeclectique").btn-social.bs-tumblr.bs-round.bs-outline.bs-sm.me-2
+                      i.fab.fa-facebook.fa-fw
+                    a(href="https://shopeclectique.com/").btn-social.bs-tumblr.bs-round.bs-outline.bs-sm.me-2
+                      i.fas.fa-link.fa-fw
+                  li.d-flex.pb-3.border-bottom
+                    i.fas.fa-map-marker-alt.fa-fw.fs-lg.mt-2.mb-0.text-primary
+                    .ps-3
+                      span.fs-ms.text-muted Find us
+                      a(href="https://goo.gl/maps/CcQhWJFmGArjLVdc6").d-block.nav-link-style.fs-sm
+                        | 215 Main St
+                  li.d-flex.pt-2.pb-3.border-bottom
+                    i.fas.fa-clock.fa-fw.fs-lg.mt-2.mb-0.text-primary
+                    .ps-3
+                      span.fs-ms.text-muted Weekend hours
+                      .d-block.nav-link-style.fs-sm
+                        | Friday: 10 AM - 8 PM
+                        br
+                        | Saturday: 10 AM - 6 PM
+                        br
+                        | Sunday: 10 AM - 4 PM
+                  li.d-flex.pt-2
+                    i.fas.fa-ice-cream.fa-fw.fs-lg.mt-2.mb-0.text-primary
+                    .ps-3
+                      span.fs-ms.text-muted Come see
+                      .d-block.nav-link-style.fs-sm
+                        | Raspberry Acres Winery at Eclectique free wine tasting, $5 wine slushees, banana themed merchandise, and special sales and discounts
+          .col-sm-4.mb-grid-gutter
+            .card
+              .card-body
+                h5 Rose Style Shoppe
+                ul.list-unstyled.mb-0
+                  li.d-flex.pb-3.border-bottom
+                    a(href="https://www.facebook.com/rosestyleshoppe/").btn-social.bs-tumblr.bs-round.bs-outline.bs-sm.me-2
+                      i.fab.fa-facebook.fa-fw
+                  li.d-flex.pb-3.border-bottom
+                    i.fas.fa-map-marker-alt.fa-fw.fs-lg.mt-2.mb-0.text-primary
+                    .ps-3
+                      span.fs-ms.text-muted Find us
+                      a(href="https://goo.gl/maps/da1omFuxZhEEWYEN9").d-block.nav-link-style.fs-sm
+                        | 906 Ligonier St
+                  li.d-flex.pt-2.pb-3.border-bottom
+                    i.fas.fa-clock.fa-fw.fs-lg.mt-2.mb-0.text-primary
+                    .ps-3
+                      span.fs-ms.text-muted Weekend hours
+                      .d-block.nav-link-style.fs-sm
+                        | Friday: 10 AM - 3 PM
+                        br
+                        | Saturday: 10 AM - 1 PM
+                  li.d-flex.pt-2
+                    i.fas.fa-ice-cream.fa-fw.fs-lg.mt-2.mb-0.text-primary
+                    .ps-3
+                      span.fs-ms.text-muted Come see
+                      .d-block.nav-link-style.fs-sm
+                        | Indoor sidewalk sale
+          
+
+
+
+//- Footer
+block footer
+  include partials/footer-default

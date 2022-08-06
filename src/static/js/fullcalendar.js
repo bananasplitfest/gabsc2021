@@ -5,9 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
     resources: async function fetchActivities() {
       let response = await fetch('https://misty-apartment-xwcb8y.netlify.app/.netlify/functions/resources');
     
-      console.log(response.status); // 200
-      console.log(response.statusText); // OK
-    
       if (response.status === 200) {
         let data = await response.json();
         console.log(data)
@@ -19,9 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
     schedulerLicenseKey: "CC-Attribution-NonCommercial-NoDerivatives",
     events: async function fetchActivities() {
       let response = await fetch('https://misty-apartment-xwcb8y.netlify.app/.netlify/functions/schedule');
-    
-      console.log(response.status); // 200
-      console.log(response.statusText); // OK
     
       if (response.status === 200) {
         let data = await response.json();

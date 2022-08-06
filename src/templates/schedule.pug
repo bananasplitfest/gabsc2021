@@ -48,7 +48,7 @@ block content
           // Content
           .schedule
             each a in activities
-              if a.start
+              if a.start && a.hidden != true
                 - const dayStr = monthsAbbv[new Date(a.start).getMonth()].toLowerCase() + new Date(a.start).getDate();
                 .border-top.py-4.activity(x-show=`day.includes("${dayStr}")`)
                   .row.py-md-2

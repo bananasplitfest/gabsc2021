@@ -1,51 +1,83 @@
 // Menu
 ul.navbar-nav
+
   li()&attributes(parentMenu === 'Activities' ? {'class': 'nav-item dropdown dropdown-mega active'} : {'class': 'nav-item dropdown dropdown-mega'})
     a(href='#' data-bs-toggle='dropdown').nav-link.dropdown-toggle Activities
     .dropdown-menu
-      a(href='#')&attributes(isNestedFile ? {'style': 'background-image: url(../img/menu/activities-pong-thumb.jpg);'} : {'style': 'background-image: url(img/menu/activities-pong-thumb.jpg);'}).dropdown-column.dropdown-column-img.bg-secondary
-      .dropdown-column
-        h5.dropdown-header Activities
+      .dropdown-column.mb-2.mb-lg-0
+        h5.dropdown-header Special Events
         a&attributes(isNestedFile ? {'href': '../5k-banana-run.html'} : {'href': '5k-banana-run.html'}).dropdown-item 5k Banana Run
         a&attributes(isNestedFile ? {'href': '../blood-drive.html'} : {'href': 'blood-drive.html'}).dropdown-item Blood Drive
         a&attributes(isNestedFile ? {'href': '../car-show.html'} : {'href': 'car-show.html'}).dropdown-item Car Show
         a&attributes(isNestedFile ? {'href': '../pie-eating-contest.html'} : {'href': 'pie-eating-contest.html'}).dropdown-item Pie Eating Contest
         a&attributes(isNestedFile ? {'href': '../princess-pageant.html'} : {'href': 'princess-pageant.html'}).dropdown-item Princess Pageant
         a(href='https://www.latrobeartcenter.org/events-all/2022-yellow-tie-gala', target="_blank").dropdown-item Yellow Tie Gala
-  li()&attributes(parentMenu === 'Entertainment' ? {'class': 'nav-item active'} : {'class': 'nav-item'})
-    a&attributes(isNestedFile ? {'href': '../entertainment.html'} : {'href': 'entertainment.html'}).nav-link Entertainment
-  
-  //- li()&attributes(parentMenu === 'Entertainment' ? {'class': 'nav-item dropdown dropdown-mega active'} : {'class': 'nav-item dropdown dropdown-mega'})
-  //-   a(href='#' data-bs-toggle='dropdown').nav-link.dropdown-toggle Entertainment
-  //-   .dropdown-menu
-  //-     a(href='entertainment.html' style='background-image: url(img/menu/entertainment-joe-g-thumb.jpg);').dropdown-column.dropdown-column-img.bg-secondary
-  //-     .dropdown-column
-  //-       h5.dropdown-header Entertainment
-  //-       a(href='entertainment.html').dropdown-item Performances
-  //-       a(href='entertainment.html').dropdown-item Past Headliners
+      .dropdown-column.mb-2.mb-lg-0
+        h5.dropdown-header Activities
+        a&attributes(isNestedFile ? {'href': '../schedule.html'} : {'href': 'schedule.html'}).dropdown-item Crafts
+        a&attributes(isNestedFile ? {'href': '../schedule.html'} : {'href': 'schedule.html'}).dropdown-item Games
+        a&attributes(isNestedFile ? {'href': '../over-21.html'} : {'href': 'over-21.html'}).dropdown-item Over 21 Area
+        a&attributes(isNestedFile ? {'href': '../entertainment.html'} : {'href': 'entertainment.html'}).dropdown-item Entertainment &amp; Expo Area
 
-  //- li()&attributes(parentMenu === 'Vendors' ? {'class': 'nav-item active'} : {'class': 'nav-item'})
-  //-   a(href='vendors.html').nav-link Vendors
+  //- li()&attributes(parentMenu === 'Activities' ? {'class': 'nav-item dropdown dropdown-mega active'} : {'class': 'nav-item dropdown dropdown-mega'})
+  //-   a(href='#' data-bs-toggle='dropdown').nav-link.dropdown-toggle Activities
+  //-   .dropdown-menu
+  //-     a(href='#')&attributes(isNestedFile ? {'style': 'background-image: url(../img/menu/activities-pong-thumb.jpg);'} : {'style': 'background-image: url(img/menu/activities-pong-thumb.jpg);'}).dropdown-column.dropdown-column-img.bg-secondary
+  //-     .dropdown-column
+  //-       h5.dropdown-header Activities
+  //-       a&attributes(isNestedFile ? {'href': '../5k-banana-run.html'} : {'href': '5k-banana-run.html'}).dropdown-item 5k Banana Run
+  //-       a&attributes(isNestedFile ? {'href': '../blood-drive.html'} : {'href': 'blood-drive.html'}).dropdown-item Blood Drive
+  //-       a&attributes(isNestedFile ? {'href': '../car-show.html'} : {'href': 'car-show.html'}).dropdown-item Car Show
+  //-       a&attributes(isNestedFile ? {'href': '../pie-eating-contest.html'} : {'href': 'pie-eating-contest.html'}).dropdown-item Pie Eating Contest
+  //-       a&attributes(isNestedFile ? {'href': '../princess-pageant.html'} : {'href': 'princess-pageant.html'}).dropdown-item Princess Pageant
+  //-       a(href='https://www.latrobeartcenter.org/events-all/2022-yellow-tie-gala', target="_blank").dropdown-item Yellow Tie Gala
+  //- li()&attributes(parentMenu === 'Entertainment' ? {'class': 'nav-item active'} : {'class': 'nav-item'})
+  //-   a&attributes(isNestedFile ? {'href': '../entertainment.html'} : {'href': 'entertainment.html'}).nav-link Entertainment
 
 
   li()&attributes(parentMenu === 'Vendors' ? {'class': 'nav-item dropdown dropdown-mega active'} : {'class': 'nav-item dropdown dropdown-mega'})
     a(href='#' data-bs-toggle='dropdown').nav-link.dropdown-toggle Vendors
     .dropdown-menu
-      a(href='#')&attributes(isNestedFile ? {'style': 'background-image: url(../img/menu/vendor-artist-thumb.jpg);'} : {'style': 'background-image: url(img/menu/vendor-artist-thumb.jpg);'}).dropdown-column.dropdown-column-img.bg-secondary
-      .dropdown-column
+      .dropdown-column.mb-2.mb-lg-0
+        h5.dropdown-header Vendors Attending
+        a&attributes(isNestedFile ? {'href': '#'} : {'href': '#'}).dropdown-item Food - Coming soon!
+        a&attributes(isNestedFile ? {'href': '../over-21.html'} : {'href': 'over-21.html'}).dropdown-item Over 21 Area
+        a&attributes(isNestedFile ? {'href': '#'} : {'href': '#'}).dropdown-item Marketplace - Coming soon!
+        a&attributes(isNestedFile ? {'href': '../downtown-shops.html'} : {'href': 'downtown-shops.html'}).dropdown-item
+          .d-flex.align-items-center
+            .p3-3
+              | Downtown Shops
+            .col-4
+              img(src='img/downtown-shops/shop-local-trolley.png' alt='Shop Local Latrobe Trolley')
+      .dropdown-column.mb-2.mb-lg-0
         h5.dropdown-header Vendor Information
         a&attributes(isNestedFile ? {'href': '../vendors.html'} : {'href': 'vendors.html'}).dropdown-item Application
         a&attributes(isNestedFile ? {'href': '../vendors.html'} : {'href': 'vendors.html'}).dropdown-item Guidelines
-        
+
   li()&attributes(parentMenu === 'Attend' ? {'class': 'nav-item dropdown dropdown-mega active'} : {'class': 'nav-item dropdown dropdown-mega'})
-    a(href='#' data-bs-toggle='dropdown').nav-link.dropdown-toggle Attend
+    a(href='#' data-bs-toggle='dropdown').nav-link.dropdown-toggle Event Info
     .dropdown-menu
-      a(href='#')&attributes(isNestedFile ? {'style': 'background-image: url(../img/menu/banana-split-boy-thumb.jpg);'} : {'style': 'background-image: url(img/menu/banana-split-boy-thumb.jpg);'}).dropdown-column.dropdown-column-img.bg-secondary
-      .dropdown-column
+      .dropdown-column.mb-2.mb-lg-0
         h5.dropdown-header Attend
-        a&attributes(isNestedFile ? {'href': '../attend.html'} : {'href': 'attend.html'}).dropdown-item Getting to the Event
-        a&attributes(isNestedFile ? {'href': '../attend.html'} : {'href': 'attend.html'}).dropdown-item Parking
+        a&attributes(isNestedFile ? {'href': '../about/when-where.html'} : {'href': 'about/when-where.html'}).dropdown-item Where is the event?
+        a&attributes(isNestedFile ? {'href': '../about/parking.html'} : {'href': '/about/parking.html'}).dropdown-item Parking
         a&attributes(isNestedFile ? {'href': '../attend.html'} : {'href': 'attend.html'}).dropdown-item What to bring
+      .dropdown-column.mb-2.mb-lg-0
+        h5.dropdown-header Promo Materials
+        a&attributes(isNestedFile ? {'href': '../about/promotion.html#general'} : {'href': 'about/promotion.html#general'}).dropdown-item General promos
+        a&attributes(isNestedFile ? {'href': '../about/promotion.html#vendors'} : {'href': 'about/promotion.html#vendors'}).dropdown-item For Vendors
+        a&attributes(isNestedFile ? {'href': '../about/promotion.html#entertainers'} : {'href': 'about/promotion.html#entertainers'}).dropdown-item For Entertainers
+
+  //- li()&attributes(parentMenu === 'Attend' ? {'class': 'nav-item dropdown dropdown-mega active'} : {'class': 'nav-item dropdown dropdown-mega'})
+  //-   a(href='#' data-bs-toggle='dropdown').nav-link.dropdown-toggle Attend
+  //-   .dropdown-menu
+  //-     a(href='#')&attributes(isNestedFile ? {'style': 'background-image: url(../img/menu/banana-split-boy-thumb.jpg);'} : {'style': 'background-image: url(img/menu/banana-split-boy-thumb.jpg);'}).dropdown-column.dropdown-column-img.bg-secondary
+  //-     .dropdown-column
+  //-       h5.dropdown-header Attend
+  //-       a&attributes(isNestedFile ? {'href': '../attend.html'} : {'href': 'attend.html'}).dropdown-item Getting to the Event
+  //-       a&attributes(isNestedFile ? {'href': '../attend.html'} : {'href': 'attend.html'}).dropdown-item Parking
+  //-       a&attributes(isNestedFile ? {'href': '../attend.html'} : {'href': 'attend.html'}).dropdown-item What to bring
+
   li()&attributes(parentMenu === 'History' ? {'class': 'nav-item dropdown dropdown-mega active'} : {'class': 'nav-item dropdown dropdown-mega'})
     a(href='#' data-bs-toggle='dropdown').nav-link.dropdown-toggle History
     .dropdown-menu
@@ -54,7 +86,5 @@ ul.navbar-nav
         h5.dropdown-header History
         a&attributes(isNestedFile ? {'href': '../history.html'} : {'href': 'history.html'}).dropdown-item The invention
         a&attributes(isNestedFile ? {'href': '../history.html'} : {'href': 'history.html'}).dropdown-item Latrobe's celebration
-        a&attributes(isNestedFile ? {'href': '../history.html'} : {'href': 'history.html'}).dropdown-item Past Banana Split Princesses
-        a&attributes(isNestedFile ? {'href': '../history.html'} : {'href': 'history.html'}).dropdown-item Past Honorary Chairs
-  //- li()&attributes(parentMenu === 'News' ? {'class': 'nav-item active'} : {'class': 'nav-item'})
-  //-   a(href='news.html').nav-link News
+        a&attributes(isNestedFile ? {'href': '../history.html#princesses'} : {'href': 'history.html#princesses'}).dropdown-item Past Banana Split Princesses
+        a&attributes(isNestedFile ? {'href': '../history.html#chairs'} : {'href': 'history.html#chairs'}).dropdown-item Past Honorary Chairs
