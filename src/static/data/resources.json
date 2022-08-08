@@ -9,7 +9,7 @@
     },
     {
       "id": "stage1",
-      "title": "Main Stage",
+      "title": "Robindale Main Stage",
       "address": "320 Main St",
       "sortOrder": "10",
       "eventColor": "#4DB6AC",
@@ -17,7 +17,7 @@
     },
     {
       "id": "stage2",
-      "title": "Stage",
+      "title": "Dollar Band Stage",
       "address": "",
       "sortOrder": "11",
       "eventColor": "#FFD600",
