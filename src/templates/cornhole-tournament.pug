@@ -1,0 +1,75 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var vendorStyles = [ 'tiny-slider/dist/tiny-slider.css', 'lightgallery.js/dist/css/lightgallery.min.css']
+  - var vendorScripts = ['tiny-slider/dist/min/tiny-slider.js', 'lightgallery.js/dist/js/lightgallery.min.js', 'lg-fullscreen.js/dist/lg-fullscreen.min.js', 'lg-zoom.js/dist/lg-zoom.min.js']
+  - var parentMenu = 'Activities'
+  - var pageTitle = 'Pie Eating Contest'
+
+//- Navbar
+block navbar
+  include partials/navbar-solid-shadow
+
+//- Page Content
+block content
+  section.sidebar-enabled.sidebar-end
+    .container
+      .row
+
+        // Project description
+        .col-lg-4.sidebar.order-lg-2
+          .px-sm-4.pt-6.py-lg-6.position-relative.zindex-5
+            .small.text-body.my-0.py-0 Innate Fitness
+            h1.h2 Cornhole Tournament
+            a(href='https://dashboard.bananasplitfest.com/cornhole-tournament/', target="_blank").btn.btn-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block Register Online</small>
+            a(href='#gallery' data-scroll).btn.btn-translucent-primary.btn-sm.ms-auto.mx-3.mb-3.d-inline-block.d-lg-none Gallery
+            .d-sm-flex.align-items-center.pt-3.pb-2.mb-5.border-bottom.fs-sm
+
+            //-   .d-flex.align-items-center.mb-3
+            //-     .text-nowrap.text-muted.me-3
+            //-       i.ai-calendar.me-1
+            //-       span Aug 28, 2020
+            //-     .text-nowrap.text-muted
+            //-       i.ai-tag.me-1
+            //-       span 3D Modelling
+            h3.h5 Details
+            ul.list-unstyled.fs-md.mb-4.pb-2
+              li.mb-2
+                | Date:
+                span.fw-medium.text-nav.ms-2 August 20, 2022
+              li.mb-2
+                | Time:
+                span.fw-medium.text-nav.ms-2 12pm - 5pm
+              li
+                | Location:
+                span.fw-medium.text-nav.ms-2 329 Main St
+            //- h3.h5 Contest Information
+            //- p.fs-sm.mb-4.pb-2 Do you have the stomach to eat an entire banana cream pie? Gobble it down the fastest and be named the pie eating winner!
+            h3.h5 Sponsors
+            ul.list-unstyled.fs-md.mb-4.pb-2
+              li.mb-2
+                | Innate Fitness Latrobe
+              li.mb-2
+                | Commercial Bank &amp; Trust of PA
+              li.mb-2
+                | Kelly, Sparber, White &amp; Associates
+              li.mb-2
+                | Robindale Energy
+              li.mb-2
+                | GLLV Chamber of Commerce
+              li.mb-2
+                | Valley Dairy Restaurants
+        
+
+        // Project gallery (List)
+        #gallery.col-lg-8.content.pb-lg-4.order-lg-1
+          .gallery.pt-5.pb-4.py-lg-5
+            a(href='img/cornhole-tournament/innate-cornhole.png').gallery-item.rounded-3.mb-grid-gutter
+              img(src='img/cornhole-tournament/innate-cornhole.png' alt='Innate Fitness Cornhole Tournament logo')
+
+
+
+//- Footer
+block footer
+  include partials/footer-default
