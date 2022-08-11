@@ -47,10 +47,17 @@ block content
 
           // Content
           .schedule
+            //- .border-top.py-2.activity
+            //-   .row.py-md2
+            //-     .col-4.col-md-2 10:00 AM - 8:00 PM
+            //-     .col-8.col-md-6.bg-primary
+            //-       .small.text-body.my-0.py-0 Preheader
+            //-       .h4.text-body.my-0.py-0 Title
+            //-       .small.text-body.my-0.py-0 Post
             each a in activities
               if a.start && a.hidden != true
                 - const dayStr = monthsAbbv[new Date(a.start).getMonth()].toLowerCase() + new Date(a.start).getDate();
-                .border-top.py-4.activity(x-show=`day.includes("${dayStr}")`)
+                .border-top.py-2.activity(x-show=`day.includes("${dayStr}")`)
                   .row.py-md-2
                     .col-lg-2.col-sm-3
                       .text-body.h6.my-0 #{ daysAbbv[new Date(a.start).getDay()] }, #{ months[new Date(a.start).getMonth()] } #{ new Date(a.start).getDate() }
