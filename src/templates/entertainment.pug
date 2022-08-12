@@ -15,8 +15,9 @@ block navbar
 block content
   -
     let highlight
+    //- a.highlight ? -1 : 0 || 
     activities.sort( function(a,b) {
-      return a.highlight ? -1 : 0 || new Date(a.start) - new Date(b.start) || new Date(a.end) - new Date(b.end) || a.title.localeCompare(b.title);   
+      return new Date(a.start) - new Date(b.start) || new Date(a.end) - new Date(b.end) || a.title.localeCompare(b.title);   
     });
     let resourcesArray = {}
     for (const i of resources) {
@@ -28,11 +29,11 @@ block content
     .row.justify-content-center
       .col-lg-9
         h1.mb-2 Entertainment
-        p.fs-4.mb-5 The line-up for the 2022 Great American Banana Split Celebration is here.
+        p.fs-4.mb-5 The line-up for the 2022 Great American Banana Split Celebration is here
 
         .entertainment
           each a in activities
-            if a.start && a.entertainer
+            if a.start && a.entertainer && a.hidden != true
               // Band
               article.card.card-horizontal.mb-grid-gutter&attributes(a.highlight ? {class: "bandShadow border-5", style: "border-color: #0757a4;"} : "")
                 //- , a.image ? "" : {class: "col-md-6 col-lg-4 col-xl-3"}

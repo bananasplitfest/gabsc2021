@@ -54,6 +54,7 @@ block content
             //-       .small.text-body.my-0.py-0 Preheader
             //-       .h4.text-body.my-0.py-0 Title
             //-       .small.text-body.my-0.py-0 Post
+            - console.log(activities)
             each a in activities
               if a.start && a.hidden != true
                 - const dayStr = monthsAbbv[new Date(a.start).getMonth()].toLowerCase() + new Date(a.start).getDate();
