@@ -8,6 +8,15 @@
       "eventColor": "#673AB7"
     },
     {
+      "id": "weldon-ligonier",
+      "title": "Weldon & Ligonier St",
+      "address": "",
+      "sortOrder": "2",
+      "eventColor": "#673AB7",
+      "eventTextColor": "",
+      "parentId": "downtown-latrobe"
+    },
+    {
       "id": "stage1",
       "title": "Robindale Main Stage",
       "address": "320 Main St",

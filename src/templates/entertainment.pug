@@ -38,7 +38,7 @@ block content
               article.card.card-horizontal.mb-grid-gutter&attributes(a.highlight ? {class: "bandShadow border-5", style: "border-color: #0757a4;"} : "")
                 //- , a.image ? "" : {class: "col-md-6 col-lg-4 col-xl-3"}
                 if a.image && a.image.page
-                  img(src='img/entertainment/2022/'+a.image.page.file).card-img-top
+                  img(src='img/'+a.image.page.file).card-img-top
                 .card-body
                   if a.pre
                     .fs-sm.m-0 #{a.pre}

@@ -1,0 +1,83 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var parentMenu = 'Activities'
+  - var pageTitle = 'Activities'
+  - var isSidebar = true
+
+//- Navbar
+block navbar
+  include partials/navbar-solid-shadow
+
+//- Page Content
+block content
+  script(src="//unpkg.com/alpinejs", defer)
+  -
+    activities.sort( function(a,b) {
+      return new Date(a.start) - new Date(b.start) || new Date(a.end) - new Date(b.end) || a.title.localeCompare(b.title);   
+    });
+    let resourcesArray = {}
+    for (const i of resources) {
+      resourcesArray[i.id] = i
+    }
+
+  .sidebar-enabled
+    .container-fluid
+      .row(x-data="{ day: ['aug19', 'aug20', 'aug21']}")
+
+        // Sidebar
+        .sidebar.col-lg-2.pt-lg-5
+          #help-sidebar.offcanvas.offcanvas-collapse
+            .offcanvas-header.navbar-shadow.mb-3
+              h5.mt-1.mb-0 Sidebar
+              button(type='button' data-bs-dismiss='offcanvas' aria-label='Close').btn-close.lead
+            .offcanvas-body.pt-3.pt-lg-0.ps-lg-0.pe-lg-2.pe-xl-4(data-simplebar)
+              //- partials/sidebar-schedule.pug
+              include partials/sidebar-schedule
+
+        .col-lg-10.content.py-4
+          
+          // Page title
+          //- .d-md-flex.justify-content-between.pb-2.mb-4
+          h1 Activites
+          p.fs-4 Plenty of activities happening all throughout the weekend for everyone to participate in.
+
+          // Content
+          .schedule.row
+            each a in activities
+              if a.activity && a.start && a.hidden != true
+                - const dayStr = monthsAbbv[new Date(a.start).getMonth()].toLowerCase() + new Date(a.start).getDate();
+                .col-md-4.col-sm-6.mb-grid-gutter.activity(x-show=`day.includes("${dayStr}")`)
+                  .card
+                    if a.image && a.image.page
+                      img(src='img/'+a.image.page.file).card-img-top
+                    .card-body
+                      if a.pre
+                        .small.text-body.my-0.py-0 #{a.pre}
+                      if a.link
+                        a(href=a.link).h5 #{a.title}
+                      else
+                        .h5 #{a.title}
+                      if a.post
+                        .small.text-body.my-0.py-0.pb-3 #{a.post}
+                      ul.list-unstyled.mb-0
+                        if ( a.resourceId && resourcesArray.hasOwnProperty(a.resourceId) )
+                          - let l = resourcesArray[a.resourceId].title
+                          - l += resourcesArray[a.resourceId].address ? " ("+resourcesArray[a.resourceId].address+")" : ""
+                          li.d-flex.pb-3.border-bottom.align-items-center
+                            i.fas.fa-map-marker-alt.fa-fw.fs-lg.mt-2.mb-0.text-primary
+                            .ps-3
+                              | #{l}
+                        li.d-flex.pt-2.align-items-center
+                          i.fas.fa-clock.fa-fw.fs-lg.mt-2.mb-0.text-primary
+                          .ps-3
+                            | #{ daysAbbv[new Date(a.start).getDay()] }, #{ months[new Date(a.start).getMonth()] } #{ new Date(a.start).getDate() }
+                            .text-body.my-0 #{new Date(a.start).toLocaleTimeString('en-US',{ timeStyle: 'short' })} - #{new Date(a.end).toLocaleTimeString('en-US',{ timeStyle: 'short' })}
+          
+
+
+
+//- Footer
+block footer
+  include partials/footer-default
