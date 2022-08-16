@@ -31,6 +31,52 @@ block content
         h1.mb-2 Entertainment
         p.fs-4.mb-5 The line-up for the 2022 Great American Banana Split Celebration is here
 
+        // CTA
+        section.bg-secondary.bg-size-cover.py-5.py-md-3.mb-3.mb-md-5(style='background-image: url(img/demo/business-consulting/cta-bg.png);')
+          .container.py-2.py-md-0
+            .row.mb-3
+              .col
+                h2.mb-4.pb-3.pb-md-0.mb-md-0 Crystal Blue Band headlines 2022 celebration
+            .row
+              .col-md-4
+                img(src="img/entertainment/crystal-blue-band.jpg", alt="Square image")
+              .col-md-8
+                .row
+                  span.me-2 #[a(href='https://www.twistedcomputing.com/').nav-link-style Twisted Computing] presents <strong>The Crystal Blue Band</strong> as the headliner for the 2022 celebration. This is the same band that became famous as part of Tommy James and the Shondells during the 60s with hits like "Crimson &amp; Clover," "Mony Mony," "Crystal Blue Persuasion," "I Think Were Alone Now," and so many more. After 50 plus years of entertaining, the group will give their final performance Saturday August 19 at 7:30pm on the Robindale Stage in downtown Latrobe, PA.
+                  ul.list-unstyled.fs-sm.align-items-center.m-0.mt-3
+                    li.list-inline-item.m-0.me-3
+                      i.fal.fa-music.fa-fw
+                      | &nbsp; Classic rock, pop
+                    li.list-inline-item.m-0.me-3
+                      i.fal.fa-calendar-day.fa-fw
+                      | &nbsp; Saturday, Aug 19
+                    li.list-inline-item.m-0.me-3
+                      i.fal.fa-clock.fa-fw
+                      | &nbsp; 7:30 PM
+                    li.list-inline-item.m-0.me-3
+                      i.fal.fa-map-marker-alt.fa-fw
+                      | &nbsp; Robindale Main Stage
+                .row
+                  .col-sm-3.mt-3
+                    a(href='about/map.html').btn.btn-primary
+                      i.fas.fa-map.fa-fw.mb-0.me-2
+                      | Event Map
+              
+              //- .col-lg-7.col-md-6
+                //- .row
+                  //- .col-sm-7.col-md-12.col-lg-7.mb-3.mb-lg-0
+                  //-     input(type='email' placeholder='Your email' required).form-control
+                  //-     .invalid-feedback Please provide a valid email address!
+                  //- .col-sm-5.col-md-12.col-lg-5
+                  //-     button(type='submit').btn.btn-primary.d-block.w-100 Book a Consultation
+                .row.d-flex.align-items-center.justify-content-center.justify-content-sm-start
+                  .col-md-5
+                    img(src="img/entertainment/crystal-blue-band.jpg", alt="Square image")
+                  .col-md-7
+                    span.me-2 Send the details on your act to #[a(href='mailto:entertainment@bananasplitfest.com').nav-link-style entertainment@bananasplitfest.com]
+                .row.d-flex.align-items-center.justify-content-center.justify-content-sm-start.pt-2
+                    span.me-2 Or call us #[a(href='tel:+17245372671,702').nav-link-style 724 537 2671 x702]
+
         .entertainment
           each a in activities
             if a.start && a.entertainer && a.hidden != true
