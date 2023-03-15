@@ -46,6 +46,22 @@ block content
           h1 2022 Schedule
           p.fs-4 Fun for kids and adults!
 
+          .row.justify-content-center.py-5
+            .col-lg-6
+              h4.widget-title Get the inside scoop
+              p.fs-sm.opacity-60 Subscribe to our newsletter to get news about the activities and entertainment we're scheduling for the 2023 celebration.
+              form(action='https://m.bnasp.lt/subscribe' method='POST' accept-charset='utf-8' target="_blank").validate
+                .input-group.flex-nowrap
+                  i.ai-mail.position-absolute.top-50.translate-middle-y.text-muted.fs-base.ms-3
+                  input(type='email' name='email' placeholder='Your email' required).form-control.rounded-start
+                  button(type='submit' name='submit').btn.btn-primary Subscribe
+                // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+                div(style='display:none;' aria-hidden='true')
+                  label(for='hp') HP
+                  input#hp(type='text' name='hp')
+                  input(type='hidden' name='list' value='AzDJknbbaJwvR3AbWONUYA')
+                  input(type='hidden' name='subform' value='yes')
+
           // Content
           .schedule
             each a in activities
