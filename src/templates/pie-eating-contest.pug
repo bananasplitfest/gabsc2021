@@ -34,8 +34,21 @@ block content
             //-     .text-nowrap.text-muted
             //-       i.ai-tag.me-1
             //-       span 3D Modelling
-            h3.h5 Details
-            ul.list-unstyled.fs-md.mb-4.pb-2
+            h3.h5 Get the inside scoop
+            p.fs-sm Subscribe to our newsletter to get updates about the pie eating contest.
+            form(action='https://m.bnasp.lt/subscribe' method='POST' accept-charset='utf-8' target="_blank")
+              .input-group.flex-nowrap
+                i.ai-mail.position-absolute.top-50.translate-middle-y.text-muted.fs-base.ms-3
+                input(type='email' name='email' placeholder='Your email' required).form-control.rounded-start
+                button(type='submit' name='submit').btn.btn-primary Subscribe
+              // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+              div(style='display:none;' aria-hidden='true')
+                label(for='hp') HP
+                input#hp(type='text' name='hp')
+                input(type='hidden' name='list' value='Job0Twoh0BzfSGxmzYB1nw')
+                input(type='hidden' name='subform' value='yes')
+            //- h3.h5 Details
+            //- ul.list-unstyled.fs-md.mb-4.pb-2
               li.mb-2
                 | Date:
                 span.fw-medium.text-nav.ms-2 August 20, 2022
@@ -45,10 +58,10 @@ block content
               li
                 | Location:
                 span.fw-medium.text-nav.ms-2 Robindale Main Stage
-            h3.h5 Contest Information
-            p.fs-sm.mb-4.pb-2 Do you have the stomach to eat an entire banana cream pie? Gobble it down the fastest and be named the pie eating winner!
-            h3.h5 Sponsors
-            ul.list-unstyled.fs-md.mb-4.pb-2
+            //- h3.h5 Contest Information
+            //- p.fs-sm.mb-4.pb-2 Do you have the stomach to eat an entire banana cream pie? Gobble it down the fastest and be named the pie eating winner!
+            //- h3.h5 Sponsors
+            //- ul.list-unstyled.fs-md.mb-4.pb-2
               //- li.mb-2
               //-   | Eat'n Park Restaurants
               //- li.mb-2

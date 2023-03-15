@@ -11,13 +11,13 @@ ul.navbar-nav
         a&attributes(isNestedFile ? {'href': '../car-show.html'} : {'href': 'car-show.html'}).dropdown-item Car Show
         a&attributes(isNestedFile ? {'href': '../pie-eating-contest.html'} : {'href': 'pie-eating-contest.html'}).dropdown-item Pie Eating Contest
         a&attributes(isNestedFile ? {'href': '../princess-pageant.html'} : {'href': 'princess-pageant.html'}).dropdown-item Princess Pageant
-        a(href='https://www.latrobeartcenter.org/events-all/2022-yellow-tie-gala', target="_blank").dropdown-item Yellow Tie Gala
+        //- a(href='https://www.latrobeartcenter.org/events-all/2022-yellow-tie-gala', target="_blank").dropdown-item Yellow Tie Gala
       .dropdown-column.mb-2.mb-lg-0
         h5.dropdown-header Activities
         a&attributes(isNestedFile ? {'href': '../activities.html'} : {'href': 'activities.html'}).dropdown-item Crafts, Games, Activities
         a&attributes(isNestedFile ? {'href': '../over-21.html'} : {'href': 'over-21.html'}).dropdown-item Over 21 Area
-        a&attributes(isNestedFile ? {'href': '../cornhole-tournament.html'} : {'href': 'cornhole-tournament.html'}).dropdown-item Cornhole Tournament
-        a&attributes(isNestedFile ? {'href': '../entertainment.html'} : {'href': 'entertainment.html'}).dropdown-item Entertainment &amp; Expo Area
+        //- a&attributes(isNestedFile ? {'href': '../cornhole-tournament.html'} : {'href': 'cornhole-tournament.html'}).dropdown-item Cornhole Tournament
+        //- a&attributes(isNestedFile ? {'href': '../entertainment.html'} : {'href': 'entertainment.html'}).dropdown-item Entertainment &amp; Expo Area
 
   //- li()&attributes(parentMenu === 'Activities' ? {'class': 'nav-item dropdown dropdown-mega active'} : {'class': 'nav-item dropdown dropdown-mega'})
   //-   a(href='#' data-bs-toggle='dropdown').nav-link.dropdown-toggle Activities
@@ -37,7 +37,10 @@ ul.navbar-nav
   li()&attributes(parentMenu === 'Entertainment' ? {'class': 'nav-item active'} : {'class': 'nav-item'})
     a&attributes(isNestedFile ? {'href': '../entertainment.html'} : {'href': 'entertainment.html'}).nav-link Entertainment
 
-  li()&attributes(parentMenu === 'Vendors' ? {'class': 'nav-item dropdown dropdown-mega active'} : {'class': 'nav-item dropdown dropdown-mega'})
+  li()&attributes(parentMenu === 'Vendors' ? {'class': 'nav-item active'} : {'class': 'nav-item'})
+    a&attributes(isNestedFile ? {'href': '../vendors.html'} : {'href': 'vendors.html'}).nav-link Vendors
+
+  //- li()&attributes(parentMenu === 'Vendors' ? {'class': 'nav-item dropdown dropdown-mega active'} : {'class': 'nav-item dropdown dropdown-mega'})
     a(href='#' data-bs-toggle='dropdown').nav-link.dropdown-toggle Vendors
     .dropdown-menu
       .dropdown-column.mb-2.mb-lg-0
@@ -55,7 +58,7 @@ ul.navbar-nav
         a&attributes(isNestedFile ? {'href': '../vendors.html'} : {'href': 'vendors.html'}).dropdown-item Application
         a&attributes(isNestedFile ? {'href': '../vendors.html'} : {'href': 'vendors.html'}).dropdown-item Guidelines
 
-  li()&attributes(parentMenu === 'Attend' ? {'class': 'nav-item dropdown dropdown-mega active'} : {'class': 'nav-item dropdown dropdown-mega'})
+  //- li()&attributes(parentMenu === 'Attend' ? {'class': 'nav-item dropdown dropdown-mega active'} : {'class': 'nav-item dropdown dropdown-mega'})
     a(href='#' data-bs-toggle='dropdown').nav-link.dropdown-toggle Event Info
     .dropdown-menu
       .dropdown-column.mb-2.mb-lg-0

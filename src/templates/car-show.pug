@@ -57,8 +57,21 @@ block content
             //-     .text-nowrap.text-muted
             //-       i.ai-tag.me-1
             //-       span 3D Modelling
-            h3.h5 Details
-            ul.list-unstyled.fs-md.mb-4.pb-2
+            h3.h5 Get the inside scoop
+            p.fs-sm Subscribe to our newsletter to get updates about the car show.
+            form(action='https://m.bnasp.lt/subscribe' method='POST' accept-charset='utf-8' target="_blank")
+              .input-group.flex-nowrap
+                i.ai-mail.position-absolute.top-50.translate-middle-y.text-muted.fs-base.ms-3
+                input(type='email' name='email' placeholder='Your email' required).form-control.rounded-start
+                button(type='submit' name='submit').btn.btn-primary Subscribe
+              // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+              div(style='display:none;' aria-hidden='true')
+                label(for='hp') HP
+                input#hp(type='text' name='hp')
+                input(type='hidden' name='list' value='JPTUjlfw4qINQorEGGIE2Q	')
+                input(type='hidden' name='subform' value='yes')
+            //- h3.h5 Details
+            //- ul.list-unstyled.fs-md.mb-4.pb-2
               li.mb-2
                 | Date:
                 span.fw-medium.text-nav.ms-2 August 20, 2022
@@ -71,13 +84,13 @@ block content
               li
                 | Cost per Entry:
                 span.fw-medium.text-nav.ms-2 $10
-            h3.h5 Show Information
-            p.fs-sm.mb-2.pb-1 Our car show is for a good cause! Not only will guests enjoy seeing a variety of cars, trucks, and motorcyles but you'll also get to support the amazing efforts of Relay for Life - Latrobe to stamp out cancer. Prizes will be awarded in each registration class, "Best of Show," and "Kid's Choice." 
-            p.fs-sm.mb-4.pb-2 Dash plaques are available for the first 100 cars. Register online or by printing and mailing in the form.
-            h3.h5 Categories
-            p.fs-sm.mb-4.pb-2 Antique, Antique Import, Chrysler/Mopar, Corvette, Ford, GM, Import, Mini, Motorcycle, Mustang, Special Interest, Street Rod, and Truck
-            h3.h5 Sponsors
-            ul.list-unstyled.fs-md.mb-4.pb-2
+            //- h3.h5 Show Information
+            //- p.fs-sm.mb-2.pb-1 Our car show is for a good cause! Not only will guests enjoy seeing a variety of cars, trucks, and motorcyles but you'll also get to support the amazing efforts of Relay for Life - Latrobe to stamp out cancer. Prizes will be awarded in each registration class, "Best of Show," and "Kid's Choice." 
+            //- p.fs-sm.mb-4.pb-2 Dash plaques are available for the first 100 cars. Register online or by printing and mailing in the form.
+            //- h3.h5 Categories
+            //- p.fs-sm.mb-4.pb-2 Antique, Antique Import, Chrysler/Mopar, Corvette, Ford, GM, Import, Mini, Motorcycle, Mustang, Special Interest, Street Rod, and Truck
+            //- h3.h5 Sponsors
+            //- ul.list-unstyled.fs-md.mb-4.pb-2
               li.mb-2
                 | State Farm Agent Sarah Crispin-Thomas
               li.mb-2

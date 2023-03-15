@@ -31,14 +31,27 @@ block content
             //-     .text-nowrap.text-muted
             //-       i.ai-tag.me-1
             //-       span 3D Modelling
-            h3.h5 Details
-            p.fs-sm.mb-4.pb-2 Your favorite local breweries, wineries, and distilleries in the celebration's over 21 area. Located adjacent to the event main stage so you'll be able to enjoy all the great performances.
-            p.fs-sm.mb-4.pb-2 The over 21 area is located near the 
+            h3.h5 Get the inside scoop
+            p.fs-sm Subscribe to our newsletter to get updates about the breweries and wineries coming to this year's event.
+            form(action='https://m.bnasp.lt/subscribe' method='POST' accept-charset='utf-8' target="_blank")
+              .input-group.flex-nowrap
+                i.ai-mail.position-absolute.top-50.translate-middle-y.text-muted.fs-base.ms-3
+                input(type='email' name='email' placeholder='Your email' required).form-control.rounded-start
+                button(type='submit' name='submit').btn.btn-primary Subscribe
+              // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+              div(style='display:none;' aria-hidden='true')
+                label(for='hp') HP
+                input#hp(type='text' name='hp')
+                input(type='hidden' name='list' value='Job0Twoh0BzfSGxmzYB1nw')
+                input(type='hidden' name='subform' value='yes')
+            //- h3.h5 Details
+            //- p.fs-sm.mb-4.pb-2 Your favorite local breweries, wineries, and distilleries in the celebration's over 21 area. Located adjacent to the event main stage so you'll be able to enjoy all the great performances.
+            //- p.fs-sm.mb-4.pb-2 The over 21 area is located near the 
               a(href="entertainment.html") Robindale Main Stage
               |  and will have the 
               a(href="cornhole-tournament.html") Innate Fitness Cornhole Tournament
               |  on Saturday.
-            ul.list-unstyled.fs-md.mb-4.pb-2
+            //- ul.list-unstyled.fs-md.mb-4.pb-2
               li.mb-2
                 | Friday
                 span.fw-medium.text-nav.ms-2 Noon - 8PM
@@ -53,8 +66,13 @@ block content
                 span.fw-medium.text-nav.ms-2 Parking lot at 329 Main St
         
 
-        // Project gallery (Grid)
+        // Project gallery (List)
         #gallery.col-lg-8.content.pb-lg-4.order-lg-1
+          .gallery.pt-5.pb-4.py-lg-5
+            a(href='img/generic/midnight-split.jpg').gallery-item.rounded-3.mb-grid-gutter
+              img(src='img/generic/midnight-split.jpg' alt='Members of the 2022 Banana Split Princess Court')
+        //- // Project gallery (Grid)
+        //- #gallery.col-lg-8.content.pb-lg-4.order-lg-1
           .gallery.row.pt-5.pb-4.py-lg-5.d-flex.justify-content-center
             .col-12
               h3.h5 Beer/Cider

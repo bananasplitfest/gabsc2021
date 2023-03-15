@@ -31,8 +31,28 @@ block content
         h1.mb-2 Entertainment
         p.fs-4.mb-5 The line-up for the 2022 Great American Banana Split Celebration is here
 
+    .row.justify-content-center
+      .col-lg-6
+        h4.widget-title Get the inside scoop
+          p.fs-sm.opacity-60 Subscribe to our newsletter to receive latest news to your inbox.
+          form(action='https://m.bnasp.lt/subscribe' method='POST' accept-charset='utf-8' target="_blank").validate
+            .input-group.flex-nowrap
+              i.ai-mail.position-absolute.top-50.translate-middle-y.text-muted.fs-base.ms-3
+              input(type='email' name='email' placeholder='Your email' required).form-control.rounded-start
+              button(type='submit' name='submit').btn.btn-primary Subscribe
+            // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+            div(style='display:none;' aria-hidden='true')
+              label(for='hp') HP
+              input#hp(type='text' name='hp')
+              input(type='hidden' name='list' value='AzDJknbbaJwvR3AbWONUYA')
+              input(type='hidden' name='subform' value='yes')
+
+
+
+
+
         // CTA
-        section.bg-secondary.bg-size-cover.py-5.py-md-3.mb-3.mb-md-5(style='background-image: url(img/demo/business-consulting/cta-bg.png);')
+        //- section.bg-secondary.bg-size-cover.py-5.py-md-3.mb-3.mb-md-5(style='background-image: url(img/demo/business-consulting/cta-bg.png);')
           .container.py-2.py-md-0
             .row.mb-3
               .col
@@ -62,7 +82,7 @@ block content
                       i.fas.fa-map.fa-fw.mb-0.me-2
                       | Event Map
         // CTA
-        section.bg-secondary.bg-size-cover.py-5.py-md-3.mb-3.mb-md-5(style='background-image: url(img/demo/business-consulting/cta-bg.png);')
+        //- section.bg-secondary.bg-size-cover.py-5.py-md-3.mb-3.mb-md-5(style='background-image: url(img/demo/business-consulting/cta-bg.png);')
           .container.py-2.py-md-0
             .row.mb-3
               .col
@@ -103,7 +123,7 @@ block content
                 .row.d-flex.align-items-center.justify-content-center.justify-content-sm-start.pt-2
                     span.me-2 Or call us #[a(href='tel:+17245372671,702').nav-link-style 724 537 2671 x702]
 
-        .entertainment
+        //- .entertainment
           each a in activities
             if a.start && a.entertainer && a.hidden != true
               // Band
