@@ -29,7 +29,7 @@ block content
         //- .row(x-data="{ day: ['aug21']}")
 
         // Sidebar
-        .sidebar.col-lg-2.pt-lg-5
+        //- .sidebar.col-lg-2.pt-lg-5
           #help-sidebar.offcanvas.offcanvas-collapse
             .offcanvas-header.navbar-shadow.mb-3
               h5.mt-1.mb-0 Sidebar
@@ -39,11 +39,11 @@ block content
               include partials/sidebar-schedule
 
 
-        .col-lg-10.content.py-4
+        .col-lg-10.content.py-4.mx-auto
 
           // Page title
           //- .d-md-flex.justify-content-between.pb-2.mb-4
-          h1 2022 Schedule
+          h1 Schedule
           p.fs-4 Fun for kids and adults!
 
           .row.justify-content-center.py-5
@@ -63,7 +63,7 @@ block content
                   input(type='hidden' name='subform' value='yes')
 
           // Content
-          .schedule
+          //- .schedule
             each a in activities
               if a.start && a.hidden != true
                 - const dayStr = monthsAbbv[new Date(a.start).getMonth()].toLowerCase() + new Date(a.start).getDate();
